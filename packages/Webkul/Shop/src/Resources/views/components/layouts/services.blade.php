@@ -25,26 +25,24 @@
             data-section-name="{{ $section->name }}"
         @endif
     >
-        <div class="max-md:max-y-6 flex justify-center gap-6 max-lg:flex-wrap max-md:grid max-md:grid-cols-2 max-md:gap-x-2.5 max-md:text-center">
+        <div class="grid grid-cols-4 gap-5 max-lg:grid-cols-2 max-sm:gap-2.5">
             @foreach ($section->options['services'] as $service)
-                <div class="flex items-center gap-5 bg-navySurface max-md:grid max-md:gap-2.5 max-sm:gap-1 max-sm:px-2">
+                <div class="group rounded-xl border border-navyBorder bg-navySurface p-6 transition-all duration-300 hover:-translate-y-1 hover:border-darkBlue max-lg:p-5 max-sm:p-4">
                     <span
-                        class="{{ $service['service_icon'] }} flex items-center justify-center w-[60px] h-[60px] bg-navySurface border border-darkBlue rounded-full text-4xl text-darkBlue p-2.5 max-md:m-auto max-md:w-16 max-md:h-16 max-sm:w-10 max-sm:h-10 max-sm:text-2xl"
+                        class="{{ $service['service_icon'] }} mb-5 flex h-12 w-12 items-center justify-center rounded-lg bg-darkBlue/10 text-3xl text-darkBlue transition-colors duration-300 group-hover:bg-darkBlue group-hover:text-navyBlue max-sm:mb-3 max-sm:h-10 max-sm:w-10 max-sm:text-2xl"
                         role="presentation"
                     >
                     </span>
 
-                    <div class="max-lg:grid max-lg:justify-center">
-                        <!-- Service Title -->
-                        <p class="font-dmserif text-base font-medium max-md:text-xl max-sm:text-sm">
-                            {{ $service['title'] }}
-                        </p>
+                    <!-- Service Title -->
+                    <p class="font-dmserif text-lg font-medium leading-tight text-offWhite max-sm:text-base">
+                        {{ $service['title'] }}
+                    </p>
 
-                        <!-- Service Description -->
-                        <p class="mt-2.5 max-w-[217px] text-sm font-medium text-mutedBlue max-md:mt-0 max-md:text-base max-sm:text-xs">
-                            {{ $service['description'] }}
-                        </p>
-                    </div>
+                    <!-- Service Description -->
+                    <p class="mt-2 text-sm font-normal leading-relaxed text-mutedBlue max-sm:text-xs">
+                        {{ $service['description'] }}
+                    </p>
                 </div>
             @endforeach
         </div>
