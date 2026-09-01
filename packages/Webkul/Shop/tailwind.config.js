@@ -29,15 +29,15 @@ module.exports = {
 
         extend: {
             colors: {
-                navyBlue: "#060C3B",
-                navySurface: "#0F1B44",
-                navySurfaceHover: "#16225C",
-                navyBorder: "#1B2554",
-                offWhite: "#F2F4FF",
-                mutedBlue: "#9AA6D6",
-                photoBackdrop: "#F4F6FB",
+                navyBlue: "#0B1220",
+                navySurface: "#131B2C",
+                navySurfaceHover: "#1B2540",
+                navyBorder: "#232D45",
+                offWhite: "#F1F5F9",
+                mutedBlue: "#94A3B8",
+                photoBackdrop: "#F4F6F9",
                 darkGreen: '#40994A',
-                darkBlue: '#0044F2',
+                darkBlue: '#3B82F6',
                 darkPink: '#F85156',
             },
 

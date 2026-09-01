@@ -16,7 +16,7 @@
     <div style="margin-bottom: 40px;">
         <a
             href="{{ $signedUrl }}"
-            style="padding: 16px 45px;justify-content: center;align-items: center;gap: 10px;border-radius: 2px;background: #060C3B;color: #FFFFFF;text-decoration: none;text-transform: uppercase;font-weight: 700;display: inline-block;"
+            style="padding: 16px 45px;justify-content: center;align-items: center;gap: 10px;border-radius: 2px;background: #3B82F6;color: #FFFFFF;text-decoration: none;text-transform: uppercase;font-weight: 700;display: inline-block;"
         >
             @lang('shop::app.eu_withdrawal.emails.guest_link.button')
         </a>

@@ -20,7 +20,7 @@ img.lazy {
     }
 
     ::selection {
-        background-color: rgba(0, 68, 242, .35);
+        background-color: rgba(59, 130, 246, .35);
     }
 
     input {
@@ -338,15 +338,15 @@ img.lazy {
     }
 
     .journal-scroll::-webkit-scrollbar-track {
-        background-color: #0F1B44;
+        background-color: #131B2C;
         cursor: pointer;
         border-radius: 12px;
-        border: 1px solid #1B2554;
+        border: 1px solid #232D45;
     }
 
     .journal-scroll::-webkit-scrollbar-thumb {
         cursor: pointer;
-        background-color: #1B2554;
+        background-color: #232D45;
         border-radius: 12px;
         border: 3px solid transparent;
         background-clip: content-box;
@@ -365,7 +365,7 @@ img.lazy {
         -webkit-appearance: none;
         -moz-appearance: none;
         background: transparent;
-        background-image: url("data:image/svg+xml;utf8,<svg fill='%23F2F4FF' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+        background-image: url("data:image/svg+xml;utf8,<svg fill='%23F1F5F9' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
         background-repeat: no-repeat;
         background-position-x: calc(100% - 10px);
         background-position-y: 50%;
@@ -448,7 +448,7 @@ img.lazy {
         animation-iteration-count: infinite;
         animation-name: skeleton;
         animation-timing-function: linear;
-        background: linear-gradient(to right, #0F1B44 8%, #16225C 18%, #0F1B44 33%);
+        background: linear-gradient(to right, #131B2C 8%, #1B2540 18%, #131B2C 33%);
         background-size: 1250px 100%;
     }
 
@@ -496,11 +496,11 @@ img.lazy {
     .glow-404 {
         background-clip: text;
         -webkit-background-clip: text;
-        color: #F2F4FF;
+        color: #F1F5F9;
     }
 
     .glow-shadow-404 {
-        color: #0F1B44;
+        color: #131B2C;
         mix-blend-mode: screen;
         transform: translateY(15.5%) rotateX(243deg) scaleY(-1) translateY(-23%) scaleY(1.35) translateX(7%) skewX(-45deg);
     }
