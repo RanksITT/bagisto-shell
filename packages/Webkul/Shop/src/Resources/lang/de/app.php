@@ -1070,6 +1070,13 @@ return [
 
         'cart' => [
             'continue-to-checkout' => 'Weiter zur Kasse',
+            'free-gift' => [
+                'added' => 'Your free gift has been added to the cart.',
+                'choose-size' => 'Choose a size',
+                'claim' => 'Claim Gift',
+                'earned' => 'You have earned a free gift!',
+                'not-available' => 'This gift is no longer available for your cart.',
+            ],
             'illegal' => 'Die Menge darf nicht weniger als eins sein.',
             'inactive' => 'Der Artikel wurde deaktiviert und wurde daher aus dem Warenkorb entfernt.',
             'inactive-add' => 'Inaktive Artikel können nicht zum Warenkorb hinzugefügt werden.',

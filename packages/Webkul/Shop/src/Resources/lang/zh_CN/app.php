@@ -1070,6 +1070,13 @@ return [
 
         'cart' => [
             'continue-to-checkout' => '继续结帐',
+            'free-gift' => [
+                'added' => 'Your free gift has been added to the cart.',
+                'choose-size' => 'Choose a size',
+                'claim' => 'Claim Gift',
+                'earned' => 'You have earned a free gift!',
+                'not-available' => 'This gift is no longer available for your cart.',
+            ],
             'illegal' => '数量不能少于一。',
             'inactive' => '该项目已停用，随后从购物车中移除。',
             'inactive-add' => '无法将停用的项目添加到购物车。',

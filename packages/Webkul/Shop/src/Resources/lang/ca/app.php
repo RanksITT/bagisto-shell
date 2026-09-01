@@ -1070,6 +1070,13 @@ return [
 
         'cart' => [
             'continue-to-checkout' => 'Continuar amb el Pagament',
+            'free-gift' => [
+                'added' => 'Your free gift has been added to the cart.',
+                'choose-size' => 'Choose a size',
+                'claim' => 'Claim Gift',
+                'earned' => 'You have earned a free gift!',
+                'not-available' => 'This gift is no longer available for your cart.',
+            ],
             'illegal' => 'La quantitat no pot ser inferior a un.',
             'inactive' => 'L\'article ha estat desactivat i posteriorment eliminat de la cistella.',
             'inactive-add' => 'L\'article inactiu no es pot afegir a la cistella.',

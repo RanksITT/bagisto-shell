@@ -1070,6 +1070,13 @@ return [
 
         'cart' => [
             'continue-to-checkout' => 'চেকআউট চালিয়ে যান',
+            'free-gift' => [
+                'added' => 'Your free gift has been added to the cart.',
+                'choose-size' => 'Choose a size',
+                'claim' => 'Claim Gift',
+                'earned' => 'You have earned a free gift!',
+                'not-available' => 'This gift is no longer available for your cart.',
+            ],
             'illegal' => 'পরিমাণ একের চেয়ে কম হতে পারে না।',
             'inactive' => 'আইটেমটি নিষ্ক্রিয় হয়ে গিয়েছে এবং পরবর্তীকার কার্ট থেকে সরানো হয়েছে।',
             'inactive-add' => 'নিষ্ক্রিয় আইটেমটি কার্টে যোগ করা যাবে না।',

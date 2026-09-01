@@ -40,15 +40,15 @@ return new class extends Migration
 
             $optionId = DB::table('attribute_options')->insertGetId([
                 'attribute_id' => $attributeId,
-                'admin_name'   => $brand,
-                'sort_order'   => $index + 1,
+                'admin_name' => $brand,
+                'sort_order' => $index + 1,
             ]);
 
             foreach ($locales as $locale) {
                 DB::table('attribute_option_translations')->insert([
                     'attribute_option_id' => $optionId,
-                    'locale'               => $locale,
-                    'label'                => $brand,
+                    'locale' => $locale,
+                    'label' => $brand,
                 ]);
             }
         }

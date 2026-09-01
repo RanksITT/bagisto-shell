@@ -5,12 +5,14 @@ namespace Webkul\CartRule\Models;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Webkul\CartRule\Contracts\CartRule as CartRuleContract;
 use Webkul\Core\Database\Factories\CartRuleFactory;
 use Webkul\Core\Models\ChannelProxy;
 use Webkul\Customer\Models\CustomerGroupProxy;
+use Webkul\Product\Models\ProductProxy;
 
 class CartRule extends Model implements CartRuleContract
 {
@@ -43,6 +45,8 @@ class CartRule extends Model implements CartRuleContract
         'discount_step',
         'apply_to_shipping',
         'free_shipping',
+        'gift_product_id',
+        'gift_qty',
         'sort_order',
     ];
 
@@ -54,6 +58,14 @@ class CartRule extends Model implements CartRuleContract
     protected $casts = [
         'conditions' => 'array',
     ];
+
+    /**
+     * Get the product handed over by a free gift rule.
+     */
+    public function gift_product(): BelongsTo
+    {
+        return $this->belongsTo(ProductProxy::modelClass(), 'gift_product_id');
+    }
 
     /**
      * Get the channels that owns the cart rule.

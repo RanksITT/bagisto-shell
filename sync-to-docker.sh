@@ -19,13 +19,23 @@ MSYS_NO_PATHCONV=1 docker run --rm \
   -v bagisto-packages:/dst \
   alpine sh -c 'apk add --no-cache rsync >/dev/null 2>&1 && rsync -a --delete /src/ /dst/'
 
-echo "==> clearing compiled views and cached config"
+echo "==> clearing compiled views, routes and cached config"
 MSYS_NO_PATHCONV=1 docker exec -w /app bagisto-app php artisan view:clear >/dev/null
+MSYS_NO_PATHCONV=1 docker exec -w /app bagisto-app php artisan route:clear >/dev/null
 MSYS_NO_PATHCONV=1 docker exec -w /app bagisto-app php artisan config:clear >/dev/null
 
 echo "==> rebuilding caches"
 MSYS_NO_PATHCONV=1 docker exec -w /app bagisto-app php artisan config:cache >/dev/null
+MSYS_NO_PATHCONV=1 docker exec -w /app bagisto-app php artisan route:cache >/dev/null
 MSYS_NO_PATHCONV=1 docker exec -w /app bagisto-app php artisan view:cache >/dev/null
+MSYS_NO_PATHCONV=1 docker exec -w /app bagisto-app php artisan responsecache:clear >/dev/null
+
+# opcache runs with validate_timestamps=0 for speed, so it never notices that a file
+# changed on disk. Without this restart php-fpm keeps executing the previous copy of
+# every class and compiled Blade template, and the sync silently appears to do nothing.
+echo "==> restarting php-fpm to drop the opcode cache"
+MSYS_NO_PATHCONV=1 docker exec bagisto-app supervisorctl restart php-fpm:php-fpmd >/dev/null
+sleep 2
 
 echo "==> done"
 curl -s -o /dev/null -w "    homepage now loads in %{time_total}s\n" http://localhost:8080/

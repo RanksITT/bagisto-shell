@@ -1070,6 +1070,13 @@ return [
 
         'cart' => [
             'continue-to-checkout' => 'Continuă spre finalizare',
+            'free-gift' => [
+                'added' => 'Your free gift has been added to the cart.',
+                'choose-size' => 'Choose a size',
+                'claim' => 'Claim Gift',
+                'earned' => 'You have earned a free gift!',
+                'not-available' => 'This gift is no longer available for your cart.',
+            ],
             'illegal' => 'Cantitatea nu poate fi mai mică de unu.',
             'inactive' => 'Articolul a fost dezactivat și eliminat din coș.',
             'inactive-add' => 'Articolul inactiv nu poate fi adăugat în coș.',

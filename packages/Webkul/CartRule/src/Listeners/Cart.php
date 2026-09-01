@@ -3,16 +3,19 @@
 namespace Webkul\CartRule\Listeners;
 
 use Webkul\CartRule\Helpers\CartRule;
+use Webkul\CartRule\Helpers\FreeGift;
 
 class Cart
 {
     /**
      * Create a new listener instance.
      *
-     * @param  \Webkul\CartRule\Repositories\CartRule  $cartRuleHelper
      * @return void
      */
-    public function __construct(protected CartRule $cartRuleHelper) {}
+    public function __construct(
+        protected CartRule $cartRuleHelper,
+        protected FreeGift $freeGiftHelper
+    ) {}
 
     /**
      * Apply valid cart rules to cart
@@ -22,6 +25,12 @@ class Cart
      */
     public function applyCartRules($cart)
     {
+        /**
+         * Withdrawn before discounts are collected, so a gift the cart no longer earns is
+         * gone by the time totals are worked out rather than being priced into them.
+         */
+        $this->freeGiftHelper->revokeUnearnedGifts($cart);
+
         $this->cartRuleHelper->collect($cart);
     }
 }

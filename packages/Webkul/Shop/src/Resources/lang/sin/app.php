@@ -1070,6 +1070,13 @@ return [
 
         'cart' => [
             'continue-to-checkout' => 'පරියේෂයට කිරීමට සහාය',
+            'free-gift' => [
+                'added' => 'Your free gift has been added to the cart.',
+                'choose-size' => 'Choose a size',
+                'claim' => 'Claim Gift',
+                'earned' => 'You have earned a free gift!',
+                'not-available' => 'This gift is no longer available for your cart.',
+            ],
             'illegal' => 'අයිතමයක් එක් අඩංගු වේ නැත.',
             'inactive' => 'අයිතමය අක්‍රීය වී ඇත්තේ, එවිට සාර්ථකව ඉවත් කරන ලදි.',
             'inactive-add' => 'අක්‍රීය අයිතමය කරුණු කැට්එකට එක් කළ නොහැක.',

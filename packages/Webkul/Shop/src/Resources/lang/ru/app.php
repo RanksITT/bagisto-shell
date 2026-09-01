@@ -1070,6 +1070,13 @@ return [
 
         'cart' => [
             'continue-to-checkout' => 'Продолжить оформление заказа',
+            'free-gift' => [
+                'added' => 'Your free gift has been added to the cart.',
+                'choose-size' => 'Choose a size',
+                'claim' => 'Claim Gift',
+                'earned' => 'You have earned a free gift!',
+                'not-available' => 'This gift is no longer available for your cart.',
+            ],
             'illegal' => 'Количество не может быть меньше одного.',
             'inactive' => 'Товар был деактивирован и удален из корзины.',
             'inactive-add' => 'Неактивный товар не может быть добавлен в корзину.',

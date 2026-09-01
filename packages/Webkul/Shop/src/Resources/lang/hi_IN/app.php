@@ -1070,6 +1070,13 @@ return [
 
         'cart' => [
             'continue-to-checkout' => 'जारी रखने के लिए जारी रखें',
+            'free-gift' => [
+                'added' => 'Your free gift has been added to the cart.',
+                'choose-size' => 'Choose a size',
+                'claim' => 'Claim Gift',
+                'earned' => 'You have earned a free gift!',
+                'not-available' => 'This gift is no longer available for your cart.',
+            ],
             'illegal' => 'मात्रा एक से कम नहीं हो सकती।',
             'inactive' => 'आइटम निष्क्रिय कर दिया गया है और इसके बाद से कार्ट से हटा दिया गया है।',
             'inactive-add' => 'निष्क्रिय आइटम को कार्ट में जोड़ा नहीं जा सकता।',

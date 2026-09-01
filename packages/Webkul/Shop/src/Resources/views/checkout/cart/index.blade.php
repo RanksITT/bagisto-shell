@@ -69,6 +69,12 @@
                 </div>
             @endif
 
+            {!! view_render_event('bagisto.shop.checkout.cart.free_gift.before') !!}
+
+            @include('shop::checkout.cart.free-gift')
+
+            {!! view_render_event('bagisto.shop.checkout.cart.free_gift.after') !!}
+
             <v-cart ref="vCart">
                 <!-- Cart Shimmer Effect -->
                 <x-shop::shimmer.checkout.cart :count="3" />
