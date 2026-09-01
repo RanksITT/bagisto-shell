@@ -184,7 +184,7 @@
                                                     type="date"
                                                     :name="`${column.index}[from]`"
                                                     value=""
-                                                    class="flex min-h-10 w-full rounded-md border px-3 py-2 text-sm text-mutedBlue transition-all hover:border-darkBlue max-sm:py-1.5"
+                                                    class="flex min-h-10 w-full rounded-md border border-navyBorder bg-navySurface px-3 py-2 text-sm text-offWhite placeholder:text-mutedBlue transition-all hover:border-darkBlue max-sm:py-1.5"
                                                     :placeholder="column.label"
                                                     :ref="`${column.index}[from]`"
                                                     @change="addFilter(
@@ -200,7 +200,7 @@
                                                     type="date"
                                                     :name="`${column.index}[to]`"
                                                     value=""
-                                                    class="flex min-h-10 w-full rounded-md border px-3 py-2 text-sm text-mutedBlue transition-all hover:border-darkBlue max-sm:py-1.5"
+                                                    class="flex min-h-10 w-full rounded-md border border-navyBorder bg-navySurface px-3 py-2 text-sm text-offWhite placeholder:text-mutedBlue transition-all hover:border-darkBlue max-sm:py-1.5"
                                                     :placeholder="column.label"
                                                     :ref="`${column.index}[from]`"
                                                     @change="addFilter(
@@ -256,7 +256,7 @@
                                                     type="date"
                                                     :name="column.index"
                                                     value=""
-                                                    class="flex min-h-10 w-full rounded-md border px-3 py-2 text-sm text-mutedBlue transition-all hover:border-darkBlue max-sm:py-1.5"
+                                                    class="flex min-h-10 w-full rounded-md border border-navyBorder bg-navySurface px-3 py-2 text-sm text-offWhite placeholder:text-mutedBlue transition-all hover:border-darkBlue max-sm:py-1.5"
                                                     :placeholder="column.label"
                                                     :ref="column.index"
                                                     @change="addFilter($event, column)"
@@ -323,7 +323,7 @@
                                                     type="datetime-local"
                                                     :name="`${column.index}[from]`"
                                                     value=""
-                                                    class="flex min-h-10 w-full rounded-md border px-3 py-2 text-sm text-mutedBlue transition-all hover:border-darkBlue"
+                                                    class="flex min-h-10 w-full rounded-md border border-navyBorder bg-navySurface px-3 py-2 text-sm text-offWhite placeholder:text-mutedBlue transition-all hover:border-darkBlue"
                                                     :placeholder="column.label"
                                                     :ref="`${column.index}[from]`"
                                                     @change="addFilter(
@@ -339,7 +339,7 @@
                                                     type="datetime-local"
                                                     :name="`${column.index}[to]`"
                                                     value=""
-                                                    class="flex min-h-10 w-full rounded-md border px-3 py-2 text-sm text-mutedBlue transition-all hover:border-darkBlue"
+                                                    class="flex min-h-10 w-full rounded-md border border-navyBorder bg-navySurface px-3 py-2 text-sm text-offWhite placeholder:text-mutedBlue transition-all hover:border-darkBlue"
                                                     :placeholder="column.label"
                                                     :ref="`${column.index}[from]`"
                                                     @change="addFilter(
@@ -395,7 +395,7 @@
                                                     :type="datetime-local"
                                                     :name="column.index"
                                                     value=""
-                                                    class="flex min-h-10 w-full rounded-md border px-3 py-2 text-sm text-mutedBlue transition-all hover:border-darkBlue"
+                                                    class="flex min-h-10 w-full rounded-md border border-navyBorder bg-navySurface px-3 py-2 text-sm text-offWhite placeholder:text-mutedBlue transition-all hover:border-darkBlue"
                                                     :placeholder="column.label"
                                                     :ref="column.index"
                                                     @change="addFilter($event, column)"
@@ -472,7 +472,7 @@
                                             <input
                                                 type="number"
                                                 step="any"
-                                                class="w-full rounded-lg border px-3 py-2 text-sm text-mutedBlue transition-all hover:border-darkBlue focus:border-darkBlue"
+                                                class="w-full rounded-lg border border-navyBorder bg-navySurface px-3 py-2 text-sm text-offWhite placeholder:text-mutedBlue transition-all hover:border-darkBlue focus:border-darkBlue"
                                                 v-model="filterValue[column.index]"
                                                 placeholder="@lang('shop::app.components.datagrid.toolbar.filter.number-options.from')"
                                                 @keyup.enter="applyNumericFilter(column)"
@@ -482,7 +482,7 @@
                                             <input
                                                 type="number"
                                                 step="any"
-                                                class="w-full rounded-lg border px-3 py-2 text-sm text-mutedBlue transition-all hover:border-darkBlue focus:border-darkBlue"
+                                                class="w-full rounded-lg border border-navyBorder bg-navySurface px-3 py-2 text-sm text-offWhite placeholder:text-mutedBlue transition-all hover:border-darkBlue focus:border-darkBlue"
                                                 v-model="filterValueMax[column.index]"
                                                 placeholder="@lang('shop::app.components.datagrid.toolbar.filter.number-options.to')"
                                                 @keyup.enter="applyNumericFilter(column)"
@@ -494,7 +494,7 @@
                                             <input
                                                 type="number"
                                                 step="any"
-                                                class="w-full rounded-lg border px-3 py-2 text-sm text-mutedBlue transition-all hover:border-darkBlue focus:border-darkBlue ltr:pr-11 rtl:pl-11 [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+                                                class="w-full rounded-lg border border-navyBorder bg-navySurface px-3 py-2 text-sm text-offWhite placeholder:text-mutedBlue transition-all hover:border-darkBlue focus:border-darkBlue ltr:pr-11 rtl:pl-11 [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
                                                 v-model="filterValue[column.index]"
                                                 :placeholder="column.label"
                                                 @keyup.enter="applyNumericFilter(column)"
@@ -643,7 +643,7 @@
                                         <div class="relative mb-2 mt-1.5">
                                             <input
                                                 type="text"
-                                                class="w-full rounded-lg border px-3 py-2 text-sm text-mutedBlue transition-all hover:border-darkBlue focus:border-darkBlue max-sm:mb-0 ltr:pr-11 rtl:pl-11"
+                                                class="w-full rounded-lg border border-navyBorder bg-navySurface px-3 py-2 text-sm text-offWhite placeholder:text-mutedBlue transition-all hover:border-darkBlue focus:border-darkBlue max-sm:mb-0 ltr:pr-11 rtl:pl-11"
                                                 :name="column.index"
                                                 :placeholder="column.label"
                                                 v-model="filterValue[column.index]"

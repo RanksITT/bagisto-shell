@@ -187,7 +187,7 @@
 
                             <input
                                 type="text"
-                                class="block w-full rounded-xl border border-navyBorder px-11 py-3.5 text-sm font-medium text-offWhite max-md:rounded-lg max-md:px-10 max-md:py-3 max-md:font-normal max-sm:text-xs"
+                                class="block w-full rounded-xl border border-navyBorder bg-navySurface px-11 py-3.5 text-sm font-medium text-offWhite placeholder:text-mutedBlue max-md:rounded-lg max-md:px-10 max-md:py-3 max-md:font-normal max-sm:text-xs"
                                 placeholder="@lang('shop::app.categories.filters.search.title')"
                                 v-model="searchQuery"
                                 v-debounce:500="searchOptions"

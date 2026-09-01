@@ -301,7 +301,7 @@
                         <template v-else>
                             <!-- Spinner -->
                             <svg
-                                class="text-blue h-8 w-8 animate-spin text-[5px] font-semibold max-md:h-7 max-md:w-7 max-sm:h-4 max-sm:w-4"
+                                class="h-8 w-8 animate-spin text-[5px] font-semibold max-md:h-7 max-md:w-7 max-sm:h-4 max-sm:w-4"
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
                                 aria-hidden="true"

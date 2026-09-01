@@ -104,7 +104,7 @@
                         name="reason_text"
                         rows="6"
                         maxlength="5000"
-                        class="mt-3 block w-full rounded-lg border border-navyBorder px-4 py-3 text-sm focus:border-darkBlue focus:outline-none focus:ring-1 focus:ring-darkBlue"
+                        class="mt-3 block w-full rounded-lg border border-navyBorder bg-navySurface px-4 py-3 text-sm text-offWhite placeholder:text-mutedBlue focus:border-darkBlue focus:outline-none focus:ring-1 focus:ring-darkBlue"
                         placeholder="@lang('shop::app.eu_withdrawal.form.reason_placeholder')"
                     >{{ old('reason_text') }}</textarea>
 
