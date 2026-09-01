@@ -43,7 +43,7 @@
             <x-shop::form.control-group class="mt-4">
                 <x-shop::form.control-group.control
                     type="image"
-                    class="max-md:[&>*]:[&>*]:rounded-full mb-0 rounded-xl !p-0 text-gray-700 max-md:grid max-md:justify-center"
+                    class="max-md:[&>*]:[&>*]:rounded-full mb-0 rounded-xl !p-0 text-mutedBlue max-md:grid max-md:justify-center"
                     name="image[]"
                     :label="trans('Image')"
                     :is-multiple="false"
@@ -256,12 +256,12 @@
                 />
 
                 <label
-                    class="icon-uncheck peer-checked:icon-check-box cursor-pointer text-2xl text-navyBlue peer-checked:text-navyBlue"
+                    class="icon-uncheck peer-checked:icon-check-box cursor-pointer text-2xl text-darkBlue peer-checked:text-darkBlue"
                     for="is-subscribed"
                 ></label>
 
                 <label
-                    class="cursor-pointer select-none text-base text-zinc-500 max-md:text-sm ltr:pl-0 rtl:pr-0"
+                    class="cursor-pointer select-none text-base text-mutedBlue max-md:text-sm ltr:pl-0 rtl:pr-0"
                     for="is-subscribed"
                 >
                     @lang('shop::app.customers.account.profile.edit.subscribe-to-newsletter')

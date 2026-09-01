@@ -315,7 +315,7 @@
                     {!! view_render_event('bagisto.shop.customers.account.addresses.create_form_controls.phone.after') !!}
 
                     <!-- Set As Default -->
-                    <div class="text-md mb-4 flex select-none items-center gap-x-1.5 text-zinc-500">
+                    <div class="text-md mb-4 flex select-none items-center gap-x-1.5 text-mutedBlue">
                         <input
                             type="checkbox"
                             name="default_address"
@@ -325,7 +325,7 @@
                         >
 
                         <label
-                            class="icon-uncheck peer-checked:icon-check-box cursor-pointer text-2xl text-navyBlue peer-checked:text-navyBlue"
+                            class="icon-uncheck peer-checked:icon-check-box cursor-pointer text-2xl text-darkBlue peer-checked:text-darkBlue"
                             for="default_address"
                         >
                         </label>

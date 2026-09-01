@@ -62,7 +62,7 @@
                                     aria-label="{{ $review->title }}"
                                 >
                                     <!-- For Desktop View -->
-                                    <div class="flex gap-5 rounded-xl border border-zinc-200 p-6 max-md:hidden max-md:gap-1.5">
+                                    <div class="flex gap-5 rounded-xl border border-navyBorder p-6 max-md:hidden max-md:gap-1.5">
                                         {!! view_render_event('bagisto.shop.customers.account.reviews.image.before', ['reviews' => $reviews]) !!}
 
                                         <x-shop::media.images.lazy
@@ -90,7 +90,7 @@
 
                                                 <div class="flex items-center gap-0.5">
                                                     @for ($i = 1; $i <= 5; $i++)
-                                                        <span class="icon-star-fill text-3xl {{ $review->rating >= $i ? 'text-amber-500' : 'text-zinc-500' }}"></span>
+                                                        <span class="icon-star-fill text-3xl {{ $review->rating >= $i ? 'text-amber-500' : 'text-mutedBlue' }}"></span>
                                                     @endfor
                                                 </div>
 
@@ -111,7 +111,7 @@
                                             {!! view_render_event('bagisto.shop.customers.account.reviews.comment.before', ['reviews' => $reviews]) !!}
 
                                             <p
-                                                class="mt-5 text-base text-zinc-500 max-md:mt-2"
+                                                class="mt-5 text-base text-mutedBlue max-md:mt-2"
                                                 v-pre
                                             >
                                                 {{ $review->comment }}
@@ -123,7 +123,7 @@
                                     </div>
 
                                     <!-- For Mobile View -->
-                                    <div class="flex gap-5 rounded-xl border border-zinc-200 p-6 max-md:grid max-md:gap-2.5 max-md:p-4 md:hidden">
+                                    <div class="flex gap-5 rounded-xl border border-navyBorder p-6 max-md:grid max-md:gap-2.5 max-md:p-4 md:hidden">
                                         <div class="flex gap-2.5">
                                             {!! view_render_event('bagisto.shop.customers.account.reviews.image.before', ['reviews' => $reviews]) !!}
     
@@ -150,7 +150,7 @@
                                                 {!! view_render_event('bagisto.shop.customers.account.reviews.created_at.before', ['reviews' => $reviews]) !!}
 
                                                 <p
-                                                    class="mt-1.5 font-normal text-zinc-500 max-md:mt-0 max-md:text-xs"
+                                                    class="mt-1.5 font-normal text-mutedBlue max-md:mt-0 max-md:text-xs"
                                                     v-pre
                                                 >
                                                     {{ $review->created_at }}
@@ -162,7 +162,7 @@
 
                                                 <div class="mt-1 flex items-center">
                                                     @for ($i = 1; $i <= 5; $i++)
-                                                        <span class="icon-star-fill text-3xl {{ $review->rating >= $i ? 'text-amber-500' : 'text-zinc-500' }}"></span>
+                                                        <span class="icon-star-fill text-3xl {{ $review->rating >= $i ? 'text-amber-500' : 'text-mutedBlue' }}"></span>
                                                     @endfor
                                                 </div>
 
@@ -175,7 +175,7 @@
                                             {!! view_render_event('bagisto.shop.customers.account.reviews.comment.before', ['reviews' => $reviews]) !!}
 
                                             <p
-                                                class="text-xs text-zinc-500"
+                                                class="text-xs text-mutedBlue"
                                                 v-pre
                                             >
                                                 {{ $review->comment }}

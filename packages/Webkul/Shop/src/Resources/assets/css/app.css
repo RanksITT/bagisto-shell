@@ -15,8 +15,12 @@ img.lazy {
 }
 
 @layer components {
+    body {
+        @apply bg-navyBlue text-offWhite;
+    }
+
     ::selection {
-        background-color: rgba(6, 12, 59, .2);
+        background-color: rgba(0, 68, 242, .35);
     }
 
     input {
@@ -334,15 +338,15 @@ img.lazy {
     }
 
     .journal-scroll::-webkit-scrollbar-track {
-        background-color: #fff;
+        background-color: #0F1B44;
         cursor: pointer;
         border-radius: 12px;
-        border: 1px solid #e9e9e9;
+        border: 1px solid #1B2554;
     }
 
     .journal-scroll::-webkit-scrollbar-thumb {
         cursor: pointer;
-        background-color: #e9e9e9;
+        background-color: #1B2554;
         border-radius: 12px;
         border: 3px solid transparent;
         background-clip: content-box;
@@ -361,7 +365,7 @@ img.lazy {
         -webkit-appearance: none;
         -moz-appearance: none;
         background: transparent;
-        background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+        background-image: url("data:image/svg+xml;utf8,<svg fill='%23F2F4FF' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
         background-repeat: no-repeat;
         background-position-x: calc(100% - 10px);
         background-position-y: 50%;
@@ -431,11 +435,11 @@ img.lazy {
     }
 
     .primary-button {
-        @apply flex gap-x-1.5 items-center place-content-center font-medium rounded-xl text-white bg-navyBlue border border-navyBlue px-8 py-4 max-w-max cursor-pointer transition-all hover:opacity-[0.9];
+        @apply flex gap-x-1.5 items-center place-content-center font-medium rounded-xl text-white bg-darkBlue border border-darkBlue px-8 py-4 max-w-max cursor-pointer transition-all hover:opacity-[0.9];
     }
 
     .secondary-button {
-        @apply flex gap-x-1.5 items-center place-content-center font-medium rounded-xl bg-white text-navyBlue border border-navyBlue px-8 py-4 max-w-max cursor-pointer transition-all hover:bg-[#050e3a0d];
+        @apply flex gap-x-1.5 items-center place-content-center font-medium rounded-xl bg-transparent text-offWhite border border-navyBorder px-8 py-4 max-w-max cursor-pointer transition-all hover:bg-navySurfaceHover;
     }
 
     .shimmer {
@@ -444,7 +448,7 @@ img.lazy {
         animation-iteration-count: infinite;
         animation-name: skeleton;
         animation-timing-function: linear;
-        background: linear-gradient(to right, #F6F6F6 8%, #F0F0F0 18%, #F6F6F6 33%);
+        background: linear-gradient(to right, #0F1B44 8%, #16225C 18%, #0F1B44 33%);
         background-size: 1250px 100%;
     }
 
@@ -492,12 +496,12 @@ img.lazy {
     .glow-404 {
         background-clip: text;
         -webkit-background-clip: text;
-        color: #060C3B;
+        color: #F2F4FF;
     }
 
     .glow-shadow-404 {
-        color: #E6E7EB;
-        mix-blend-mode: darken;
+        color: #0F1B44;
+        mix-blend-mode: screen;
         transform: translateY(15.5%) rotateX(243deg) scaleY(-1) translateY(-23%) scaleY(1.35) translateX(7%) skewX(-45deg);
     }
 

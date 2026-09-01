@@ -31,7 +31,7 @@ return [
                 'manage-stock' => 'Voorraad Beheren',
                 'meta-description' => 'Meta Beschrijving',
                 'meta-keywords' => 'Meta Sleutelwoorden',
-                'meta-title' => 'Meta Titel',
+                'meta-title' => 'Rancon LubMart',
                 'name' => 'Naam',
                 'new' => 'Nieuw',
                 'price' => 'Prijs',
@@ -56,8 +56,11 @@ return [
                 'green' => 'Groen',
                 'l' => 'L',
                 'm' => 'M',
+                'motul' => 'Motul',
+                'pristine' => 'Pristine',
                 'red' => 'Rood',
                 's' => 'S',
+                'shell' => 'Shell',
                 'white' => 'Wit',
                 'xl' => 'XL',
                 'yellow' => 'Geel',
@@ -134,8 +137,8 @@ return [
             'channels' => [
                 'meta-description' => 'Demo winkel meta beschrijving',
                 'meta-keywords' => 'Demo winkel meta trefwoorden',
-                'meta-title' => 'Demo winkel',
-                'name' => 'Standaard',
+                'meta-title' => 'Rancon LubMart',
+                'name' => 'Rancon LubMart',
             ],
 
             'currencies' => [
@@ -806,7 +809,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => 'Beheerder',
-                'bagisto' => 'Bagisto',
+                'bagisto' => 'Rancon LubMart',
                 'confirm-password' => 'Bevestig wachtwoord',
                 'email' => 'E-mail',
                 'email-address' => 'admin@example.com',
@@ -821,7 +824,7 @@ return [
                 'application-name' => 'Toepassingsnaam',
                 'argentine-peso' => 'Argentijnse Peso (ARS)',
                 'australian-dollar' => 'Australische Dollar (AUD)',
-                'bagisto' => 'Bagisto',
+                'bagisto' => 'Rancon LubMart',
                 'bangladeshi-taka' => 'Bangladesh Taka (BDT)',
                 'bahraini-dinar' => 'Bahreinse Dinar (BHD)',
                 'brazilian-real' => 'Braziliaanse Real (BRL)',
@@ -974,7 +977,7 @@ return [
 
             'arabic' => 'Arabisch',
             'back' => 'Terug',
-            'bagisto' => 'Bagisto',
+            'bagisto' => 'Rancon LubMart',
             'bagisto-info' => 'Een communityproject van',
             'bagisto-logo' => 'Bagisto Logo',
             'bengali' => 'Bengaals',

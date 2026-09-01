@@ -26,7 +26,7 @@
                 {!! view_render_event('bagisto.shop.checkout.onepage.payment_method.accordion.before') !!}
 
                 <!-- Accordion Blade Component -->
-                <x-shop::accordion class="overflow-hidden !border-b-0 max-md:rounded-lg max-md:!border-none max-md:!bg-gray-100">
+                <x-shop::accordion class="overflow-hidden !border-b-0 max-md:rounded-lg max-md:!border-none max-md:!bg-navySurface">
                     <!-- Accordion Blade Component Header -->
                     <x-slot:header class="px-0 py-4 max-md:p-3 max-md:text-sm max-md:font-medium max-sm:p-2">
                         
@@ -57,13 +57,13 @@
     
                                 <label 
                                     :for="payment.method" 
-                                    class="icon-radio-unselect peer-checked:icon-radio-select absolute top-5 cursor-pointer text-2xl text-navyBlue ltr:right-5 rtl:left-5"
+                                    class="icon-radio-unselect peer-checked:icon-radio-select absolute top-5 cursor-pointer text-2xl text-darkBlue ltr:right-5 rtl:left-5"
                                 >
                                 </label>
 
                                 <label
                                     :for="payment.method"
-                                    class="block w-[190px] cursor-pointer rounded-xl border border-zinc-200 p-5 max-md:flex max-md:w-full max-md:gap-5 max-md:rounded-lg max-md:ltr:pr-12 max-md:rtl:pl-12 max-sm:gap-4 max-sm:px-4 max-sm:py-2.5 max-sm:ltr:pr-12 max-sm:rtl:pl-12"
+                                    class="block w-[190px] cursor-pointer rounded-xl border border-navyBorder p-5 max-md:flex max-md:w-full max-md:gap-5 max-md:rounded-lg max-md:ltr:pr-12 max-md:rtl:pl-12 max-sm:gap-4 max-sm:px-4 max-sm:py-2.5 max-sm:ltr:pr-12 max-sm:rtl:pl-12"
                                 >
                                     {!! view_render_event('bagisto.shop.checkout.onepage.payment-method.image.before') !!}
 
@@ -89,7 +89,7 @@
 
                                         {!! view_render_event('bagisto.shop.checkout.onepage.payment-method.description.before') !!}
 
-                                        <p class="mt-2.5 text-xs font-medium text-zinc-500 max-md:mt-1 max-sm:mt-0">
+                                        <p class="mt-2.5 text-xs font-medium text-mutedBlue max-md:mt-1 max-sm:mt-0">
                                             @{{ payment.description }}
                                         </p> 
 

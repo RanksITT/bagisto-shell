@@ -31,7 +31,7 @@ return [
                 'manage-stock' => 'إدارة المخزون',
                 'meta-description' => 'الوصف الواجب',
                 'meta-keywords' => 'الكلمات الرئيسية الواجبة',
-                'meta-title' => 'العنوان الواجب',
+                'meta-title' => 'Rancon LubMart',
                 'name' => 'الاسم',
                 'new' => 'جديد',
                 'price' => 'السعر',
@@ -56,8 +56,11 @@ return [
                 'green' => 'أخضر',
                 'l' => 'كبير',
                 'm' => 'وسط',
+                'motul' => 'Motul',
+                'pristine' => 'Pristine',
                 'red' => 'أحمر',
                 's' => 'صغير',
+                'shell' => 'Shell',
                 'white' => 'أبيض',
                 'xl' => 'كبير جداً',
                 'yellow' => 'أصفر',
@@ -134,8 +137,8 @@ return [
             'channels' => [
                 'meta-description' => 'وصف متجر تجريبي',
                 'meta-keywords' => 'الكلمات الرئيسية للمتجر التجريبي',
-                'meta-title' => 'متجر تجريبي',
-                'name' => 'افتراضي',
+                'meta-title' => 'Rancon LubMart',
+                'name' => 'Rancon LubMart',
             ],
 
             'currencies' => [
@@ -806,7 +809,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => 'مدير',
-                'bagisto' => 'Bagisto',
+                'bagisto' => 'Rancon LubMart',
                 'confirm-password' => 'تأكيد كلمة المرور',
                 'email' => 'البريد الإلكتروني',
                 'email-address' => 'admin@example.com',
@@ -821,7 +824,7 @@ return [
                 'application-name' => 'اسم التطبيق',
                 'argentine-peso' => 'البيزو الأرجنتيني (ARS)',
                 'australian-dollar' => 'الدولار الأسترالي (AUD)',
-                'bagisto' => 'Bagisto',
+                'bagisto' => 'Rancon LubMart',
                 'bangladeshi-taka' => 'التاكا البنغلاديشي (BDT)',
                 'bahraini-dinar' => 'دينار بحريني (BHD)',
                 'brazilian-real' => 'الريال البرازيلي (BRL)',
@@ -974,7 +977,7 @@ return [
 
             'arabic' => 'العربية',
             'back' => 'رجوع',
-            'bagisto' => 'Bagisto',
+            'bagisto' => 'Rancon LubMart',
             'bagisto-info' => 'مشروع مجتمعي من قبل',
             'bagisto-logo' => 'شعار Bagisto',
             'bengali' => 'البنغالية',

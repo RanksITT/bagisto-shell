@@ -18,7 +18,7 @@
 
     @isset($header)
         <template v-slot:header="{ close }">
-            <div {{ $header->attributes->merge(['class' => 'grid gap-y-2.5 p-6 pb-5 max-md:gap-y-1.5 max-md:border-b max-md:border-zinc-200 max-md:p-4 max-md:gap-y-1 max-md:font-semibold']) }}>
+            <div {{ $header->attributes->merge(['class' => 'grid gap-y-2.5 p-6 pb-5 max-md:gap-y-1.5 max-md:border-b max-md:border-navyBorder max-md:p-4 max-md:gap-y-1 max-md:font-semibold']) }}>
                 {{ $header }}
 
                 <div class="absolute top-5 max-sm:top-4 ltr:right-5 rtl:left-5">
@@ -89,7 +89,7 @@
                 :leave-to-class="enterFromLeaveToClasses"
             >
                 <div
-                    class="fixed z-[1000] overflow-hidden bg-white max-md:!w-full"
+                    class="fixed z-[1000] overflow-hidden bg-navySurface max-md:!w-full"
                     :class="{
                         'inset-x-0 top-0': position == 'top',
                         'inset-x-0 bottom-0 max-sm:max-h-full': position == 'bottom',
@@ -99,7 +99,7 @@
                     :style="'width:' + width"
                     v-show="isOpen"
                 >
-                    <div class="pointer-events-auto h-full w-full overflow-auto bg-white">
+                    <div class="pointer-events-auto h-full w-full overflow-auto bg-navySurface">
                         <div class="flex h-full w-full flex-col">
                             <div class="min-h-0 min-w-0 flex-1 overflow-auto">
                                 <div class="flex h-full flex-col">

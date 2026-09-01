@@ -56,8 +56,11 @@ return [
                 'green' => 'Green',
                 'l' => 'L',
                 'm' => 'M',
+                'motul' => 'Motul',
+                'pristine' => 'Pristine',
                 'red' => 'Red',
                 's' => 'S',
+                'shell' => 'Shell',
                 'white' => 'White',
                 'xl' => 'XL',
                 'yellow' => 'Yellow',
@@ -132,10 +135,10 @@ return [
 
         'core' => [
             'channels' => [
-                'meta-description' => 'Demo store meta description',
-                'meta-keywords' => 'Demo store meta keyword',
-                'meta-title' => 'Demo store',
-                'name' => 'Default',
+                'meta-description' => 'Rancon LubMart – genuine lubricants from Shell, Motul, Pristine and more',
+                'meta-keywords' => 'Rancon LubMart, lubricants, motor oil, Shell, Motul, Pristine',
+                'meta-title' => 'Rancon LubMart',
+                'name' => 'Rancon LubMart',
             ],
 
             'currencies' => [
@@ -806,7 +809,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => 'Admin',
-                'bagisto' => 'Bagisto',
+                'bagisto' => 'Rancon LubMart',
                 'confirm-password' => 'Confirm Password',
                 'email' => 'Email',
                 'email-address' => 'admin@example.com',
@@ -821,7 +824,7 @@ return [
                 'application-name' => 'Application Name',
                 'argentine-peso' => 'Argentine Peso (ARS)',
                 'australian-dollar' => 'Australian Dollar (AUD)',
-                'bagisto' => 'Bagisto',
+                'bagisto' => 'Rancon LubMart',
                 'bangladeshi-taka' => 'Bangladeshi Taka (BDT)',
                 'bahraini-dinar' => 'Bahraini Dinar (BHD)',
                 'brazilian-real' => 'Brazilian Real (BRL)',
@@ -974,7 +977,7 @@ return [
 
             'arabic' => 'Arabic',
             'back' => 'Back',
-            'bagisto' => 'Bagisto',
+            'bagisto' => 'Rancon LubMart',
             'bagisto-info' => 'a Community Project by',
             'bagisto-logo' => 'Bagisto Logo',
             'bengali' => 'Bengali',

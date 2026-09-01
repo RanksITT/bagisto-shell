@@ -78,7 +78,7 @@
                                         <div class="text-sm font-semibold">
                                             <p>@lang('shop::app.customers.account.downloadable-products.orderId'): #@{{ record.increment_id }}</p>
 
-                                            <p class="text-xs font-normal text-neutral-500">
+                                            <p class="text-xs font-normal text-mutedBlue">
                                                 @{{ record.created_at }}
                                             </p>
                                         </div>
@@ -93,7 +93,7 @@
                                         >
                                         </p>
 
-                                        <p><span class="text-neutral-500">@lang('Remaining Downloads'):</span> <span class="font-medium">@{{ record.remaining_downloads }}</span></p>
+                                        <p><span class="text-mutedBlue">@lang('Remaining Downloads'):</span> <span class="font-medium">@{{ record.remaining_downloads }}</span></p>
                                     </div>
                                 </div>
                             </template>

@@ -72,26 +72,26 @@
 
                     <template v-else>
                         <template v-for="record in available.records">
-                            <div class="mb-4 w-full rounded-lg border p-4 transition-all last:mb-0 hover:bg-gray-50">
+                            <div class="mb-4 w-full rounded-lg border p-4 transition-all last:mb-0 hover:bg-navySurfaceHover">
                                 <div class="block space-y-3">
                                     <!-- Row 1 -->
                                     <div class="flex items-start justify-between">
                                         <div class="flex flex-col">
-                                            <span class="text-xs text-gray-500">
+                                            <span class="text-xs text-mutedBlue">
                                                 @lang('shop::app.customers.account.rma.index.datagrid.id')
                                             </span>
 
-                                            <span class="text-sm font-semibold text-gray-900">
+                                            <span class="text-sm font-semibold text-offWhite">
                                                 #@{{ record.id }}
                                             </span>
                                         </div>
 
                                         <div class="flex flex-col gap-1 text-right">
-                                            <span class="text-xs text-gray-500">
+                                            <span class="text-xs text-mutedBlue">
                                                 @lang('shop::app.customers.account.rma.index.datagrid.order-ref')
                                             </span>
 
-                                            <span class="text-sm font-semibold text-gray-900"
+                                            <span class="text-sm font-semibold text-offWhite"
                                                 v-html="record.order_id">
                                             </span>
                                         </div>
@@ -100,21 +100,21 @@
                                     <!-- Row 2 -->
                                     <div class="flex items-start justify-between">
                                         <div class="flex flex-col gap-1">
-                                            <span class="text-xs text-gray-500">
+                                            <span class="text-xs text-mutedBlue">
                                                 @lang('shop::app.customers.account.rma.index.datagrid.rma-status')
                                             </span>
 
-                                            <span class="text-sm font-semibold text-gray-900"
+                                            <span class="text-sm font-semibold text-offWhite"
                                                 v-html="record.title">
                                             </span>
                                         </div>
 
                                         <div class="flex flex-col gap-1 text-right">
-                                            <span class="text-xs text-gray-500">
+                                            <span class="text-xs text-mutedBlue">
                                                 @lang('shop::app.customers.account.rma.index.datagrid.quantity')
                                             </span>
 
-                                            <span class="text-sm font-semibold text-gray-900"
+                                            <span class="text-sm font-semibold text-offWhite"
                                                 v-html="record.total_quantity">
                                             </span>
                                         </div>
@@ -123,11 +123,11 @@
                                     <!-- Row 3 -->
                                     <div class="flex items-center justify-between border-t pt-2">
                                         <div class="mt-1 flex flex-col gap-2">
-                                            <span class="text-xs text-gray-500">
+                                            <span class="text-xs text-mutedBlue">
                                                 @lang('shop::app.customers.account.rma.index.datagrid.create')
                                             </span>
 
-                                            <p class="text-sm text-gray-900">
+                                            <p class="text-sm text-offWhite">
                                                 @{{ record.created_at }}
                                             </p>
                                         </div>
@@ -137,7 +137,7 @@
                                             v-if="available.actions.length"
                                         >
                                             <span
-                                                class="cursor-pointer rounded-md p-1.5 text-2xl transition-all hover:bg-gray-200 dark:hover:bg-gray-800 max-sm:place-self-center"
+                                                class="cursor-pointer rounded-md p-1.5 text-2xl transition-all hover:bg-navySurfaceHover dark:hover:bg-gray-800 max-sm:place-self-center"
                                                 :class="action.icon"
                                                 v-text="! action.icon ? action.title : ''"
                                                 v-for="action in record.actions"

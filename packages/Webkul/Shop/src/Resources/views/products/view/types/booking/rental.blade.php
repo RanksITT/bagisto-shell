@@ -33,7 +33,7 @@
                         >
 
                         <label
-                            class="text-2xl icon-radio-unselect peer-checked:icon-radio-select text-navyBlue"
+                            class="text-2xl icon-radio-unselect peer-checked:icon-radio-select text-darkBlue"
                             for="booking[daily]"
                         >
                         </label>
@@ -58,7 +58,7 @@
                         >
 
                         <label
-                            class="text-2xl icon-radio-unselect peer-checked:icon-radio-select text-navyBlue"
+                            class="text-2xl icon-radio-unselect peer-checked:icon-radio-select text-darkBlue"
                             for="booking[hourly]"
                         >
                         </label>
@@ -261,21 +261,21 @@
             </div>
 
             <!-- Rental Price Breakdown -->
-            <div class="mt-3 rounded-lg border border-zinc-200 bg-zinc-50 p-4 text-sm">
+            <div class="mt-3 rounded-lg border border-navyBorder bg-navySurface p-4 text-sm">
                 <p class="mb-3 font-semibold">
                     @lang('shop::app.products.view.type.booking.rental.summary-title')
                 </p>
 
                 <template v-if="hasSelection">
                     <div class="flex items-center justify-between py-1">
-                        <span class="text-zinc-600">
+                        <span class="text-mutedBlue">
                             @lang('shop::app.products.view.type.booking.rental.base-rental-fee')
                         </span>
 
                         <span class="flex items-center gap-2">
                             <span
                                 v-if="hasBaseDiscount"
-                                class="text-zinc-400 line-through"
+                                class="text-mutedBlue line-through"
                                 v-text="formattedBaseRegularPrice"
                             >
                             </span>
@@ -290,7 +290,7 @@
 
                     <div class="flex items-center justify-between py-1">
                         <span
-                            class="text-zinc-600"
+                            class="text-mutedBlue"
                             v-text="rateLineLabel"
                         >
                         </span>
@@ -302,7 +302,7 @@
                         </span>
                     </div>
 
-                    <div class="mt-3 flex items-center justify-between border-t border-zinc-200 pt-3">
+                    <div class="mt-3 flex items-center justify-between border-t border-navyBorder pt-3">
                         <span class="font-semibold">
                             @lang('shop::app.products.view.type.booking.rental.total')
                         </span>
@@ -316,7 +316,7 @@
                 </template>
 
                 <template v-else>
-                    <p class="text-xs text-zinc-500">
+                    <p class="text-xs text-mutedBlue">
                         @lang('shop::app.products.view.type.booking.rental.select-dates-hint')
                     </p>
                 </template>

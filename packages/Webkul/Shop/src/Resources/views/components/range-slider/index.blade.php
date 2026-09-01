@@ -17,10 +17,10 @@
             </div>
 
             <div class="relative mx-auto flex h-20 w-full items-center justify-center p-2">
-                <div class="relative h-1 w-full rounded-2xl bg-gray-200">
+                <div class="relative h-1 w-full rounded-2xl bg-navySurfaceHover">
                     <div
                         ref="progress"
-                        class="absolute left-1/4 right-0 h-full rounded-xl bg-navyBlue"
+                        class="absolute left-1/4 right-0 h-full rounded-xl bg-darkBlue"
                     >
                     </div>
 
@@ -30,7 +30,7 @@
                             ref="minRange"
                             type="range"
                             :value="minRange"
-                            class="pointer-events-none absolute h-1 w-full cursor-pointer appearance-none bg-transparent outline-none [&::-moz-range-thumb]:pointer-events-auto [&::-moz-range-thumb]:h-[18px] [&::-moz-range-thumb]:w-[18px] [&::-moz-range-thumb]:appearance-none [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:ring [&::-moz-range-thumb]:ring-navyBlue [&::-ms-thumb]:pointer-events-auto [&::-ms-thumb]:h-[18px] [&::-ms-thumb]:w-[18px] [&::-ms-thumb]:appearance-none [&::-ms-thumb]:rounded-full [&::-ms-thumb]:bg-white [&::-ms-thumb]:ring [&::-ms-thumb]:ring-navyBlue [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:h-[18px] [&::-webkit-slider-thumb]:w-[18px] [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:ring [&::-webkit-slider-thumb]:ring-navyBlue"
+                            class="pointer-events-none absolute h-1 w-full cursor-pointer appearance-none bg-transparent outline-none [&::-moz-range-thumb]:pointer-events-auto [&::-moz-range-thumb]:h-[18px] [&::-moz-range-thumb]:w-[18px] [&::-moz-range-thumb]:appearance-none [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-navySurface [&::-moz-range-thumb]:ring [&::-moz-range-thumb]:ring-darkBlue [&::-ms-thumb]:pointer-events-auto [&::-ms-thumb]:h-[18px] [&::-ms-thumb]:w-[18px] [&::-ms-thumb]:appearance-none [&::-ms-thumb]:rounded-full [&::-ms-thumb]:bg-navySurface [&::-ms-thumb]:ring [&::-ms-thumb]:ring-darkBlue [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:h-[18px] [&::-webkit-slider-thumb]:w-[18px] [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-navySurface [&::-webkit-slider-thumb]:ring [&::-webkit-slider-thumb]:ring-darkBlue"
                             :min="allowedMinRange"
                             :max="allowedMaxRange"
                             aria-label="@lang('shop::app.components.range-slider.min-range')"
@@ -45,7 +45,7 @@
                             ref="maxRange"
                             type="range"
                             :value="maxRange"
-                            class="pointer-events-none absolute h-1 w-full cursor-pointer appearance-none bg-transparent outline-none [&::-moz-range-thumb]:pointer-events-auto [&::-moz-range-thumb]:h-[18px] [&::-moz-range-thumb]:w-[18px] [&::-moz-range-thumb]:appearance-none [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:ring [&::-moz-range-thumb]:ring-navyBlue [&::-ms-thumb]:pointer-events-auto [&::-ms-thumb]:h-[18px] [&::-ms-thumb]:w-[18px] [&::-ms-thumb]:appearance-none [&::-ms-thumb]:rounded-full [&::-ms-thumb]:bg-white [&::-ms-thumb]:ring [&::-ms-thumb]:ring-navyBlue [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:h-[18px] [&::-webkit-slider-thumb]:w-[18px] [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:ring [&::-webkit-slider-thumb]:ring-navyBlue"
+                            class="pointer-events-none absolute h-1 w-full cursor-pointer appearance-none bg-transparent outline-none [&::-moz-range-thumb]:pointer-events-auto [&::-moz-range-thumb]:h-[18px] [&::-moz-range-thumb]:w-[18px] [&::-moz-range-thumb]:appearance-none [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-navySurface [&::-moz-range-thumb]:ring [&::-moz-range-thumb]:ring-darkBlue [&::-ms-thumb]:pointer-events-auto [&::-ms-thumb]:h-[18px] [&::-ms-thumb]:w-[18px] [&::-ms-thumb]:appearance-none [&::-ms-thumb]:rounded-full [&::-ms-thumb]:bg-navySurface [&::-ms-thumb]:ring [&::-ms-thumb]:ring-darkBlue [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:h-[18px] [&::-webkit-slider-thumb]:w-[18px] [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-navySurface [&::-webkit-slider-thumb]:ring [&::-webkit-slider-thumb]:ring-darkBlue"
                             :min="allowedMinRange"
                             :max="allowedMaxRange"
                             aria-label="@lang('shop::app.components.range-slider.max-range')"

@@ -72,7 +72,7 @@
                                 <!-- Coupon Form Action Container -->
                                 <div class="flex flex-wrap items-center gap-4 max-md:justify-between">
                                     <div class="flex items-center gap-4 max-md:block">
-                                        <p class="text-sm font-medium text-zinc-500 max-md:text-left max-md:text-xs">
+                                        <p class="text-sm font-medium text-mutedBlue max-md:text-left max-md:text-xs">
                                             @lang('shop::app.checkout.coupon.subtotal')
                                         </p>
 
@@ -108,7 +108,7 @@
                     </span>
 
                     <span
-                        class="icon-cancel cursor-pointer text-xl text-gray-400 transition-colors hover:text-red-500 max-sm:text-base"
+                        class="icon-cancel cursor-pointer text-xl text-mutedBlue transition-colors hover:text-red-500 max-sm:text-base"
                         title="@lang('shop::app.checkout.coupon.remove')"
                         @click="destroyCoupon"
                     >

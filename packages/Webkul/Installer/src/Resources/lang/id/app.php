@@ -31,7 +31,7 @@ return [
                 'manage-stock' => 'Kelola Stok',
                 'meta-description' => 'Meta Deskripsi',
                 'meta-keywords' => 'Meta Kata Kunci',
-                'meta-title' => 'Meta Judul',
+                'meta-title' => 'Rancon LubMart',
                 'name' => 'Nama',
                 'new' => 'Baru',
                 'price' => 'Harga',
@@ -56,8 +56,11 @@ return [
                 'green' => 'Hijau',
                 'l' => 'L',
                 'm' => 'M',
+                'motul' => 'Motul',
+                'pristine' => 'Pristine',
                 'red' => 'Merah',
                 's' => 'S',
+                'shell' => 'Shell',
                 'white' => 'Putih',
                 'xl' => 'XL',
                 'yellow' => 'Kuning',
@@ -134,8 +137,8 @@ return [
             'channels' => [
                 'meta-description' => 'Deskripsi meta toko demo',
                 'meta-keywords' => 'Kata kunci meta toko demo',
-                'meta-title' => 'Toko demo',
-                'name' => 'Default',
+                'meta-title' => 'Rancon LubMart',
+                'name' => 'Rancon LubMart',
             ],
 
             'currencies' => [
@@ -806,7 +809,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => 'Admin',
-                'bagisto' => 'Bagisto',
+                'bagisto' => 'Rancon LubMart',
                 'confirm-password' => 'Konfirmasi Kata Sandi',
                 'email' => 'Email',
                 'email-address' => 'admin@example.com',
@@ -821,7 +824,7 @@ return [
                 'application-name' => 'Nama Aplikasi',
                 'argentine-peso' => 'Peso Argentina (ARS)',
                 'australian-dollar' => 'Dolar Australia (AUD)',
-                'bagisto' => 'Bagisto',
+                'bagisto' => 'Rancon LubMart',
                 'bangladeshi-taka' => 'Taka Bangladesh (BDT)',
                 'bahraini-dinar' => 'Dinar Bahrain (BHD)',
                 'brazilian-real' => 'Real Brasil (BRL)',
@@ -974,7 +977,7 @@ return [
 
             'arabic' => 'Arab',
             'back' => 'Kembali',
-            'bagisto' => 'Bagisto',
+            'bagisto' => 'Rancon LubMart',
             'bagisto-info' => 'Proyek Komunitas oleh',
             'bagisto-logo' => 'Logo Bagisto',
             'bengali' => 'Bengali',

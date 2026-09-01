@@ -35,7 +35,7 @@
 
             <a
                 href="{{ route('shop.customers.account.profile.edit') }}"
-                class="secondary-button border-zinc-200 px-5 py-3 font-normal max-md:rounded-lg max-md:py-2 max-sm:py-1.5 max-sm:text-sm"
+                class="secondary-button border-navyBorder px-5 py-3 font-normal max-md:rounded-lg max-md:py-2 max-sm:py-1.5 max-sm:text-sm"
             >
                 @lang('shop::app.customers.account.profile.index.edit')
             </a>
@@ -47,12 +47,12 @@
         <div class="grid grid-cols-1 mt-8 gap-y-6 max-md:mt-5 max-sm:gap-y-4">
             {!! view_render_event('bagisto.shop.customers.account.profile.first_name.before') !!}
 
-            <div class="grid w-full grid-cols-[2fr_3fr] border-b border-zinc-200 px-8 py-3 max-md:px-0">
+            <div class="grid w-full grid-cols-[2fr_3fr] border-b border-navyBorder px-8 py-3 max-md:px-0">
                 <p class="text-sm font-medium">
                     @lang('shop::app.customers.account.profile.index.first-name')
                 </p>
 
-                <p class="text-sm font-medium text-zinc-500" v-pre>
+                <p class="text-sm font-medium text-mutedBlue" v-pre>
                     {{ $customer->first_name }}
                 </p>
             </div>
@@ -61,12 +61,12 @@
 
             {!! view_render_event('bagisto.shop.customers.account.profile.last_name.before') !!}
 
-            <div class="grid w-full grid-cols-[2fr_3fr] border-b border-zinc-200 px-8 py-3 max-md:px-0">
+            <div class="grid w-full grid-cols-[2fr_3fr] border-b border-navyBorder px-8 py-3 max-md:px-0">
                 <p class="text-sm font-medium">
                     @lang('shop::app.customers.account.profile.index.last-name')
                 </p>
 
-                <p class="text-sm font-medium text-zinc-500" v-pre>
+                <p class="text-sm font-medium text-mutedBlue" v-pre>
                     {{ $customer->last_name }}
                 </p>
             </div>
@@ -75,13 +75,13 @@
 
             {!! view_render_event('bagisto.shop.customers.account.profile.gender.before') !!}
 
-            <div class="grid w-full grid-cols-[2fr_3fr] border-b border-zinc-200 px-8 py-3 max-md:px-0">
+            <div class="grid w-full grid-cols-[2fr_3fr] border-b border-navyBorder px-8 py-3 max-md:px-0">
                 <p class="text-sm font-medium">
                     @lang('shop::app.customers.account.profile.index.gender')
                 </p>
 
                 <p
-                    class="text-sm font-medium text-zinc-500"
+                    class="text-sm font-medium text-mutedBlue"
                     v-pre
                 >
                     {{ $customer->gender ?? '-'}}
@@ -92,13 +92,13 @@
 
             {!! view_render_event('bagisto.shop.customers.account.profile.date_of_birth.before') !!}
 
-            <div class="grid w-full grid-cols-[2fr_3fr] border-b border-zinc-200 px-8 py-3 max-md:px-0">
+            <div class="grid w-full grid-cols-[2fr_3fr] border-b border-navyBorder px-8 py-3 max-md:px-0">
                 <p class="text-sm font-medium">
                     @lang('shop::app.customers.account.profile.index.dob')
                 </p>
 
                 <p
-                    class="text-sm font-medium text-zinc-500"
+                    class="text-sm font-medium text-mutedBlue"
                     v-pre
                 >
                     {{ $customer->date_of_birth ?? '-' }}
@@ -109,13 +109,13 @@
 
             {!! view_render_event('bagisto.shop.customers.account.profile.email.before') !!}
 
-            <div class="grid w-full grid-cols-[2fr_3fr] border-b border-zinc-200 px-8 py-3 max-md:px-0">
+            <div class="grid w-full grid-cols-[2fr_3fr] border-b border-navyBorder px-8 py-3 max-md:px-0">
                 <p class="text-sm font-medium">
                     @lang('shop::app.customers.account.profile.index.email')
                 </p>
 
                 <p
-                    class="text-sm font-medium no-underline text-zinc-500"
+                    class="text-sm font-medium no-underline text-mutedBlue"
                     v-pre
                 >
                     {{ $customer->email }}

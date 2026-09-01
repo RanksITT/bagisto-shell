@@ -43,12 +43,12 @@
         {!! view_render_event('bagisto.shop.customers.sign-up.logo.before') !!}
 
         <!-- Form Container -->
-		<div class="m-auto w-full max-w-[870px] rounded-xl border border-zinc-200 p-16 px-[90px] max-md:px-8 max-md:py-8 max-sm:border-none max-sm:p-0">
+		<div class="m-auto w-full max-w-[870px] rounded-xl border border-navyBorder p-16 px-[90px] max-md:px-8 max-md:py-8 max-sm:border-none max-sm:p-0">
 			<h1 class="font-dmserif text-4xl max-md:text-3xl max-sm:text-xl">
                 @lang('shop::app.customers.signup-form.page-title')
             </h1>
 
-			<p class="mt-4 text-xl text-zinc-500 max-sm:mt-0 max-sm:text-sm">
+			<p class="mt-4 text-xl text-mutedBlue max-sm:mt-0 max-sm:text-sm">
                 @lang('shop::app.customers.signup-form.form-signup-text')
             </p>
 
@@ -192,12 +192,12 @@
                             />
 
                             <label
-                                class="icon-uncheck peer-checked:icon-check-box cursor-pointer text-2xl text-navyBlue peer-checked:text-navyBlue"
+                                class="icon-uncheck peer-checked:icon-check-box cursor-pointer text-2xl text-darkBlue peer-checked:text-darkBlue"
                                 for="is-subscribed"
                             ></label>
 
                             <label
-                                class="cursor-pointer select-none text-base text-zinc-500 max-sm:text-sm ltr:pl-0 rtl:pr-0"
+                                class="cursor-pointer select-none text-base text-mutedBlue max-sm:text-sm ltr:pl-0 rtl:pr-0"
                                 for="is-subscribed"
                             >
                                 @lang('shop::app.customers.signup-form.subscribe-to-newsletter')
@@ -222,7 +222,7 @@
                             />
 
                             <label
-                                class="cursor-pointer select-none text-base text-zinc-500 max-sm:text-sm"
+                                class="cursor-pointer select-none text-base text-mutedBlue max-sm:text-sm"
                                 for="agreement"
                                 v-pre
                             >
@@ -231,7 +231,7 @@
 
                             @if (core()->getConfigData('general.gdpr.agreement.agreement_content'))
                                 <span
-                                    class="cursor-pointer text-base text-navyBlue max-sm:text-sm"
+                                    class="cursor-pointer text-base text-darkBlue max-sm:text-sm"
                                     @click="$refs.termsModal.open()"
                                 >
                                     @lang('shop::app.customers.signup-form.click-here')
@@ -261,10 +261,10 @@
                 </x-shop::form>
             </div>
 
-			<p class="mt-5 font-medium text-zinc-500 max-sm:text-center max-sm:text-sm">
+			<p class="mt-5 font-medium text-mutedBlue max-sm:text-center max-sm:text-sm">
                 @lang('shop::app.customers.signup-form.account-exists')
 
-                <a class="text-navyBlue"
+                <a class="text-darkBlue"
                     href="{{ route('shop.customer.session.index') }}"
                 >
                     @lang('shop::app.customers.signup-form.sign-in-button')
@@ -272,7 +272,7 @@
             </p>
 		</div>
 
-        <p class="mb-4 mt-8 text-center text-xs text-zinc-500">
+        <p class="mb-4 mt-8 text-center text-xs text-mutedBlue">
             @lang('shop::app.customers.signup-form.footer', ['current_year'=> date('Y') ])
         </p>
 	</div>

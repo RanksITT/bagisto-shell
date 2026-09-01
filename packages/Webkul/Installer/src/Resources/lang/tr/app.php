@@ -31,7 +31,7 @@ return [
                 'manage-stock' => 'Stoğu Yönet',
                 'meta-description' => 'Meta Açıklama',
                 'meta-keywords' => 'Meta Anahtar Kelimeler',
-                'meta-title' => 'Meta Başlık',
+                'meta-title' => 'Rancon LubMart',
                 'name' => 'Ad',
                 'new' => 'Yeni',
                 'price' => 'Fiyat',
@@ -56,8 +56,11 @@ return [
                 'green' => 'Yeşil',
                 'l' => 'L',
                 'm' => 'M',
+                'motul' => 'Motul',
+                'pristine' => 'Pristine',
                 'red' => 'Kırmızı',
                 's' => 'S',
+                'shell' => 'Shell',
                 'white' => 'Beyaz',
                 'xl' => 'XL',
                 'yellow' => 'Sarı',
@@ -134,8 +137,8 @@ return [
             'channels' => [
                 'meta-description' => 'Demo Mağaza Meta Açıklama',
                 'meta-keywords' => 'Demo Mağaza Meta Anahtar Kelimeler',
-                'meta-title' => 'Demo Mağaza',
-                'name' => 'Varsayılan',
+                'meta-title' => 'Rancon LubMart',
+                'name' => 'Rancon LubMart',
             ],
 
             'currencies' => [
@@ -806,7 +809,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => 'Yönetici',
-                'bagisto' => 'Bagisto',
+                'bagisto' => 'Rancon LubMart',
                 'confirm-password' => 'Şifreyi Onayla',
                 'email' => 'E-posta',
                 'email-address' => 'admin@ornek.com',
@@ -821,7 +824,7 @@ return [
                 'application-name' => 'Uygulama Adı',
                 'argentine-peso' => 'Arjantin Pezosu (ARS)',
                 'australian-dollar' => 'Avustralya Doları (AUD)',
-                'bagisto' => 'Bagisto',
+                'bagisto' => 'Rancon LubMart',
                 'bangladeshi-taka' => 'Bangladeş Takası (BDT)',
                 'bahraini-dinar' => 'Bahreyn Dinarı (BHD)',
                 'brazilian-real' => 'Brezilya Reali (BRL)',
@@ -974,7 +977,7 @@ return [
 
             'arabic' => 'Arapça',
             'back' => 'Geri',
-            'bagisto' => 'Bagisto',
+            'bagisto' => 'Rancon LubMart',
             'bagisto-info' => 'Webkul tarafından geliştirilen bir Topluluk Projesi',
             'bagisto-logo' => 'Bagisto Logosu',
             'bengali' => 'Bengalce',

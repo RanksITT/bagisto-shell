@@ -6,7 +6,7 @@
 @for ($i = 0;  $i < 10; $i++)
     @if (! $isMultiRow)
         <div
-            class="row grid gap-2.5 border-b border-gray-300 px-4 py-4 text-gray-600"
+            class="row grid gap-2.5 border-b border-navyBorder px-4 py-4 text-mutedBlue"
             style="grid-template-columns: repeat({{ (int) $columns }}, minmax(0, 1fr))"
         >
             @for ($j = 0;  $j < $columns; $j++)
@@ -17,7 +17,7 @@
             @endfor
         </div>
     @else
-        <div class="row grid grid-cols-[2fr_1fr_1fr] gap-2.5 border-b border-gray-300 px-4 py-2.5 text-gray-600">
+        <div class="row grid grid-cols-[2fr_1fr_1fr] gap-2.5 border-b border-navyBorder px-4 py-2.5 text-mutedBlue">
             <div class="flex gap-2.5">
                 <div class="shimmer h-6 w-6"></div>
 

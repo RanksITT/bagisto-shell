@@ -36,10 +36,10 @@
                     class="fixed inset-0 z-20 transform overflow-y-auto transition" v-show="isOpen"
                 >
                     <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-                        <div class="absolute left-1/2 top-1/2 z-[999] w-full max-w-[475px] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-xl bg-white p-5 max-md:w-[90%] max-sm:p-4">
+                        <div class="absolute left-1/2 top-1/2 z-[999] w-full max-w-[475px] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-xl bg-navySurface p-5 max-md:w-[90%] max-sm:p-4">
                             <div class="flex gap-2.5">
                                 <div>
-                                    <span class="flex rounded-full border border-gray-300 p-2.5">
+                                    <span class="flex rounded-full border border-navyBorder p-2.5">
                                         <i class="icon-error text-3xl max-sm:text-xl"></i>
                                     </span>
                                 </div>
@@ -49,7 +49,7 @@
                                         @{{ title }}
                                     </div>
 
-                                    <div class="pb-5 pt-1.5 text-left text-sm text-gray-500">
+                                    <div class="pb-5 pt-1.5 text-left text-sm text-mutedBlue">
                                         @{{ message }}
                                     </div>
 

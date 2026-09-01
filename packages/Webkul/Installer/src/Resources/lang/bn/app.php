@@ -31,7 +31,7 @@ return [
                 'manage-stock' => 'স্টক পরিচালনা করুন',
                 'meta-description' => 'মেটা বর্ণনা',
                 'meta-keywords' => 'মেটা কীওয়ার্ড',
-                'meta-title' => 'মেটা শিরোনাম',
+                'meta-title' => 'Rancon LubMart',
                 'name' => 'name',
                 'new' => 'নতুন',
                 'price' => 'মূল্য',
@@ -56,8 +56,11 @@ return [
                 'green' => 'সবুজ',
                 'l' => 'L',
                 'm' => 'M',
+                'motul' => 'Motul',
+                'pristine' => 'Pristine',
                 'red' => 'লাল',
                 's' => 'S',
+                'shell' => 'Shell',
                 'white' => 'সাদা',
                 'xl' => 'XL',
                 'yellow' => 'হলুদ',
@@ -134,8 +137,8 @@ return [
             'channels' => [
                 'meta-description' => 'ডেমো স্টোর মেটা বর্ণনা',
                 'meta-keywords' => 'ডেমো স্টোর মেটা কীওয়ার্ড',
-                'meta-title' => 'ডেমো স্টোর',
-                'name' => 'ডিফল্ট',
+                'meta-title' => 'Rancon LubMart',
+                'name' => 'Rancon LubMart',
             ],
 
             'currencies' => [

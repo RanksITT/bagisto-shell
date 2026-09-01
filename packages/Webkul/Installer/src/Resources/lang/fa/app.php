@@ -31,7 +31,7 @@ return [
                 'manage-stock' => 'مدیریت موجودی',
                 'meta-description' => 'توضیحات متا',
                 'meta-keywords' => 'کلمات کلیدی متا',
-                'meta-title' => 'عنوان متا',
+                'meta-title' => 'Rancon LubMart',
                 'name' => 'نام',
                 'new' => 'جدید',
                 'price' => 'قیمت',
@@ -56,8 +56,11 @@ return [
                 'green' => 'سبز',
                 'l' => 'L',
                 'm' => 'M',
+                'motul' => 'Motul',
+                'pristine' => 'Pristine',
                 'red' => 'قرمز',
                 's' => 'S',
+                'shell' => 'Shell',
                 'white' => 'سفید',
                 'xl' => 'XL',
                 'yellow' => 'زرد',
@@ -134,8 +137,8 @@ return [
             'channels' => [
                 'meta-description' => 'فروشگاه نمونه توضیحات متا',
                 'meta-keywords' => 'فروشگاه نمونه کلمات کلیدی متا',
-                'meta-title' => 'فروشگاه نمونه',
-                'name' => 'پیش‌فرض',
+                'meta-title' => 'Rancon LubMart',
+                'name' => 'Rancon LubMart',
             ],
 
             'currencies' => [
@@ -806,7 +809,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => 'مدیر',
-                'bagisto' => 'Bagisto',
+                'bagisto' => 'Rancon LubMart',
                 'confirm-password' => 'تأیید رمز عبور',
                 'email' => 'ایمیل',
                 'email-address' => 'admin@example.com',
@@ -821,7 +824,7 @@ return [
                 'application-name' => 'نام برنامه',
                 'argentine-peso' => 'پزوی آرژانتین (ARS)',
                 'australian-dollar' => 'دلار استرالیا (AUD)',
-                'bagisto' => 'Bagisto',
+                'bagisto' => 'Rancon LubMart',
                 'bangladeshi-taka' => 'تاکای بنگلادش (BDT)',
                 'bahraini-dinar' => 'دینار بحرین (BHD)',
                 'brazilian-real' => 'رئال برزیل (BRL)',
@@ -974,7 +977,7 @@ return [
 
             'arabic' => 'عربی',
             'back' => 'بازگشت',
-            'bagisto' => 'Bagisto',
+            'bagisto' => 'Rancon LubMart',
             'bagisto-info' => 'یک پروژه جامعه‌ای توسط',
             'bagisto-logo' => 'لوگوی Bagisto',
             'bengali' => 'بنگالی',

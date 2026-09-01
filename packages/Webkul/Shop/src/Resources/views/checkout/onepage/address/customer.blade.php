@@ -40,7 +40,7 @@
                         <!-- Saved Customer Addresses Cards -->
                         <div class="mb-2 grid grid-cols-2 gap-5 max-1060:grid-cols-[1fr] max-lg:grid-cols-2 max-md:mt-2 max-md:grid-cols-1">
                             <div
-                                class="relative max-w-[414px] cursor-pointer select-none rounded-xl border border-zinc-200 p-0 max-md:flex-wrap max-md:rounded-lg"
+                                class="relative max-w-[414px] cursor-pointer select-none rounded-xl border border-navyBorder p-0 max-md:flex-wrap max-md:rounded-lg"
                                 v-for="address in customerSavedAddresses.billing"
                             >
                                 <!-- Actions -->
@@ -74,7 +74,7 @@
                                     class="block cursor-pointer rounded-xl p-5 max-sm:rounded-lg"
                                     :for="`billing_address_id_${address.id}`"
                                 >
-                                    <span class="icon-checkout-address text-6xl text-navyBlue max-sm:text-5xl"></span>
+                                    <span class="icon-checkout-address text-6xl text-darkBlue max-sm:text-5xl"></span>
 
                                     <div class="flex items-center justify-between">
                                         <p class="text-base font-medium">
@@ -86,7 +86,7 @@
                                         </p>
                                     </div>
 
-                                    <p class="mt-6 text-sm text-zinc-500 max-md:mt-2 max-sm:mt-0">
+                                    <p class="mt-6 text-sm text-mutedBlue max-md:mt-2 max-sm:mt-0">
                                         <template v-if="address.address">
                                             @{{ address.address.join(', ') }},
                                         </template>
@@ -100,7 +100,7 @@
 
                             <!-- New Address Card -->
                             <div
-                                class="flex max-w-[414px] cursor-pointer items-center justify-center rounded-xl border border-zinc-200 p-5 max-md:flex-wrap max-md:rounded-lg"
+                                class="flex max-w-[414px] cursor-pointer items-center justify-center rounded-xl border border-navyBorder p-5 max-md:flex-wrap max-md:rounded-lg"
                                 @click="activeAddressForm = 'billing'"
                                 v-if="! cart.billing_address"
                             >
@@ -110,7 +110,7 @@
                                     tabindex="0"
                                 >
                                     <span
-                                        class="icon-plus rounded-full border border-black p-2.5 text-3xl max-sm:p-2"
+                                        class="icon-plus rounded-full border border-darkBlue p-2.5 text-3xl max-sm:p-2"
                                         role="presentation"
                                     ></span>
 
@@ -137,7 +137,7 @@
                                 />
 
                                 <label
-                                    class="cursor-pointer select-none text-base text-zinc-500 max-md:text-sm max-sm:text-xs ltr:pl-0 rtl:pr-0"
+                                    class="cursor-pointer select-none text-base text-mutedBlue max-md:text-sm max-sm:text-xs ltr:pl-0 rtl:pr-0"
                                     for="use_for_shipping"
                                 >
                                     @lang('shop::app.checkout.onepage.address.same-as-billing')
@@ -160,7 +160,7 @@
                                 <!-- Saved Customer Addresses Cards -->
                                 <div class="mb-2 grid grid-cols-2 gap-5 max-1060:grid-cols-[1fr] max-lg:grid-cols-2 max-md:mt-4 max-md:grid-cols-1">
                                     <div
-                                        class="relative max-w-[414px] cursor-pointer select-none rounded-xl border border-zinc-200 p-0 max-md:flex-wrap max-md:rounded-lg"
+                                        class="relative max-w-[414px] cursor-pointer select-none rounded-xl border border-navyBorder p-0 max-md:flex-wrap max-md:rounded-lg"
                                         v-for="address in customerSavedAddresses.shipping"
                                     >
                                         <!-- Actions -->
@@ -194,7 +194,7 @@
                                             class="block cursor-pointer rounded-xl p-5 max-md:rounded-lg"
                                             :for="`shipping_address_id_${address.id}`"
                                         >
-                                            <span class="icon-checkout-address text-6xl text-navyBlue max-sm:text-5xl"></span>
+                                            <span class="icon-checkout-address text-6xl text-darkBlue max-sm:text-5xl"></span>
 
                                             <div class="flex items-center justify-between">
                                                 <p class="text-base font-medium">
@@ -206,7 +206,7 @@
                                                 </p>
                                             </div>
 
-                                            <p class="mt-6 text-sm text-zinc-500 max-md:mt-2 max-sm:mt-0">
+                                            <p class="mt-6 text-sm text-mutedBlue max-md:mt-2 max-sm:mt-0">
                                                 <template v-if="address.address">
                                                     @{{ address.address.join(', ') }},
                                                 </template>
@@ -220,7 +220,7 @@
 
                                     <!-- New Address Card -->
                                     <div
-                                        class="flex max-w-[414px] cursor-pointer items-center justify-center rounded-xl border border-zinc-200 p-5 max-md:flex-wrap max-md:rounded-lg"
+                                        class="flex max-w-[414px] cursor-pointer items-center justify-center rounded-xl border border-navyBorder p-5 max-md:flex-wrap max-md:rounded-lg"
                                         @click="selectedAddressForEdit = null; activeAddressForm = 'shipping'"
                                         v-if="! cart.shipping_address"
                                     >
@@ -230,7 +230,7 @@
                                             tabindex="0"
                                         >
                                             <span
-                                                class="icon-plus rounded-full border border-black p-2.5 text-3xl max-sm:p-2"
+                                                class="icon-plus rounded-full border border-darkBlue p-2.5 text-3xl max-sm:p-2"
                                                 role="presentation"
                                             ></span>
 
@@ -305,7 +305,7 @@
                             />
 
                             <label
-                                class="cursor-pointer select-none text-base text-zinc-500 max-md:text-sm max-sm:text-xs ltr:pl-0 rtl:pr-0"
+                                class="cursor-pointer select-none text-base text-mutedBlue max-md:text-sm max-sm:text-xs ltr:pl-0 rtl:pr-0"
                                 for="save_address"
                             >
                                 @lang('shop::app.checkout.onepage.address.save-address')

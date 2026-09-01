@@ -28,12 +28,12 @@
                     />
 
                     <span
-                        class="icon-uncheck peer-checked:icon-check-box cursor-pointer text-2xl leading-tight peer-checked:text-navyBlue"
+                        class="icon-uncheck peer-checked:icon-check-box cursor-pointer text-2xl leading-tight peer-checked:text-darkBlue"
                     >
                     </span>
 
                     <span class="block">
-                        <span class="text-zinc-500 max-md:text-xs">
+                        <span class="text-mutedBlue max-md:text-xs">
                             @lang('shop::app.customers.account.rma.terms.terms')
                         </span>
                         
@@ -68,10 +68,10 @@
             <!-- Modal Content -->
             <x-slot:content>
                 <div 
-                    class="overflow-y-auto rounded border border-gray-200 bg-gray-50 p-4" 
+                    class="overflow-y-auto rounded border border-navyBorder bg-navySurface p-4" 
                     style="min-height: 400px; max-height: 500px;"
                 >
-                    <div class="prose prose-sm max-w-none text-gray-700">
+                    <div class="prose prose-sm max-w-none text-mutedBlue">
                         {{ core()->getConfigData('sales.rma.setting.return_policy') }}
                     </div>
                 </div>

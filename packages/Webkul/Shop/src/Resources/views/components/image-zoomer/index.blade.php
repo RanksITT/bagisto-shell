@@ -7,7 +7,7 @@
     >
         <transition
             tag="div"
-            class="bg-white"
+            class="bg-photoBackdrop"
             name="modal-content"
             enter-class="duration-300 ease-out"
             enter-from-class="translate-y-4 opacity-0 md:translate-y-0 md:scale-95"
@@ -110,9 +110,9 @@
                 <div class="mb-4 flex justify-center gap-x-2">
                     <template v-for="(attachment, index) in attachments">
                         <img
-                            class="h-16 w-16 transform cursor-pointer rounded-md border border-navyBlue border-transparent object-cover transition-transform hover:!border-navyBlue"
+                            class="h-16 w-16 transform cursor-pointer rounded-md border border-darkBlue border-transparent object-cover transition-transform hover:!border-darkBlue"
                             :class="{
-                                '!border-navyBlue': currentIndex === index + 1,
+                                '!border-darkBlue': currentIndex === index + 1,
                             }"
                             :src="attachment.url"
                             :alt="attachment.alt"
@@ -122,9 +122,9 @@
                         />
 
                         <video
-                            class="h-16 w-16 transform cursor-pointer rounded-md border border-navyBlue border-transparent object-cover transition-transform hover:!border-navyBlue"
+                            class="h-16 w-16 transform cursor-pointer rounded-md border border-darkBlue border-transparent object-cover transition-transform hover:!border-darkBlue"
                             :class="{
-                                '!border-navyBlue': currentIndex === index + 1,
+                                '!border-darkBlue': currentIndex === index + 1,
                             }"
                             :src="attachment.url"
                             :key="index"

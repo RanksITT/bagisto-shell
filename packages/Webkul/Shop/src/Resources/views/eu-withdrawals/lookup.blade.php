@@ -4,12 +4,12 @@
     </x-slot>
 
     <div class="container mt-10 mx-auto max-w-xl px-5 max-md:mt-6 max-md:px-4">
-        <div class="rounded-xl border border-zinc-200 bg-white p-8 max-sm:p-5">
+        <div class="rounded-xl border border-navyBorder bg-navySurface p-8 max-sm:p-5">
             <h1 class="text-2xl font-medium max-md:text-xl">
                 @lang('shop::app.eu_withdrawal.lookup.heading')
             </h1>
 
-            <p class="mt-2 text-sm text-zinc-600">
+            <p class="mt-2 text-sm text-mutedBlue">
                 @lang('shop::app.eu_withdrawal.lookup.intro')
             </p>
 
@@ -31,7 +31,7 @@
                 <div>
                     <label
                         for="order_increment_id"
-                        class="mb-1.5 block text-sm font-medium text-zinc-900"
+                        class="mb-1.5 block text-sm font-medium text-offWhite"
                     >
                         @lang('shop::app.eu_withdrawal.lookup.order_number')
                     </label>
@@ -43,7 +43,7 @@
                         required
                         autocomplete="off"
                         value="{{ old('order_increment_id') }}"
-                        class="block w-full rounded-lg border border-zinc-200 px-4 py-3 text-sm focus:border-navyBlue focus:outline-none focus:ring-1 focus:ring-navyBlue"
+                        class="block w-full rounded-lg border border-navyBorder px-4 py-3 text-sm focus:border-darkBlue focus:outline-none focus:ring-1 focus:ring-darkBlue"
                     >
 
                     @error('order_increment_id')
@@ -54,7 +54,7 @@
                 <div>
                     <label
                         for="email"
-                        class="mb-1.5 block text-sm font-medium text-zinc-900"
+                        class="mb-1.5 block text-sm font-medium text-offWhite"
                     >
                         @lang('shop::app.eu_withdrawal.lookup.email')
                     </label>
@@ -66,7 +66,7 @@
                         required
                         autocomplete="email"
                         value="{{ old('email') }}"
-                        class="block w-full rounded-lg border border-zinc-200 px-4 py-3 text-sm focus:border-navyBlue focus:outline-none focus:ring-1 focus:ring-navyBlue"
+                        class="block w-full rounded-lg border border-navyBorder px-4 py-3 text-sm focus:border-darkBlue focus:outline-none focus:ring-1 focus:ring-darkBlue"
                     >
                     
                     @error('email')
@@ -83,7 +83,7 @@
             </form>
         </div>
 
-        <p class="mt-6 text-center text-xs text-zinc-500">
+        <p class="mt-6 text-center text-xs text-mutedBlue">
             @lang('shop::app.eu_withdrawal.lookup.legal_note')
         </p>
     </div>

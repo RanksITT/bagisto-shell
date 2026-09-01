@@ -82,7 +82,7 @@
                                         </p>
                                     </div>
 
-                                    <p class="w-full mt-3 border border-zinc-200"></p>
+                                    <p class="w-full mt-3 border border-navyBorder"></p>
 
                                     {!! view_render_event('bagisto.shop.components.layouts.header.mobile.index.customers_action.before') !!}
 
@@ -91,14 +91,14 @@
 
                                     <a
                                         href="{{ route('shop.customer.session.create') }}"
-                                        class="block py-4 m-0 mx-auto text-base font-medium text-center text-white cursor-pointer w-max rounded-2xl bg-navyBlue px-7 ltr:ml-0 rtl:mr-0"
+                                        class="block py-4 m-0 mx-auto text-base font-medium text-center text-white cursor-pointer w-max rounded-2xl bg-darkBlue px-7 ltr:ml-0 rtl:mr-0"
                                     >
                                             @lang('shop::app.components.layouts.header.mobile.sign-in')
                                         </a>
 
                                     <a
                                         href="{{ route('shop.customers.register.index') }}"
-                                        class="m-0 mx-auto block w-max cursor-pointer rounded-2xl border-2 border-navyBlue bg-white px-7 py-3.5 text-center text-base font-medium text-navyBlue ltr:ml-0 rtl:mr-0"
+                                        class="m-0 mx-auto block w-max cursor-pointer rounded-2xl border-2 border-darkBlue bg-navySurface px-7 py-3.5 text-center text-base font-medium text-darkBlue ltr:ml-0 rtl:mr-0"
                                     >
                                             @lang('shop::app.components.layouts.header.mobile.sign-up')
                                         </a>
@@ -124,7 +124,7 @@
                                             </p>
                                         </div>
 
-                                        <p class="w-full mt-3 border border-zinc-200"></p>
+                                        <p class="w-full mt-3 border border-navyBorder"></p>
 
                                         <div class="mt-2.5 grid gap-1 pb-2.5">
                                             {!! view_render_event('bagisto.shop.components.layouts.header.mobile.index.profile_dropdown.links.before') !!}
@@ -217,7 +217,7 @@
 
             <input
                 type="text"
-                class="block w-full rounded-xl border border-['#E3E3E3'] px-11 py-3.5 text-sm font-medium text-gray-900 max-md:rounded-lg max-md:px-10 max-md:py-3 max-md:font-normal max-sm:text-xs"
+                class="block w-full rounded-xl border border-['#E3E3E3'] px-11 py-3.5 text-sm font-medium text-offWhite max-md:rounded-lg max-md:px-10 max-md:py-3 max-md:font-normal max-sm:text-xs"
                 name="query"
                 value="{{ request('query') }}"
                 placeholder="@lang('shop::app.components.layouts.header.mobile.search-text')"
@@ -259,8 +259,8 @@
 
                 <x-slot:content class="!p-0">
                     <!-- Account Profile Hero Section -->
-                    <div class="p-4 border-b border-zinc-200">
-                        <div class="grid grid-cols-[auto_1fr] items-center gap-4 rounded-xl border border-zinc-200 p-2.5">
+                    <div class="p-4 border-b border-navyBorder">
+                        <div class="grid grid-cols-[auto_1fr] items-center gap-4 rounded-xl border border-navyBorder p-2.5">
                             <div>
                                 <img
                                 src="{{ auth()->user()?->image_url ??  bagisto_asset('images/user-placeholder.png') }}"
@@ -286,7 +286,7 @@
                                 >
                                     <p class="text-2xl break-all font-mediums max-md:text-xl">Hello! {{ auth()->user()?->first_name }}</p>
 
-                                    <p class="no-underline text-zinc-500 max-md:text-sm">{{ auth()->user()?->email }}</p>
+                                    <p class="no-underline text-mutedBlue max-md:text-sm">{{ auth()->user()?->email }}</p>
                                 </div>
                             @endauth
                         </div>
@@ -303,7 +303,7 @@
                 <x-slot:footer>
                     <!-- Localization & Currency Section -->
                 @if(core()->getCurrentChannel()->locales()->count() > 1 || core()->getCurrentChannel()->currencies()->count() > 1 )
-                                    <div class="fixed bottom-0 z-10 grid w-full max-w-full grid-cols-[1fr_auto_1fr] items-center justify-items-center border-t border-zinc-200 bg-white px-5 ltr:left-0 rtl:right-0">
+                                    <div class="fixed bottom-0 z-10 grid w-full max-w-full grid-cols-[1fr_auto_1fr] items-center justify-items-center border-t border-navyBorder bg-navySurface px-5 ltr:left-0 rtl:right-0">
                                         <!-- Filter Drawer -->
                                         <x-shop::drawer
                                             position="bottom"
@@ -341,7 +341,7 @@
                                         </x-shop::drawer>
 
                                         <!-- Seperator -->
-                                        <span class="h-5 w-0.5 bg-zinc-200"></span>
+                                        <span class="h-5 w-0.5 bg-navySurfaceHover"></span>
 
                                         <!-- Sort Drawer -->
                                         <x-shop::drawer
@@ -418,7 +418,7 @@
                             :class="{'mb-2': category.children && category.children.length}"
                         >
                         <div class="flex items-center justify-between py-2 transition-colors duration-200 cursor-pointer">
-                            <a :href="category.url" class="text-base font-medium text-black">
+                            <a :href="category.url" class="text-base font-medium text-offWhite">
                                 @{{ category.name }}
                             </a>
                         </div>
@@ -453,14 +453,14 @@
                     class="flex-shrink-0 w-full h-full"
                     v-if="currentViewLevel === 'third'"
                 >
-                <div class="px-6 py-4 border-b border-gray-200">
+                <div class="px-6 py-4 border-b border-navyBorder">
                         <button
                             @click="goBackToMainView"
                             class="flex items-center justify-center gap-2 focus:outline-none"
                             aria-label="Go back"
                         >
                         <span class="text-lg icon-arrow-left rtl:icon-arrow-right"></span>
-                        <div class="text-base font-medium text-black">
+                        <div class="text-base font-medium text-offWhite">
                             @lang('shop::app.components.layouts.header.mobile.back-button')
                         </div>
                     </button>

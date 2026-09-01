@@ -5,7 +5,7 @@ return [
         'forgot-password' => [
             'already-sent' => 'E-mailul de resetare a parolei a fost deja trimis.',
             'back' => 'Înapoi la autentificare?',
-            'bagisto' => 'Bagisto',
+            'bagisto' => 'Rancon LubMart',
             'email' => 'E-mail',
             'email-not-exist' => 'Nu putem găsi un utilizator cu această adresă de e-mail.',
             'footer' => '© Drepturi de autor 2010 - :current_year, Webkul Software (Înregistrat în India). Toate drepturile rezervate.',
@@ -19,7 +19,7 @@ return [
 
         'reset-password' => [
             'back-link-title' => 'Înapoi la autentificare',
-            'bagisto' => 'Bagisto',
+            'bagisto' => 'Rancon LubMart',
             'confirm-password' => 'Confirmă parola',
             'email' => 'E-mail înregistrat',
             'footer' => '© Drepturi de autor 2010 - :current_year, Webkul Software (Înregistrat în India). Toate drepturile rezervate.',
@@ -29,7 +29,7 @@ return [
         ],
 
         'login-form' => [
-            'bagisto' => 'Bagisto',
+            'bagisto' => 'Rancon LubMart',
             'button-title' => 'Autentificare',
             'create-your-account' => 'Creează-ți contul',
             'email' => 'E-mail',
@@ -49,7 +49,7 @@ return [
 
         'signup-form' => [
             'account-exists' => 'Aveți deja un cont?',
-            'bagisto' => 'Bagisto',
+            'bagisto' => 'Rancon LubMart',
             'button-title' => 'Înregistrare',
             'click-here' => 'Click aici',
             'confirm-pass' => 'Confirmă parola',
@@ -564,7 +564,7 @@ return [
                     'bottom' => [
                         'all' => 'Toate',
                         'back-button' => 'Înapoi la meniul principal',
-                        'bagisto' => 'Bagisto',
+                        'bagisto' => 'Rancon LubMart',
                         'categories' => 'Categorii',
                         'compare' => 'Comparare',
                         'dropdown-text' => 'Gestionează coșul, comenzile și lista de dorințe',
@@ -585,7 +585,7 @@ return [
                 'mobile' => [
                     'account' => 'Cont',
                     'back-button' => 'Înapoi la meniul principal',
-                    'bagisto' => 'Bagisto',
+                    'bagisto' => 'Rancon LubMart',
                     'compare' => 'Comparare',
                     'currencies' => 'Monede',
                     'dropdown-text' => 'Gestionează coșul, comenzile și lista de dorințe',
@@ -1089,7 +1089,7 @@ return [
             'suspended-account-message' => 'Contul dvs. a fost suspendat.',
 
             'index' => [
-                'bagisto' => 'Bagisto',
+                'bagisto' => 'Rancon LubMart',
                 'cart' => 'Coș de cumpărături',
                 'continue-shopping' => 'Continuă cumpărăturile',
                 'empty-product' => 'Nu aveți niciun produs în coș.',

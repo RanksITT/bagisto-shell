@@ -31,7 +31,7 @@ return [
                 'manage-stock' => '庫存管理',
                 'meta-description' => '元描述',
                 'meta-keywords' => '元關鍵詞',
-                'meta-title' => '元標題',
+                'meta-title' => 'Rancon LubMart',
                 'name' => '名稱',
                 'new' => '新品',
                 'price' => '價格',
@@ -56,8 +56,11 @@ return [
                 'green' => '綠色',
                 'l' => 'L',
                 'm' => 'M',
+                'motul' => 'Motul',
+                'pristine' => 'Pristine',
                 'red' => '紅色',
                 's' => 'S',
+                'shell' => 'Shell',
                 'white' => '白色',
                 'xl' => 'XL',
                 'yellow' => '黃色',
@@ -134,8 +137,8 @@ return [
             'channels' => [
                 'meta-description' => '演示商店元描述',
                 'meta-keywords' => '演示商店元關鍵詞',
-                'meta-title' => '演示商店',
-                'name' => '默認',
+                'meta-title' => 'Rancon LubMart',
+                'name' => 'Rancon LubMart',
             ],
 
             'currencies' => [
@@ -806,7 +809,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => '管理员',
-                'bagisto' => 'Bagisto',
+                'bagisto' => 'Rancon LubMart',
                 'confirm-password' => '确认密码',
                 'email' => '电子邮件',
                 'email-address' => 'admin@example.com',
@@ -821,7 +824,7 @@ return [
                 'application-name' => '应用程序名称',
                 'argentine-peso' => '阿根廷比索 (ARS)',
                 'australian-dollar' => '澳大利亚元 (AUD)',
-                'bagisto' => 'Bagisto',
+                'bagisto' => 'Rancon LubMart',
                 'bangladeshi-taka' => '孟加拉塔卡 (BDT)',
                 'bahraini-dinar' => '巴林第纳尔 (BHD)',
                 'brazilian-real' => '巴西雷亚尔 (BRL)',
@@ -974,7 +977,7 @@ return [
 
             'arabic' => '阿拉伯语',
             'back' => '返回',
-            'bagisto' => 'Bagisto',
+            'bagisto' => 'Rancon LubMart',
             'bagisto-info' => '由 Webkul 社区共同开发的项目',
             'bagisto-logo' => 'Bagisto Logo',
             'bengali' => '孟加拉语',

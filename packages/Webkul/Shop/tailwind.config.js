@@ -30,7 +30,12 @@ module.exports = {
         extend: {
             colors: {
                 navyBlue: "#060C3B",
-                lightOrange: "#F6F2EB",
+                navySurface: "#0F1B44",
+                navySurfaceHover: "#16225C",
+                navyBorder: "#1B2554",
+                offWhite: "#F2F4FF",
+                mutedBlue: "#9AA6D6",
+                photoBackdrop: "#F4F6FB",
                 darkGreen: '#40994A',
                 darkBlue: '#0044F2',
                 darkPink: '#F85156',

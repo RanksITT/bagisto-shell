@@ -31,7 +31,7 @@ return [
                 'manage-stock' => 'Gestionar Stock',
                 'meta-description' => 'Meta Descripció',
                 'meta-keywords' => 'Meta Paraules Clau',
-                'meta-title' => 'Meta Títol',
+                'meta-title' => 'Rancon LubMart',
                 'name' => 'Nom',
                 'new' => 'Nou',
                 'price' => 'Preu',
@@ -56,8 +56,11 @@ return [
                 'green' => 'Verd',
                 'l' => 'L',
                 'm' => 'M',
+                'motul' => 'Motul',
+                'pristine' => 'Pristine',
                 'red' => 'Roig',
                 's' => 'S',
+                'shell' => 'Shell',
                 'white' => 'Blanc',
                 'xl' => 'XL',
                 'yellow' => 'Groc',
@@ -134,8 +137,8 @@ return [
             'channels' => [
                 'meta-description' => 'Descripció de Meta de la Botiga de Demostració',
                 'meta-keywords' => 'Paraules Clau de Meta de la Botiga de Demostració',
-                'meta-title' => 'Botiga de Demostració',
-                'name' => 'Predeterminat',
+                'meta-title' => 'Rancon LubMart',
+                'name' => 'Rancon LubMart',
             ],
 
             'currencies' => [
@@ -806,7 +809,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => 'Administrador',
-                'bagisto' => 'Bagisto',
+                'bagisto' => 'Rancon LubMart',
                 'confirm-password' => 'Confirmar Contrasenya',
                 'email' => 'Correu Electrònic',
                 'email-address' => 'admin@example.com',
@@ -821,7 +824,7 @@ return [
                 'application-name' => 'Nom de l\'Aplicació',
                 'argentine-peso' => 'Pes Argentí (ARS)',
                 'australian-dollar' => 'Dòlar Australià (AUD)',
-                'bagisto' => 'Bagisto',
+                'bagisto' => 'Rancon LubMart',
                 'bangladeshi-taka' => 'Taka de Bangladesh (BDT)',
                 'bahraini-dinar' => 'Dinar bahreïnien (BHD)',
                 'brazilian-real' => 'Real Brasiler (BRL)',
@@ -974,7 +977,7 @@ return [
 
             'arabic' => 'Àrab',
             'back' => 'Enrere',
-            'bagisto' => 'Bagisto',
+            'bagisto' => 'Rancon LubMart',
             'bagisto-info' => 'Un projecte comunitari per',
             'bagisto-logo' => 'Logotip de Bagisto',
             'bengali' => 'Bengalí',

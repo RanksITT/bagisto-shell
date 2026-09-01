@@ -67,6 +67,21 @@ class AttributeOptionTableSeeder extends Seeder
                 'admin_name' => trans('installer::app.seeders.attribute.attribute-options.xl', [], $defaultLocale),
                 'sort_order' => 4,
                 'attribute_id' => 24,
+            ], [
+                'id' => 10,
+                'admin_name' => trans('installer::app.seeders.attribute.attribute-options.shell', [], $defaultLocale),
+                'sort_order' => 1,
+                'attribute_id' => 25,
+            ], [
+                'id' => 11,
+                'admin_name' => trans('installer::app.seeders.attribute.attribute-options.motul', [], $defaultLocale),
+                'sort_order' => 2,
+                'attribute_id' => 25,
+            ], [
+                'id' => 12,
+                'admin_name' => trans('installer::app.seeders.attribute.attribute-options.pristine', [], $defaultLocale),
+                'sort_order' => 3,
+                'attribute_id' => 25,
             ],
         ]);
 
@@ -110,6 +125,18 @@ class AttributeOptionTableSeeder extends Seeder
                     'locale' => $locale,
                     'label' => trans('installer::app.seeders.attribute.attribute-options.xl', [], $locale),
                     'attribute_option_id' => 9,
+                ], [
+                    'locale' => $locale,
+                    'label' => trans('installer::app.seeders.attribute.attribute-options.shell', [], $locale),
+                    'attribute_option_id' => 10,
+                ], [
+                    'locale' => $locale,
+                    'label' => trans('installer::app.seeders.attribute.attribute-options.motul', [], $locale),
+                    'attribute_option_id' => 11,
+                ], [
+                    'locale' => $locale,
+                    'label' => trans('installer::app.seeders.attribute.attribute-options.pristine', [], $locale),
+                    'attribute_option_id' => 12,
                 ],
             ]);
         }

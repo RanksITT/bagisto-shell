@@ -125,7 +125,7 @@
                     :key="index"
                     class="sm:p-2.5 mx-1 h-3 w-3 cursor-pointer rounded-full max-md:h-2 max-md:w-2 max-sm:h-1.5 max-sm:w-1.5
                     p-2 focus:outline-none"
-                    :class="{ 'bg-navyBlue': index === Math.abs(currentIndex), 'opacity-30 bg-gray-500': index !== Math.abs(currentIndex) }"
+                    :class="{ 'bg-darkBlue': index === Math.abs(currentIndex), 'opacity-60 bg-mutedBlue': index !== Math.abs(currentIndex) }"
                     role="button"
                     tabindex="0"
                     :aria-label="'Go to slide ' + (index + 1)"

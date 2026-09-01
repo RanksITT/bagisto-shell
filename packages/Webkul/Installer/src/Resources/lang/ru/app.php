@@ -31,7 +31,7 @@ return [
                 'manage-stock' => 'Управление запасами',
                 'meta-description' => 'Мета-описание',
                 'meta-keywords' => 'Мета-ключевые слова',
-                'meta-title' => 'Мета-заголовок',
+                'meta-title' => 'Rancon LubMart',
                 'name' => 'Название',
                 'new' => 'Новый',
                 'price' => 'Цена',
@@ -56,8 +56,11 @@ return [
                 'green' => 'Зеленый',
                 'l' => 'L',
                 'm' => 'M',
+                'motul' => 'Motul',
+                'pristine' => 'Pristine',
                 'red' => 'Красный',
                 's' => 'S',
+                'shell' => 'Shell',
                 'white' => 'Белый',
                 'xl' => 'XL',
                 'yellow' => 'Желтый',
@@ -134,8 +137,8 @@ return [
             'channels' => [
                 'meta-description' => 'Мета-описание демонстрационного магазина',
                 'meta-keywords' => 'Мета-ключевые слова демонстрационного магазина',
-                'meta-title' => 'Демонстрационный магазин',
-                'name' => 'По умолчанию',
+                'meta-title' => 'Rancon LubMart',
+                'name' => 'Rancon LubMart',
             ],
 
             'currencies' => [
@@ -806,7 +809,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => 'Администратор',
-                'bagisto' => 'Bagisto',
+                'bagisto' => 'Rancon LubMart',
                 'confirm-password' => 'Подтвердите пароль',
                 'email' => 'Email',
                 'email-address' => 'admin@example.com',
@@ -821,7 +824,7 @@ return [
                 'application-name' => 'Название приложения',
                 'argentine-peso' => 'Аргентинское песо (ARS)',
                 'australian-dollar' => 'Австралийский доллар (AUD)',
-                'bagisto' => 'Bagisto',
+                'bagisto' => 'Rancon LubMart',
                 'bangladeshi-taka' => 'Бангладешская така (BDT)',
                 'bahraini-dinar' => 'Бахрейнский динар (BHD)',
                 'brazilian-real' => 'Бразильский реал (BRL)',
@@ -974,7 +977,7 @@ return [
 
             'arabic' => 'Арабский',
             'back' => 'Назад',
-            'bagisto' => 'Bagisto',
+            'bagisto' => 'Rancon LubMart',
             'bagisto-info' => 'Проект сообщества от',
             'bagisto-logo' => 'Логотип Bagisto',
             'bengali' => 'Бенгальский',

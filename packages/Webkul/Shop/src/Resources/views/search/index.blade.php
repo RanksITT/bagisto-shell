@@ -54,7 +54,7 @@
                 >
 
                 <p
-                    class="mt-1 text-sm text-gray-600"
+                    class="mt-1 text-sm text-mutedBlue"
                     v-pre
                 >
                     {{ trans('shop::app.search.suggest') }}

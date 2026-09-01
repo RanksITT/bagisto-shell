@@ -31,7 +31,7 @@ return [
                 'manage-stock' => '在庫管理',
                 'meta-description' => 'メタ説明',
                 'meta-keywords' => 'メタキーワード',
-                'meta-title' => 'メタタイトル',
+                'meta-title' => 'Rancon LubMart',
                 'name' => '名前',
                 'new' => '新規',
                 'price' => '価格',
@@ -56,8 +56,11 @@ return [
                 'green' => '緑',
                 'l' => 'L',
                 'm' => 'M',
+                'motul' => 'Motul',
+                'pristine' => 'Pristine',
                 'red' => '赤',
                 's' => 'S',
+                'shell' => 'Shell',
                 'white' => '白',
                 'xl' => 'XL',
                 'yellow' => '黄色',
@@ -134,8 +137,8 @@ return [
             'channels' => [
                 'meta-description' => 'デモストアのメタ説明',
                 'meta-keywords' => 'デモストアのメタキーワード',
-                'meta-title' => 'デモストア',
-                'name' => 'デフォルト',
+                'meta-title' => 'Rancon LubMart',
+                'name' => 'Rancon LubMart',
             ],
 
             'currencies' => [
@@ -806,7 +809,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => '管理者',
-                'bagisto' => 'Bagisto',
+                'bagisto' => 'Rancon LubMart',
                 'confirm-password' => 'パスワードの確認',
                 'email' => 'メール',
                 'email-address' => 'admin@example.com',
@@ -821,7 +824,7 @@ return [
                 'application-name' => 'アプリケーション名',
                 'argentine-peso' => 'アルゼンチンペソ（ARS）',
                 'australian-dollar' => 'オーストラリアドル（AUD）',
-                'bagisto' => 'Bagisto',
+                'bagisto' => 'Rancon LubMart',
                 'bangladeshi-taka' => 'バングラデシュタカ（BDT）',
                 'bahraini-dinar' => 'バーレーンディナール（BHD）',
                 'brazilian-real' => 'ブラジルレアル（BRL）',
@@ -974,7 +977,7 @@ return [
 
             'arabic' => 'アラビア語',
             'back' => '戻る',
-            'bagisto' => 'Bagisto',
+            'bagisto' => 'Rancon LubMart',
             'bagisto-info' => 'コミュニティプロジェクト by',
             'bagisto-logo' => 'Bagistoロゴ',
             'bengali' => 'ベンガル語',

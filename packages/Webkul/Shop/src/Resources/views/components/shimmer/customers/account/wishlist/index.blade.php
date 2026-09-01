@@ -13,7 +13,7 @@
         <div class="mt-8 flex flex-wrap gap-20 max-1060:flex-col max-md:my-5 max-md:last:mb-0">
             <div class="grid flex-1 gap-y-6">
                 <!-- Single card -->
-                <div class="flex justify-between gap-x-2.5 border-b border-zinc-200 pb-5">
+                <div class="flex justify-between gap-x-2.5 border-b border-navyBorder pb-5">
                     <div class="flex gap-x-5 max-md:w-full">
                         <div class="">
                             <div class="shimmer h-[110px] w-[110px] rounded-xl max-md:h-20 max-md:w-20"></div>

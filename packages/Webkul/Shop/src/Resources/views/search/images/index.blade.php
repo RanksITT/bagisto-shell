@@ -27,7 +27,7 @@
             >
                 <!-- Spinner -->
                 <svg
-                    class="h-5 w-5 animate-spin text-black"
+                    class="h-5 w-5 animate-spin text-offWhite"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"

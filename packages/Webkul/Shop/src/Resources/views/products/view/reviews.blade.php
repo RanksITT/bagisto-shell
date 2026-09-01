@@ -58,7 +58,7 @@
                                     class="icon-star-fill cursor-pointer text-2xl"
                                     role="presentation"
                                     v-for="rating in [1,2,3,4,5]"
-                                    :class="appliedRatings >= rating ? 'text-amber-500' : 'text-zinc-500'"
+                                    :class="appliedRatings >= rating ? 'text-amber-500' : 'text-mutedBlue'"
                                     @click="appliedRatings = rating"
                                 >
                                 </span>
@@ -168,18 +168,18 @@
                             <!-- Left Section -->
                             <div class="sticky top-24 flex h-max flex-col gap-6 max-lg:relative max-lg:top-auto max-md:w-full">
 
-                                <div class="flex flex-col items-center gap-2 max-md:mt-3 max-md:gap-0 max-md:border-b max-md:border-zinc-200 max-md:pb-3">
+                                <div class="flex flex-col items-center gap-2 max-md:mt-3 max-md:gap-0 max-md:border-b max-md:border-navyBorder max-md:pb-3">
                                     <p class="text-5xl max-md:text-3xl">
                                         {{ $avgRatings }}
                                     </p>
 
                                     <div class="flex items-center gap-0.5">
                                         @for ($i = 1; $i <= 5; $i++)
-                                            <span class="icon-star-fill text-3xl {{ $avgRatings >= $i ? 'text-amber-500' : 'text-zinc-500' }}"></span>
+                                            <span class="icon-star-fill text-3xl {{ $avgRatings >= $i ? 'text-amber-500' : 'text-mutedBlue' }}"></span>
                                         @endfor
                                     </div>
 
-                                    <p class="text-base text-zinc-500 max-sm:text-sm">
+                                    <p class="text-base text-mutedBlue max-sm:text-sm">
                                         {{ $reviewHelper->getTotalFeedback($product) }}
 
                                         @lang('shop::app.products.view.reviews.ratings')
@@ -192,7 +192,7 @@
                                         <div class="row grid grid-cols-[1fr_2fr] items-center gap-4 max-md:grid-cols-[0.5fr_2fr] max-sm:flex-wrap max-sm:gap-0">
                                             <div class="whitespace-nowrap text-base font-medium max-sm:text-sm">{{ $i }} Stars</div>
 
-                                            <div class="h-4 w-[275px] max-w-full rounded-sm bg-neutral-200 max-sm:h-3.5 max-sm:w-full">
+                                            <div class="h-4 w-[275px] max-w-full rounded-sm bg-navySurfaceHover max-sm:h-3.5 max-sm:w-full">
                                                 <div
                                                     class="h-4 rounded-sm bg-amber-500 max-sm:h-3.5"
                                                     style="width: {{ $percentageRatings[$i] }}%"
@@ -209,7 +209,7 @@
                                             || auth()->guard('customer')->user()
                                         )
                                             <div
-                                                class="flex cursor-pointer items-center justify-center gap-x-4 rounded-xl border border-navyBlue px-4 py-3 max-sm:rounded-lg max-sm:py-1.5"
+                                                class="flex cursor-pointer items-center justify-center gap-x-4 rounded-xl border border-darkBlue px-4 py-3 max-sm:rounded-lg max-sm:py-1.5"
                                                 @click="canReview = true"
                                             >
                                                 <span class="icon-pen text-2xl"></span>
@@ -229,7 +229,7 @@
                                 ></v-product-review-item>
 
                                 <button
-                                    class="mx-auto block w-max rounded-2xl border border-navyBlue bg-white px-11 py-3 text-center text-base font-medium text-navyBlue"
+                                    class="mx-auto block w-max rounded-2xl border border-darkBlue bg-navySurface px-11 py-3 text-center text-base font-medium text-darkBlue"
                                     v-if="links?.next"
                                     @click="get()"
                                 >
@@ -259,7 +259,7 @@
                                         || auth()->guard('customer')->user()
                                     )
                                         <div
-                                            class="mt-8 flex cursor-pointer items-center gap-x-4 rounded-xl border border-navyBlue px-4 py-2.5 max-sm:mt-5 max-sm:gap-x-1.5 max-sm:rounded-lg max-sm:py-1.5 max-sm:text-sm"
+                                            class="mt-8 flex cursor-pointer items-center gap-x-4 rounded-xl border border-darkBlue px-4 py-2.5 max-sm:mt-5 max-sm:gap-x-1.5 max-sm:rounded-lg max-sm:py-1.5 max-sm:text-sm"
                                             @click="canReview = true"
                                         >
                                             <span class="icon-pen text-2xl max-sm:text-lg"></span>
@@ -280,7 +280,7 @@
         type="text/x-template"
         id="v-product-review-item-template"
     >
-        <div class="rounded-xl border border-zinc-200 p-6 max-md:hidden">
+        <div class="rounded-xl border border-navyBorder p-6 max-md:hidden">
             <div class="flex gap-5">
                 <template v-if="review.profile">
                     <img
@@ -293,10 +293,10 @@
 
                 <template v-else>
                     <div
-                        class="flex max-h-[100px] min-h-[100px] min-w-[100px] max-w-[100px] items-center justify-center rounded-xl bg-zinc-100"
+                        class="flex max-h-[100px] min-h-[100px] min-w-[100px] max-w-[100px] items-center justify-center rounded-xl bg-photoBackdrop"
                         :title="review.name"
                     >
-                        <span class="text-2xl font-semibold text-zinc-500">
+                        <span class="text-2xl font-semibold text-navyBlue">
                             @{{ review.name.split(' ').map(name => name.charAt(0).toUpperCase()).join('') }}
                         </span>
                     </div>
@@ -307,7 +307,7 @@
                         @{{ review.name }}
                     </p>
 
-                    <p class="mb-2 text-sm font-medium text-neutral-500">
+                    <p class="mb-2 text-sm font-medium text-mutedBlue">
                         @{{ review.created_at }}
                     </p>
 
@@ -315,7 +315,7 @@
                         <span
                             class="icon-star-fill text-3xl"
                             v-for="rating in [1,2,3,4,5]"
-                            :class="review.rating >= rating ? 'text-amber-500' : 'text-zinc-500'"
+                            :class="review.rating >= rating ? 'text-amber-500' : 'text-mutedBlue'"
                         ></span>
                     </div>
                 </div>
@@ -326,7 +326,7 @@
                     @{{ review.title }}
                 </p>
 
-                <p class="text-base leading-relaxed text-neutral-500 max-sm:text-xs">
+                <p class="text-base leading-relaxed text-mutedBlue max-sm:text-xs">
                     @{{ review.comment }}
                 </p>
 
@@ -403,7 +403,7 @@
 
         <!-- For Mobile View -->
         <div class="md:hidden">
-            <div class="grid gap-1.5 rounded-xl border border-zinc-200 p-4 max-md:mb-0">
+            <div class="grid gap-1.5 rounded-xl border border-navyBorder p-4 max-md:mb-0">
                 <div class="flex items-center gap-2.5">
                     <img
                         v-if="review.profile"
@@ -415,10 +415,10 @@
 
                     <div
                         v-else
-                        class="min-h-10 min-w-10 max-w-10 flex max-h-10 items-center justify-center rounded-full bg-zinc-100"
+                        class="min-h-10 min-w-10 max-w-10 flex max-h-10 items-center justify-center rounded-full bg-photoBackdrop"
                         :title="review.name"
                     >
-                        <span class="text-xs font-semibold text-zinc-500">
+                        <span class="text-xs font-semibold text-navyBlue">
                             @{{ review.name.split(' ').map(name => name.charAt(0).toUpperCase()).join('') }}
                         </span>
                     </div>
@@ -428,7 +428,7 @@
                             @{{ review.name }}
                         </p>
 
-                        <p class="text-xs text-zinc-500">
+                        <p class="text-xs text-mutedBlue">
                             @{{ review.created_at }}
                         </p>
                     </div>
@@ -436,7 +436,7 @@
 
                 <div class="flex items-center">
                     @for ($i = 1; $i <= 5; $i++)
-                        <span class="icon-star-fill text-xl {{ $avgRatings >= $i ? 'text-amber-500' : 'text-zinc-500' }}"></span>
+                        <span class="icon-star-fill text-xl {{ $avgRatings >= $i ? 'text-amber-500' : 'text-mutedBlue' }}"></span>
                     @endfor
                 </div>
 
@@ -445,7 +445,7 @@
                         @{{ review.title }}
                     </p>
 
-                    <p class="mt-1.5 text-sm text-zinc-500">
+                    <p class="mt-1.5 text-sm text-mutedBlue">
                         @{{ review.comment }}
                     </p>
 
