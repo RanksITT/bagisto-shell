@@ -214,7 +214,7 @@
             </v-field>
 
             <label
-                class="rounded-lg-full after:rounded-lg-full peer h-5 w-9 cursor-pointer bg-navySurfaceHover after:absolute after:left-0.5 after:top-0.5 after:h-4 after:w-4 after:border after:border-navyBorder after:bg-navySurface after:transition-all after:content-[''] peer-checked:bg-darkBlue peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none peer-focus:ring-blue-300"
+                class="rounded-lg-full after:rounded-lg-full peer h-5 w-9 cursor-pointer bg-navySurfaceHover after:absolute after:left-0.5 after:top-0.5 after:h-4 after:w-4 after:border after:border-navyBorder after:bg-navySurface after:transition-all after:content-[''] peer-checked:bg-darkBlue peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none peer-focus:ring-darkBlue"
                 for="{{ $name }}"
             ></label>
         </label>

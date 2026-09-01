@@ -51,7 +51,7 @@
         <div class="grid w-max select-none gap-3">
             <!-- Details Toggler -->
             <p
-                class="flex cursor-pointer items-center gap-x-[15px] text-sm font-medium text-blue-600"
+                class="flex cursor-pointer items-center gap-x-[15px] text-sm font-medium text-darkBlue"
                 @click="showDaysAvailability = ! showDaysAvailability"
             >
                 @lang('shop::app.products.view.type.booking.appointment.see-details')

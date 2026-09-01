@@ -174,7 +174,7 @@
                                                         <template v-if="option?.attribute_type === 'file'">
                                                             <a
                                                                 :href="option.file_url"
-                                                                class="text-blue-700"
+                                                                class="text-darkBlue"
                                                                 target="_blank"
                                                                 :download="option.file_name"
                                                             >
@@ -201,7 +201,7 @@
 
                                         <!--Wishlist Item removed button-->
                                         <a
-                                            class="flex cursor-pointer justify-end text-base text-blue-700 max-md:hidden"
+                                            class="flex cursor-pointer justify-end text-base text-darkBlue max-md:hidden"
                                             @click="remove"
                                         >
                                             @lang('shop::app.customers.account.wishlist.remove')
@@ -246,7 +246,7 @@
                                 </p>
 
                                 <a
-                                    class="flex cursor-pointer justify-end text-base text-blue-700"
+                                    class="flex cursor-pointer justify-end text-base text-darkBlue"
                                     @click="remove"
                                 >
                                     @lang('shop::app.customers.account.wishlist.remove')

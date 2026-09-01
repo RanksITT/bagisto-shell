@@ -19,20 +19,6 @@ img.lazy {
         @apply bg-navyBlue text-offWhite;
     }
 
-    /**
-     * Links carry no colour of their own in this theme, so anything not given an explicit
-     * class falls back to the browser's default blue - which is unreadable on the dark
-     * ground and off-palette. Inherit instead, and let the accent mark only the ones that
-     * are deliberately styled as actions.
-     */
-    a {
-        @apply text-inherit;
-    }
-
-    a:hover {
-        @apply text-darkBlue;
-    }
-
     ::selection {
         background-color: rgba(232, 163, 61, .35);
     }
