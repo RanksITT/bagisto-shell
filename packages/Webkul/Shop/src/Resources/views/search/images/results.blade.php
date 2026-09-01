@@ -51,7 +51,7 @@
                     <div class="flex flex-wrap gap-5 max-sm:hidden">
                         <span 
                             class="flex cursor-pointer items-center justify-center rounded-full border border-darkBlue px-4 py-1.5 font-medium text-darkBlue"
-                            :class="{'rounded-full bg-darkBlue text-white': term.name.trim() === queryParameter.trim()}"
+                            :class="{'rounded-full bg-darkBlue text-navyBlue': term.name.trim() === queryParameter.trim()}"
                             v-for="term in searchedTerms"
                             @click="search(term)"
                         >
@@ -72,7 +72,7 @@
                 >
                     <span
                         class="max-w-full flex-initial px-2.5 py-2 text-xs font-normal leading-none max-sm:px-3 max-sm:py-2.5"
-                        :class="{'rounded-full bg-darkBlue text-white': term.name.trim() === queryParameter.trim()}"
+                        :class="{'rounded-full bg-darkBlue text-navyBlue': term.name.trim() === queryParameter.trim()}"
                     >
                         @{{ term.name }}
                     </span>

@@ -1,8 +1,8 @@
 <svg width="170" height="36" viewBox="0 0 170 36" fill="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
         <linearGradient id="rlmShieldGradientDark" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#6E8CFF"/>
-            <stop offset="1" stop-color="#2A46C8"/>
+            <stop offset="0" stop-color="#F3C87E"/>
+            <stop offset="1" stop-color="#D99A34"/>
         </linearGradient>
 
         <mask id="rlmDropMaskDark">
@@ -13,7 +13,7 @@
 
     <g transform="translate(0,1) scale(0.17)">
         <polygon points="100,8 175,50 175,150 100,192 25,150 25,50" fill="url(#rlmShieldGradientDark)" mask="url(#rlmDropMaskDark)"/>
-        <polygon points="100,8 175,50 175,150 100,192 25,150 25,50" fill="none" stroke="#9CB1FF" stroke-width="4"/>
+        <polygon points="100,8 175,50 175,150 100,192 25,150 25,50" fill="none" stroke="#F3C87E" stroke-width="4"/>
     </g>
 
     <text x="44" y="24" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" letter-spacing="-0.3" fill="#FFFFFF">Rancon LubMart</text>

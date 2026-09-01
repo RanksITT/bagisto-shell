@@ -35,7 +35,7 @@
 
                 <a 
                     href="{{ route('shop.home.index') }}"
-                    class="m-auto mt-8 block w-max cursor-pointer rounded-[45px] bg-darkBlue px-10 py-4 text-center text-base font-medium text-white max-sm:mb-10 max-sm:px-6 max-sm:text-sm"
+                    class="m-auto mt-8 block w-max cursor-pointer rounded-[45px] bg-darkBlue px-10 py-4 text-center text-base font-medium text-navyBlue max-sm:mb-10 max-sm:px-6 max-sm:text-sm"
                 >
                     @lang('shop::app.errors.go-to-home') 
                 </a>

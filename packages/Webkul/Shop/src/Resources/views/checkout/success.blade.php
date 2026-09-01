@@ -49,7 +49,7 @@
 			{{ view_render_event('bagisto.shop.checkout.success.continue-shopping.before', ['order' => $order]) }}
 
 			<a href="{{ route('shop.home.index') }}">
-				<div class="w-max cursor-pointer rounded-2xl bg-darkBlue px-11 py-3 text-center text-base font-medium text-white max-md:rounded-lg max-md:px-6 max-md:py-1.5">
+				<div class="w-max cursor-pointer rounded-2xl bg-darkBlue px-11 py-3 text-center text-base font-medium text-navyBlue max-md:rounded-lg max-md:px-6 max-md:py-1.5">
              		@lang('shop::app.checkout.cart.index.continue-shopping')
 				</div>
 			</a>

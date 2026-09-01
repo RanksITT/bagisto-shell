@@ -91,7 +91,7 @@
 
                                     <a
                                         href="{{ route('shop.customer.session.create') }}"
-                                        class="block py-4 m-0 mx-auto text-base font-medium text-center text-white cursor-pointer w-max rounded-2xl bg-darkBlue px-7 ltr:ml-0 rtl:mr-0"
+                                        class="block py-4 m-0 mx-auto text-base font-medium text-center text-navyBlue cursor-pointer w-max rounded-2xl bg-darkBlue px-7 ltr:ml-0 rtl:mr-0"
                                     >
                                             @lang('shop::app.components.layouts.header.mobile.sign-in')
                                         </a>

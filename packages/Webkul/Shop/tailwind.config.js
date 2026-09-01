@@ -28,16 +28,20 @@ module.exports = {
         },
 
         extend: {
+            /**
+             * Names are kept from the original navy palette to avoid a repo-wide
+             * rename; the values underneath are the current charcoal/amber theme.
+             */
             colors: {
-                navyBlue: "#0B1220",
-                navySurface: "#131B2C",
-                navySurfaceHover: "#1B2540",
-                navyBorder: "#232D45",
-                offWhite: "#F1F5F9",
-                mutedBlue: "#94A3B8",
-                photoBackdrop: "#F4F6F9",
+                navyBlue: "#111113",
+                navySurface: "#1A1A1D",
+                navySurfaceHover: "#242427",
+                navyBorder: "#302F2A",
+                offWhite: "#F5F3EE",
+                mutedBlue: "#A8A29A",
+                photoBackdrop: "#F4F2ED",
                 darkGreen: '#40994A',
-                darkBlue: '#3B82F6',
+                darkBlue: '#E8A33D',
                 darkPink: '#F85156',
             },
 

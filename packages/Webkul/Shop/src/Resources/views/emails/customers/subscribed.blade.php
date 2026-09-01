@@ -16,7 +16,7 @@
     <div style="display: flex;margin-bottom: 95px">
         <a
             href="{{ route('shop.subscription.destroy', $subscribersList->token) }}"
-            style="padding: 16px 45px;justify-content: center;align-items: center;gap: 10px;border-radius: 2px;background: #3B82F6;color: #FFFFFF;text-decoration: none;text-transform: uppercase;font-weight: 700;"
+            style="padding: 16px 45px;justify-content: center;align-items: center;gap: 10px;border-radius: 2px;background: #E8A33D;color: #111113;text-decoration: none;text-transform: uppercase;font-weight: 700;"
         >
             @lang('shop::app.emails.customers.subscribed.unsubscribe')
         </a>

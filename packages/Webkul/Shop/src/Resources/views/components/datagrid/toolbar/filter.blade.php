@@ -511,7 +511,7 @@
                                             >
                                                 <button
                                                     type="button"
-                                                    class="absolute top-1/2 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-md bg-darkBlue text-white transition-colors hover:opacity-90 ltr:right-2 rtl:left-2"
+                                                    class="absolute top-1/2 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-md bg-darkBlue text-navyBlue transition-colors hover:opacity-90 ltr:right-2 rtl:left-2"
                                                     v-show="filterValue[column.index]"
                                                     :aria-label="'@lang('shop::app.components.datagrid.toolbar.filter.apply-filter')'"
                                                     @click="applyNumericFilter(column)"
@@ -661,7 +661,7 @@
                                             >
                                                 <button
                                                     type="button"
-                                                    class="absolute top-1/2 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-md bg-darkBlue text-white transition-colors hover:opacity-90 ltr:right-2 rtl:left-2"
+                                                    class="absolute top-1/2 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-md bg-darkBlue text-navyBlue transition-colors hover:opacity-90 ltr:right-2 rtl:left-2"
                                                     v-show="filterValue[column.index]"
                                                     :aria-label="'@lang('shop::app.components.datagrid.toolbar.filter.apply-filter')'"
                                                     @click="applyTextFilter(column)"
