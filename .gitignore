@@ -36,6 +36,7 @@ package-lock.json
 /public/vendor
 /lang/vendor
 skills-lock.json
+/packages
 /storage/*.key
 /storage/dcc-data/
 /test-results
