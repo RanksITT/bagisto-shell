@@ -1,0 +1,57 @@
+name: Deploy production branch
+
+on:
+  push:
+    branches:
+      - production
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: true
+
+jobs:
+  production-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.4"
+          extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, bcmath, soap, intl, gd, exif, iconv, fileinfo, simplexml
+          coverage: none
+
+      - name: Composer install
+        run: composer install --no-interaction --prefer-dist --no-progress
+
+      # - name: Run testsff
+      ###   env:
+      #     APP_ENV: testing
+      #     DB_CONNECTION: sqlite
+      #     DB_DATABASE: ":memory:"
+      #   run: php artisan test
+
+  deploy:
+    needs: production-deploy
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/production'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy over SSH
+        uses: appleboy/ssh-action@v1.2.5
+        with:
+          host: ${{ secrets.PRODUCTION_HOST }}
+          username: ${{ secrets.PRODUCTION_USER }}
+          key: ${{ secrets.PRODUCTION_SSH_KEY }}
+          port: ${{ secrets.PRODUCTION_PORT }}
+          command_timeout: 20m
+          script: |
+            set -euo pipefail
+            git config --global --add safe.directory "${{ secrets.PRODUCTION_DEPLOY_PATH }}"
+            cd "${{ secrets.PRODUCTION_DEPLOY_PATH }}"
+            git reset --hard origin/production
+            git clean -fd
+            git pull origin production
+            bash .scripts/laravel.sh
