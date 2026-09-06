@@ -25,9 +25,15 @@
             data-section-name="{{ $section->name }}"
         @endif
     >
-        <div class="grid grid-cols-4 gap-5 max-lg:grid-cols-2 max-sm:gap-2.5">
+        <div
+            class="grid grid-cols-4 gap-5 max-lg:grid-cols-2 max-sm:gap-2.5"
+            data-reveal-group
+        >
             @foreach ($section->options['services'] as $service)
-                <div class="group rounded-xl border border-navyBorder bg-navySurface p-6 transition-all duration-300 hover:-translate-y-1 hover:border-darkBlue max-lg:p-5 max-sm:p-4">
+                <div
+                    class="group rounded-xl border border-navyBorder bg-navySurface p-6 transition-all duration-300 hover:-translate-y-1 hover:border-darkBlue max-lg:p-5 max-sm:p-4"
+                    data-reveal="up"
+                >
                     <span
                         class="{{ $service['service_icon'] }} mb-5 flex h-12 w-12 items-center justify-center rounded-lg bg-darkBlue/10 text-3xl text-darkBlue transition-colors duration-300 group-hover:bg-darkBlue group-hover:text-navyBlue max-sm:mb-3 max-sm:h-10 max-sm:w-10 max-sm:text-2xl"
                         role="presentation"

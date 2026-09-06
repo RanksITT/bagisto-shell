@@ -753,6 +753,13 @@ return [
             ],
         ],
 
+        'categories' => [
+            'scroller' => [
+                'scroll-hint' => 'برای کاوش اسکرول کنید',
+                'view-range' => 'مشاهده مجموعه',
+            ],
+        ],
+
         'range-slider' => [
             'max-range' => 'حداکثر محدوده',
             'min-range' => 'حداقل محدوده',
@@ -760,6 +767,7 @@ return [
         ],
 
         'carousel' => [
+            'explore-range' => 'کاوش در مجموعه',
             'image-slide' => 'اسلاید تصویر',
             'next' => 'بعدی',
             'previous' => 'قبلی',

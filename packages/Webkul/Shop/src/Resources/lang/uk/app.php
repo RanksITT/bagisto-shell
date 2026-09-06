@@ -753,6 +753,13 @@ return [
             ],
         ],
 
+        'categories' => [
+            'scroller' => [
+                'scroll-hint' => 'Прокрутіть, щоб переглянути',
+                'view-range' => 'Переглянути лінійку',
+            ],
+        ],
+
         'range-slider' => [
             'max-range' => 'Максимальний Діапазон',
             'min-range' => 'Мінімальний Діапазон',
@@ -760,6 +767,7 @@ return [
         ],
 
         'carousel' => [
+            'explore-range' => 'Переглянути лінійку',
             'image-slide' => 'Зображення Слайду',
             'next' => 'Наступний',
             'previous' => 'Попередній',

@@ -753,6 +753,13 @@ return [
             ],
         ],
 
+        'categories' => [
+            'scroller' => [
+                'scroll-hint' => 'බැලීමට අනුචලනය කරන්න',
+                'view-range' => 'පරාසය බලන්න',
+            ],
+        ],
+
         'range-slider' => [
             'max-range' => 'උපරිම ක්ෂේත්වය',
             'min-range' => 'අවමෝදයේ ක්ෂේත්වය',
@@ -760,6 +767,7 @@ return [
         ],
 
         'carousel' => [
+            'explore-range' => 'පරාසය ගවේෂණය කරන්න',
             'image-slide' => 'රූප ස්ලයිඩ්',
             'next' => 'ඊළඟ',
             'previous' => 'පෙර',

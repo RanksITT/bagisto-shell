@@ -753,6 +753,13 @@ return [
             ],
         ],
 
+        'categories' => [
+            'scroller' => [
+                'scroll-hint' => 'مرر للاستكشاف',
+                'view-range' => 'عرض المجموعة',
+            ],
+        ],
+
         'range-slider' => [
             'max-range' => 'الحد الأقصى',
             'min-range' => 'الحد الأدنى',
@@ -760,6 +767,7 @@ return [
         ],
 
         'carousel' => [
+            'explore-range' => 'استكشف المجموعة',
             'image-slide' => 'شريحة الصورة',
             'next' => 'التالي',
             'previous' => 'السابق',

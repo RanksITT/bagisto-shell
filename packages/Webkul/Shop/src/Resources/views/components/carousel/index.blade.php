@@ -69,23 +69,58 @@
                 ref="sliderContainer"
             >
                 <div
-                    class="max-h-screen w-screen bg-cover bg-no-repeat"
+                    class="relative max-h-screen w-screen bg-cover bg-no-repeat"
                     v-for="(image, index) in images"
                     :key="index"
                     @click="visitLink(image)"
+                    data-scrub="hero"
                     ref="slide"
                 >
-                    <x-shop::media.images.lazy
-                        class="aspect-[2.2/1] max-h-full w-full max-w-full select-none transition-transform duration-300 ease-in-out will-change-transform"
-                        ::lazy="index === 0 ? false : true"
-                        ::src="image.image"
-                        ::srcset="image.image + ' 1920w, ' + image.image.replace('storage', 'cache/large') + ' 1280w,' + image.image.replace('storage', 'cache/medium') + ' 1024w, ' + image.image.replace('storage', 'cache/small') + ' 768w'"
-                        sizes="100vw"
-                        ::alt="image?.title || 'Carousel Image ' + (index + 1)"
-                        tabindex="0"
-                        ::fetchpriority="index === 0 ? 'high' : 'low'"
-                        ::decoding="index === 0 ? 'sync' : 'async'"
-                    />
+                    <div class="hero-parallax">
+                        <x-shop::media.images.lazy
+                            class="aspect-[2.2/1] max-h-full w-full max-w-full select-none transition-transform duration-300 ease-in-out will-change-transform"
+                            ::lazy="index === 0 ? false : true"
+                            ::src="image.image"
+                            ::srcset="image.image + ' 1920w, ' + image.image.replace('storage', 'cache/large') + ' 1280w,' + image.image.replace('storage', 'cache/medium') + ' 1024w, ' + image.image.replace('storage', 'cache/small') + ' 768w'"
+                            sizes="100vw"
+                            ::alt="image?.title || 'Carousel Image ' + (index + 1)"
+                            tabindex="0"
+                            ::fetchpriority="index === 0 ? 'high' : 'low'"
+                            ::decoding="index === 0 ? 'sync' : 'async'"
+                        />
+                    </div>
+
+                    <!-- Slide Headline -->
+                    <div
+                        class="hero-overlay"
+                        v-if="image.title"
+                    >
+                        <div class="container max-lg:px-8 max-sm:!px-4">
+                            <h2
+                                class="hero-overlay__title font-dmserif"
+                                data-reveal="clip"
+                                v-text="image.title"
+                            >
+                            </h2>
+
+                            <span
+                                class="hero-overlay__rule"
+                                data-reveal="scale"
+                                role="presentation"
+                            >
+                            </span>
+
+                            <a
+                                class="primary-button hero-overlay__cta"
+                                :href="image.link"
+                                data-reveal="up"
+                                @click.stop
+                                v-if="image.link"
+                            >
+                                @lang('shop::app.components.carousel.explore-range')
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
 

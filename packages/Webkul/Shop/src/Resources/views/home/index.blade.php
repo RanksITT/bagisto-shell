@@ -73,15 +73,25 @@
                     @endpush
                 @endif
 
-                <!-- Render HTML -->
+                {{--
+                    Admin authored markup is purified, which drops any `data-*`
+                    hook it was written with. Wrapping it in a scrubbed element
+                    publishes the section's scroll progress as a custom property
+                    that the `rl-` classes inside can inherit and animate against.
+                --}}
                 @if (! empty($data['html']))
-                    {!! $data['html'] !!}
+                    <div
+                        class="static-chapter"
+                        data-scrub="section"
+                    >
+                        {!! $data['html'] !!}
+                    </div>
                 @endif
 
                 @break
             @case ($section::CATEGORY_CAROUSEL)
-                <!-- Categories carousel -->
-                <x-shop::categories.carousel
+                <!-- Categories scroller -->
+                <x-shop::categories.scroller
                     :title="$data['title'] ?? ''"
                     :src="route('shop.api.categories.index', $data['filters'] ?? [])"
                     :navigation-link="route('shop.home.index')"

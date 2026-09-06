@@ -753,6 +753,13 @@ return [
             ],
         ],
 
+        'categories' => [
+            'scroller' => [
+                'scroll-hint' => 'Gulir untuk menjelajah',
+                'view-range' => 'Lihat Rangkaian',
+            ],
+        ],
+
         'range-slider' => [
             'max-range' => 'Jangkauan Maksimal',
             'min-range' => 'Jangkauan Minimal',
@@ -760,6 +767,7 @@ return [
         ],
 
         'carousel' => [
+            'explore-range' => 'Jelajahi Rangkaian',
             'image-slide' => 'Slide Gambar',
             'next' => 'Berikutnya',
             'previous' => 'Sebelumnya',

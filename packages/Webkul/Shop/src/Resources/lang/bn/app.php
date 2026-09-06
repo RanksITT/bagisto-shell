@@ -753,6 +753,13 @@ return [
             ],
         ],
 
+        'categories' => [
+            'scroller' => [
+                'scroll-hint' => 'দেখতে স্ক্রোল করুন',
+                'view-range' => 'রেঞ্জ দেখুন',
+            ],
+        ],
+
         'range-slider' => [
             'max-range' => 'সর্বাধিক পরিসীমা',
             'min-range' => 'ন্যূনতম পরিসীমা',
@@ -760,6 +767,7 @@ return [
         ],
 
         'carousel' => [
+            'explore-range' => 'রেঞ্জ দেখুন',
             'image-slide' => 'চিত্র স্লাইড',
             'next' => 'পরবর্তী',
             'previous' => 'পূর্ববর্তী',

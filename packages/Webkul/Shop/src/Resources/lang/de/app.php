@@ -753,6 +753,13 @@ return [
             ],
         ],
 
+        'categories' => [
+            'scroller' => [
+                'scroll-hint' => 'Scrollen zum Entdecken',
+                'view-range' => 'Sortiment ansehen',
+            ],
+        ],
+
         'range-slider' => [
             'max-range' => 'Höchstbereich',
             'min-range' => 'Mindestbereich',
@@ -760,6 +767,7 @@ return [
         ],
 
         'carousel' => [
+            'explore-range' => 'Sortiment entdecken',
             'image-slide' => 'Bildrutsche',
             'next' => 'Nächster',
             'previous' => 'Vorheriger',

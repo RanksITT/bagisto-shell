@@ -753,6 +753,13 @@ return [
             ],
         ],
 
+        'categories' => [
+            'scroller' => [
+                'scroll-hint' => 'Keşfetmek için kaydırın',
+                'view-range' => 'Ürün Yelpazesini Gör',
+            ],
+        ],
+
         'range-slider' => [
             'max-range' => 'Maksimum',
             'min-range' => 'Minimum',
@@ -760,6 +767,7 @@ return [
         ],
 
         'carousel' => [
+            'explore-range' => 'Ürün Yelpazesini Keşfet',
             'image-slide' => 'Resim',
             'next' => 'Sonraki',
             'previous' => 'Önceki',

@@ -11,7 +11,8 @@
     >
         <!-- Grid Card -->
         <div
-            class="1180:transtion-all group w-full rounded-md 1180:relative 1180:grid 1180:content-start 1180:overflow-hidden 1180:duration-300 1180:hover:shadow-[0_5px_10px_rgba(0,0,0,0.1)]"
+            class="1180:transition-all group w-full rounded-md 1180:relative 1180:grid 1180:content-start 1180:overflow-hidden 1180:duration-300 1180:hover:shadow-[0_5px_10px_rgba(0,0,0,0.1)]"
+            data-reveal="up"
             v-if="mode != 'list'"
         >
             <div class="relative max-h-[300px] max-w-[291px] overflow-hidden max-md:max-h-60 max-md:max-w-full max-md:rounded-lg max-sm:max-h-[200px] max-sm:max-w-full">
@@ -192,6 +193,7 @@
         <!-- List Card -->
         <div
             class="relative flex max-w-max grid-cols-2 gap-4 overflow-hidden rounded max-sm:flex-wrap"
+            data-reveal="up"
             v-else
         >
             <div class="group relative max-h-[258px] max-w-[250px] overflow-hidden">

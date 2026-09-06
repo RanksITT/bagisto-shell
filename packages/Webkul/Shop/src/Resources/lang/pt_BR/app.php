@@ -753,6 +753,13 @@ return [
             ],
         ],
 
+        'categories' => [
+            'scroller' => [
+                'scroll-hint' => 'Role para explorar',
+                'view-range' => 'Ver a linha',
+            ],
+        ],
+
         'range-slider' => [
             'max-range' => 'Faixa Máxima',
             'min-range' => 'Faixa Mínima',
@@ -760,6 +767,7 @@ return [
         ],
 
         'carousel' => [
+            'explore-range' => 'Explore a linha',
             'image-slide' => 'Slide de Imagem',
             'next' => 'Próximo',
             'previous' => 'Anterior',

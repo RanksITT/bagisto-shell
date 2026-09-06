@@ -753,6 +753,13 @@ return [
             ],
         ],
 
+        'categories' => [
+            'scroller' => [
+                'scroll-hint' => 'スクロールして見る',
+                'view-range' => 'ラインナップを見る',
+            ],
+        ],
+
         'range-slider' => [
             'max-range' => '最大範囲',
             'min-range' => '最小範囲',
@@ -760,6 +767,7 @@ return [
         ],
 
         'carousel' => [
+            'explore-range' => 'ラインナップを見る',
             'image-slide' => '画像スライド',
             'next' => '次へ',
             'previous' => '前へ',

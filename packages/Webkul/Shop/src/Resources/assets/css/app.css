@@ -15,6 +15,20 @@ img.lazy {
 }
 
 @layer components {
+    /**
+     * Height of the sticky site header, which several scroll effects need to
+     * offset against. Matches the `min-h-[78px]` on the desktop header bar.
+     */
+    :root {
+        --header-h: 78px;
+    }
+
+    @media (max-width: 1023px) {
+        :root {
+            --header-h: 62px;
+        }
+    }
+
     body {
         @apply bg-navyBlue text-offWhite;
     }
@@ -528,5 +542,171 @@ img.lazy {
 
     .skip-to-main-content-link:focus {
         @apply ltr:left-1/2 rtl:right-1/2 ltr:translate-x-1/2 rtl:translate-x-[-50%] opacity-100;
+    }
+
+    /**
+     * Scroll reveal primitive. The hidden state is scoped to the `js-motion`
+     * class so a failed bundle or a reduced motion preference leaves the
+     * document fully painted.
+     */
+    @media (prefers-reduced-motion: no-preference) {
+        .js-motion [data-reveal] {
+            opacity: 0;
+            transition:
+                opacity .6s cubic-bezier(.22, 1, .36, 1),
+                translate .6s cubic-bezier(.22, 1, .36, 1),
+                scale .6s cubic-bezier(.22, 1, .36, 1),
+                clip-path .7s cubic-bezier(.22, 1, .36, 1);
+            transition-delay: var(--reveal-delay, 0ms);
+        }
+
+        .js-motion [data-reveal="up"] {
+            translate: 0 24px;
+        }
+
+        .js-motion [data-reveal="left"] {
+            translate: -28px 0;
+        }
+
+        .js-motion [data-reveal="right"] {
+            translate: 28px 0;
+        }
+
+        .js-motion[dir="rtl"] [data-reveal="left"] {
+            translate: 28px 0;
+        }
+
+        .js-motion[dir="rtl"] [data-reveal="right"] {
+            translate: -28px 0;
+        }
+
+        .js-motion [data-reveal="scale"] {
+            scale: .96;
+        }
+
+        .js-motion [data-reveal="clip"] {
+            clip-path: inset(100% 0 0 0);
+        }
+
+        .js-motion [data-reveal].is-visible {
+            opacity: 1;
+            translate: none;
+            scale: none;
+            clip-path: inset(0 0 0 0);
+        }
+    }
+
+    /**
+     * Hero takeover. The image drifts and swells as the first viewport scrolls
+     * away while the headline lifts out ahead of it, so the hero reads as one
+     * moving plate rather than a static banner. Both are driven by `--scrub-exit`
+     * from the shared scroll engine and both fall back to a still hero when that
+     * property never arrives.
+     */
+    .hero-parallax {
+        overflow: hidden;
+    }
+
+    /**
+     * The hero is a full viewport image sitting below an in flow sticky header, so
+     * its lower edge always falls the height of that header below the fold. The
+     * scrim still covers the whole image, but the copy is padded clear of the
+     * overflow so the call to action is never cut off.
+     */
+    .hero-overlay {
+        @apply pointer-events-none absolute inset-x-0 bottom-0 pt-32 max-md:pt-20;
+        padding-bottom: calc(4rem + var(--header-h, 78px));
+        background: linear-gradient(to top, rgba(17, 17, 19, .96) 0%, rgba(17, 17, 19, .88) 30%, rgba(17, 17, 19, .55) 62%, transparent 100%);
+    }
+
+    .hero-overlay__title {
+        @apply max-w-[18ch] text-5xl leading-tight text-offWhite max-lg:text-4xl max-md:text-3xl max-sm:text-2xl;
+    }
+
+    .hero-overlay__rule {
+        @apply mt-5 block h-px w-24 bg-darkBlue max-md:mt-3;
+        transform-origin: left center;
+    }
+
+    [dir="rtl"] .hero-overlay__rule {
+        transform-origin: right center;
+    }
+
+    .hero-overlay__cta {
+        @apply pointer-events-auto mt-7 max-md:mt-5 max-sm:px-6 max-sm:py-3 max-sm:text-sm;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        .js-motion .hero-parallax > * {
+            scale: calc(1 + var(--scrub-exit, 0) * .12);
+            translate: 0 calc(var(--scrub-exit, 0) * -4%);
+        }
+
+        .js-motion .hero-overlay {
+            opacity: calc(1 - var(--scrub-exit, 0) * 2.2);
+            translate: 0 calc(var(--scrub-exit, 0) * -60px);
+        }
+
+        .js-motion .hero-overlay__rule[data-reveal] {
+            scale: 0 1;
+        }
+
+        .js-motion .hero-overlay__rule[data-reveal].is-visible {
+            scale: 1 1;
+        }
+    }
+
+    /**
+     * Reading progress. Painted above the sticky header, and inert until the
+     * scroll engine starts publishing a value.
+     */
+    .scroll-progress {
+        @apply pointer-events-none fixed inset-x-0 top-0 z-20 h-0.5 origin-left bg-darkBlue;
+        transform: scaleX(var(--progress, 0));
+    }
+
+    /**
+     * The header steps out of the way on the way down the page and comes straight
+     * back on the way up. Guarded by `js-motion` so a page without the bundle keeps
+     * a permanently visible header.
+     */
+    .js-motion header {
+        transition: translate .35s cubic-bezier(.22, 1, .36, 1);
+    }
+
+    .js-motion.header-hidden header {
+        translate: 0 -100%;
+    }
+
+    /**
+     * Static content chapters. The section's own scroll progress reaches the admin
+     * authored markup as an inherited custom property, which is the only hook that
+     * survives purification.
+     */
+    @media (prefers-reduced-motion: no-preference) {
+        .js-motion .static-chapter .rl-brand {
+            border-color: rgba(232, 163, 61, calc(var(--scrub, 0) * .55));
+        }
+
+        .js-motion .static-chapter .rl-offer {
+            background-image: linear-gradient(
+                120deg,
+                rgba(232, 163, 61, calc(var(--scrub, 0) * .14)) 0%,
+                transparent 60%
+            );
+        }
+    }
+
+    .range-scroller-track {
+        transition: transform .12s linear;
+        will-change: transform;
+    }
+
+    .range-scroller-swipe {
+        scroll-snap-type: x mandatory;
+    }
+
+    .range-scroller-swipe > * {
+        scroll-snap-align: center;
     }
 }

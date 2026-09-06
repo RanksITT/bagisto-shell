@@ -753,6 +753,13 @@ return [
             ],
         ],
 
+        'categories' => [
+            'scroller' => [
+                'scroll-hint' => 'Scroll om te ontdekken',
+                'view-range' => 'Bekijk het assortiment',
+            ],
+        ],
+
         'range-slider' => [
             'max-range' => 'Maximale Bereik',
             'min-range' => 'Minimale Bereik',
@@ -760,6 +767,7 @@ return [
         ],
 
         'carousel' => [
+            'explore-range' => 'Ontdek het assortiment',
             'image-slide' => 'Afbeeldingslide',
             'next' => 'Volgende',
             'previous' => 'Vorige',

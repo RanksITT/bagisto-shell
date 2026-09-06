@@ -753,6 +753,13 @@ return [
             ],
         ],
 
+        'categories' => [
+            'scroller' => [
+                'scroll-hint' => '滚动浏览',
+                'view-range' => '查看系列',
+            ],
+        ],
+
         'range-slider' => [
             'max-range' => '最大范围',
             'min-range' => '最小范围',
@@ -760,6 +767,7 @@ return [
         ],
 
         'carousel' => [
+            'explore-range' => '探索系列',
             'image-slide' => '图片幻灯片',
             'next' => '下一个',
             'previous' => '上一个',

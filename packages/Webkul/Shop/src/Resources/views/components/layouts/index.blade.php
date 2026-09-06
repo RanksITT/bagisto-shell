@@ -76,6 +76,30 @@
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap"
         />
 
+        {{--
+            Arm the scroll reveal primitive before the first paint so revealable
+            markup never flashes in before it is hidden. The failsafe drops the
+            class again if the bundle never boots, leaving the page readable.
+        --}}
+        <script>
+            (function () {
+                if (
+                    ! ('IntersectionObserver' in window)
+                    || window.matchMedia('(prefers-reduced-motion: reduce)').matches
+                ) {
+                    return;
+                }
+
+                document.documentElement.classList.add('js-motion');
+
+                window.setTimeout(function () {
+                    if (! document.documentElement.dataset.revealReady) {
+                        document.documentElement.classList.remove('js-motion');
+                    }
+                }, 4000);
+            })();
+        </script>
+
         @stack('styles')
 
         <style>
@@ -101,6 +125,13 @@
         >
             Skip to main content
         </a>
+
+        <!-- Reading Progress -->
+        <div
+            class="scroll-progress"
+            role="presentation"
+        >
+        </div>
 
         <!-- Built With Bagisto -->
         <div id="app">

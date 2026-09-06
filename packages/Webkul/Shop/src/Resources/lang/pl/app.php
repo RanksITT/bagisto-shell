@@ -753,6 +753,13 @@ return [
             ],
         ],
 
+        'categories' => [
+            'scroller' => [
+                'scroll-hint' => 'Przewiń, aby odkryć',
+                'view-range' => 'Zobacz ofertę',
+            ],
+        ],
+
         'range-slider' => [
             'max-range' => 'Maksymalny Zakres',
             'min-range' => 'Minimalny Zakres',
@@ -760,6 +767,7 @@ return [
         ],
 
         'carousel' => [
+            'explore-range' => 'Poznaj ofertę',
             'image-slide' => 'Obrazek Slajdu',
             'next' => 'Następny',
             'previous' => 'Poprzedni',

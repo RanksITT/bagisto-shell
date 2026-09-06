@@ -16,7 +16,10 @@
             v-if="! isLoading && products.length"
         >
             <div class="flex justify-between">
-                <h2 class="font-dmserif text-3xl max-md:text-2xl max-sm:text-xl">
+                <h2
+                    class="font-dmserif text-3xl max-md:text-2xl max-sm:text-xl"
+                    data-reveal="up"
+                >
                     @{{ title }}
                 </h2>
 
@@ -60,6 +63,7 @@
             <div
                 ref="swiperContainer"
                 class="flex gap-8 pb-2.5 [&>*]:flex-[0] mt-10 overflow-auto scroll-smooth scrollbar-hide max-md:gap-7 max-md:mt-5 max-sm:gap-4 max-md:pb-0 max-md:whitespace-nowrap"
+                data-reveal-group
             >
                 <x-shop::products.card
                     class="min-w-[291px] max-md:h-fit max-md:min-w-56 max-sm:min-w-[192px]"

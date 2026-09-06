@@ -753,6 +753,13 @@ return [
             ],
         ],
 
+        'categories' => [
+            'scroller' => [
+                'scroll-hint' => 'גלול כדי לחקור',
+                'view-range' => 'הצג את הסדרה',
+            ],
+        ],
+
         'range-slider' => [
             'max-range' => 'טווח מרבי',
             'min-range' => 'טווח מינימלי',
@@ -760,6 +767,7 @@ return [
         ],
 
         'carousel' => [
+            'explore-range' => 'גלה את הסדרה',
             'image-slide' => 'שקופית תמונה',
             'next' => 'הבא',
             'previous' => 'הקודם',

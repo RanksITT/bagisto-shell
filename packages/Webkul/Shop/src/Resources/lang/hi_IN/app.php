@@ -753,6 +753,13 @@ return [
             ],
         ],
 
+        'categories' => [
+            'scroller' => [
+                'scroll-hint' => 'देखने के लिए स्क्रॉल करें',
+                'view-range' => 'रेंज देखें',
+            ],
+        ],
+
         'range-slider' => [
             'max-range' => 'अधिकतम सीमा',
             'min-range' => 'न्यूनतम सीमा',
@@ -760,6 +767,7 @@ return [
         ],
 
         'carousel' => [
+            'explore-range' => 'रेंज देखें',
             'image-slide' => 'चित्र स्लाइड',
             'next' => 'अगला',
             'previous' => 'पिछला',

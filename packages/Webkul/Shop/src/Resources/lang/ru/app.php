@@ -753,6 +753,13 @@ return [
             ],
         ],
 
+        'categories' => [
+            'scroller' => [
+                'scroll-hint' => 'Прокрутите, чтобы посмотреть',
+                'view-range' => 'Смотреть линейку',
+            ],
+        ],
+
         'range-slider' => [
             'max-range' => 'Максимальный Диапазон',
             'min-range' => 'Минимальный Диапазон',
@@ -760,6 +767,7 @@ return [
         ],
 
         'carousel' => [
+            'explore-range' => 'Смотреть линейку',
             'image-slide' => 'Изображение Слайда',
             'next' => 'Следующий',
             'previous' => 'Предыдущий',

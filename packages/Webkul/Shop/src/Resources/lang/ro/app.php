@@ -753,6 +753,13 @@ return [
             ],
         ],
 
+        'categories' => [
+            'scroller' => [
+                'scroll-hint' => 'Derulează pentru a explora',
+                'view-range' => 'Vezi gama',
+            ],
+        ],
+
         'range-slider' => [
             'max-range' => 'Interval maxim',
             'min-range' => 'Interval minim',
@@ -760,6 +767,7 @@ return [
         ],
 
         'carousel' => [
+            'explore-range' => 'Explorează gama',
             'image-slide' => 'Diapozitiv imagine',
             'next' => 'Următorul',
             'previous' => 'Anteriorul',

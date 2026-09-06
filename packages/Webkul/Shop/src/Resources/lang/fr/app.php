@@ -753,6 +753,13 @@ return [
             ],
         ],
 
+        'categories' => [
+            'scroller' => [
+                'scroll-hint' => 'Faites défiler pour explorer',
+                'view-range' => 'Voir la gamme',
+            ],
+        ],
+
         'range-slider' => [
             'max-range' => 'Plage maximale',
             'min-range' => 'Plage minimale',
@@ -760,6 +767,7 @@ return [
         ],
 
         'carousel' => [
+            'explore-range' => 'Explorer la gamme',
             'image-slide' => 'Diapositive d\'image',
             'next' => 'Suivant',
             'previous' => 'Précédent',

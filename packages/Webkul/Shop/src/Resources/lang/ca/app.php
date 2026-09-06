@@ -753,6 +753,13 @@ return [
             ],
         ],
 
+        'categories' => [
+            'scroller' => [
+                'scroll-hint' => 'Desplaceu-vos per explorar',
+                'view-range' => 'Veure la gamma',
+            ],
+        ],
+
         'range-slider' => [
             'max-range' => 'Rang màxim',
             'min-range' => 'Rang mínim',
@@ -760,6 +767,7 @@ return [
         ],
 
         'carousel' => [
+            'explore-range' => 'Explora la gamma',
             'image-slide' => 'Diapositiva d’imatge',
             'next' => 'Següent',
             'previous' => 'Anterior',
