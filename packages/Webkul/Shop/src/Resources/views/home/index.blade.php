@@ -88,6 +88,22 @@
                     </div>
                 @endif
 
+                {{--
+                    The engine chapter follows the first static block, so the page
+                    opens with the banner and the category shortcuts before it asks
+                    the visitor to stop and read. Anchored here rather than to the
+                    category carousel, which the store does not publish.
+                --}}
+                @if (! ($storyEngine ?? false))
+                    @php ($storyEngine = true)
+
+                    <x-shop::story.pour />
+
+                    <x-shop::story.engine />
+
+                    <x-shop::story.pour />
+                @endif
+
                 @break
             @case ($section::CATEGORY_CAROUSEL)
                 <!-- Categories scroller -->
@@ -97,13 +113,6 @@
                     :navigation-link="route('shop.home.index')"
                     aria-label="{{ trans('shop::app.home.index.categories-carousel') }}"
                 />
-
-                <!-- Engine Chapter, with the oil poured in and back out again -->
-                <x-shop::story.pour />
-
-                <x-shop::story.engine />
-
-                <x-shop::story.pour />
 
                 @break
             @case ($section::PRODUCT_CAROUSEL)
@@ -124,8 +133,6 @@
                     @php ($storyGradeFinder = true)
 
                     <x-shop::story.viscosity />
-
-                    <x-shop::story.protection />
                 @elseif (! ($storyFigures ?? false))
                     @php ($storyFigures = true)
 
