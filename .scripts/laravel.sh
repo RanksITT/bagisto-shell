@@ -39,16 +39,6 @@ fi
 echo "Running migrations..."
 php artisan migrate --force
 
-if [[ "${SKIP_PERMISSION_SEEDER:-0}" != "1" ]]; then
-  echo "Running permission seeder..."
-  php artisan db:seed --class=Database\\Seeders\\PermissionSeeder --force
-fi
-
-if [[ "${SKIP_SETTINGS_SEEDER:-0}" != "1" ]]; then
-  echo "Running settings seeder..."
-  php artisan db:seed --class=Database\\Seeders\\SettingsSeeder --force
-fi
-
 echo "Rebuilding caches..."
 php artisan optimize:clear
 php artisan config:cache
