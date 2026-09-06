@@ -753,6 +753,38 @@ return [
             ],
         ],
 
+        'story' => [
+            'figures' => [
+                'grades' => 'Klasy lepkosci',
+                'products' => 'Produkty',
+                'title' => 'Co mamy w ofercie',
+                'vehicles' => 'Typy pojazdow',
+            ],
+
+            'protection' => [
+                'kept' => 'Chronione',
+                'text' => 'Powierzchnia lozyska rysuje sie i wzera bez filmu miedzy metalami. Zachowaj film, a zachowasz czesc.',
+                'title' => 'Zuzycie powstaje tam, gdzie brakuje oleju',
+                'worn' => 'Bez ochrony',
+            ],
+
+            'viscosity' => [
+                'cold' => 'Zimno',
+                'hot' => 'Goraco',
+                'text' => 'Pierwsza liczba mowi o plynieciu na zimno, druga o odpornosci na goraco. Olej wielosezonowy robi jedno i drugie.',
+                'title' => 'Znajdz swoja klase',
+            ],
+
+            'engine' => [
+                'eyebrow' => 'Wewnątrz silnika',
+                'step-gallery' => 'Wznosi się kanałami',
+                'step-ring' => 'Pokrywa gładź cylindra',
+                'step-sump' => 'Wypełnia miskę',
+                'text' => 'Oryginalny olej Shell dociera do każdej ruchomej części, od miski olejowej po górny pierścień.',
+                'title' => 'Ochrona na wskroś',
+            ],
+        ],
+
         'categories' => [
             'scroller' => [
                 'scroll-hint' => 'Przewiń, aby odkryć',

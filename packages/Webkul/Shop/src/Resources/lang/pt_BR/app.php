@@ -753,6 +753,38 @@ return [
             ],
         ],
 
+        'story' => [
+            'figures' => [
+                'grades' => 'Graus de viscosidade',
+                'products' => 'Produtos',
+                'title' => 'O que temos',
+                'vehicles' => 'Tipos de veiculo',
+            ],
+
+            'protection' => [
+                'kept' => 'Protegido',
+                'text' => 'Uma superficie de apoio risca e crateriza sem pelicula entre os metais. Mantenha a pelicula e mantera a peca.',
+                'title' => 'O desgaste surge onde nao ha oleo',
+                'worn' => 'Sem protecao',
+            ],
+
+            'viscosity' => [
+                'cold' => 'Frio',
+                'hot' => 'Quente',
+                'text' => 'O primeiro numero indica o escoamento a frio e o segundo a resistencia a quente. Um multiviscoso faz os dois.',
+                'title' => 'Encontre seu grau',
+            ],
+
+            'engine' => [
+                'eyebrow' => 'Dentro do motor',
+                'step-gallery' => 'Sobe pelas galerias',
+                'step-ring' => 'Reveste o cilindro',
+                'step-sump' => 'Enche o cárter',
+                'text' => 'O lubrificante Shell original alcança cada peça móvel, do cárter ao anel superior.',
+                'title' => 'Proteção até o fundo',
+            ],
+        ],
+
         'categories' => [
             'scroller' => [
                 'scroll-hint' => 'Role para explorar',

@@ -14,10 +14,13 @@ import { createApp } from "vue/dist/vue.esm-bundler";
  */
 import initScrollReveal from "./scroll-reveal";
 import initScrollEngine from "./scroll-engine";
+import initEngineScene from "./engine-scene";
 
 initScrollReveal();
 
 initScrollEngine();
+
+initEngineScene();
 
 /**
  * Main root application registry.

@@ -753,6 +753,38 @@ return [
             ],
         ],
 
+        'story' => [
+            'figures' => [
+                'grades' => 'Grades de viscosite',
+                'products' => 'Produits',
+                'title' => 'Notre gamme',
+                'vehicles' => 'Types de vehicule',
+            ],
+
+            'protection' => [
+                'kept' => 'Protege',
+                'text' => 'Une portee se raye et se pique sans film entre les metaux. Gardez le film, vous gardez la piece.',
+                'title' => 'L usure apparait la ou le lubrifiant manque',
+                'worn' => 'Sans protection',
+            ],
+
+            'viscosity' => [
+                'cold' => 'Froid',
+                'hot' => 'Chaud',
+                'text' => 'Le premier chiffre indique le comportement a froid, le second la tenue a chaud. Une multigrade fait les deux.',
+                'title' => 'Trouvez votre grade',
+            ],
+
+            'engine' => [
+                'eyebrow' => 'Dans le moteur',
+                'step-gallery' => 'Monte dans les conduits',
+                'step-ring' => 'Enrobe la chemise',
+                'step-sump' => 'Remplit le carter',
+                'text' => 'Le lubrifiant Shell authentique atteint chaque pièce mobile, du carter au segment supérieur.',
+                'title' => 'Une protection en profondeur',
+            ],
+        ],
+
         'categories' => [
             'scroller' => [
                 'scroll-hint' => 'Faites défiler pour explorer',

@@ -8,8 +8,11 @@
  * effect.
  *
  * Elements opt in declaratively with `data-scrub`, which publishes their progress
- * through the viewport as a `--scrub` custom property between 0 and 1. What that
- * progress means is left to CSS. Components that need the raw number instead
+ * as custom properties between 0 and 1: `--scrub` through the viewport,
+ * `--scrub-exit` past the top of it, and, for a stage taller than the viewport,
+ * `--scrub-pin` through its own pinned window. Elements marked `data-progress`
+ * receive `--progress`, reading progress for the document as a whole. What any of
+ * those numbers mean is left to CSS; components that need the raw value instead
  * subscribe with `subscribe()`.
  *
  * The engine stays asleep while the visitor has asked for reduced motion.
@@ -18,6 +21,16 @@
 import { afterMount } from './scroll-reveal';
 
 const SCRUB_SELECTOR = '[data-scrub]';
+
+/**
+ * Elements that want document reading progress.
+ *
+ * Progress is written to these rather than to the root element on purpose. A
+ * custom property is inherited, so setting one on the root invalidates style for
+ * every element in the document on every scroll frame; writing to the handful of
+ * elements that actually read it keeps the invalidation where it belongs.
+ */
+const READER_SELECTOR = '[data-progress]';
 
 /**
  * Elements currently holding a promoted compositor layer.
@@ -32,11 +45,11 @@ const subscribers = new Set();
 
 let scrubbed = [];
 
+let readers = [];
+
 let frame = null;
 
 let refreshTimer = null;
-
-let progressBar = null;
 
 let lastScrollY = 0;
 
@@ -84,7 +97,28 @@ function exitProgress(rect) {
 }
 
 /**
- * Run one frame: measure everything, then apply everything.
+ * How far a pinned stage has travelled through its own pinned window, from 0 as
+ * its top reaches the top of the viewport to 1 as its bottom reaches the bottom.
+ *
+ * A tall stage that sticks its contents needs this rather than the travel measure,
+ * whose range is compressed towards the middle by the height of the stage itself.
+ */
+function pinProgress(rect, viewportHeight) {
+    const travel = rect.height - viewportHeight;
+
+    if (travel <= 0) {
+        return 0;
+    }
+
+    return clamp(-rect.top / travel);
+}
+
+/**
+ * Run one frame: read all geometry, then write all styles.
+ *
+ * The chrome update and the subscribers both read layout, so they run inside the
+ * read phase alongside the measurement pass. Moving either of them after the
+ * write loop would force a synchronous layout on every frame.
  */
 function tick() {
     frame = null;
@@ -96,10 +130,17 @@ function tick() {
         rect: element.getBoundingClientRect(),
     }));
 
+    const scrollable = document.documentElement.scrollHeight - viewportHeight;
+
     const context = {
         scrollY: window.scrollY,
         viewportHeight,
+        measurements,
     };
+
+    subscribers.forEach((subscriber) => subscriber(context));
+
+    updateChrome(context, scrollable);
 
     measurements.forEach(({ element, rect }) => {
         const onScreen = rect.top < viewportHeight && rect.bottom > 0;
@@ -123,24 +164,24 @@ function tick() {
         element.style.setProperty('--scrub', travelProgress(rect, viewportHeight).toFixed(4));
 
         element.style.setProperty('--scrub-exit', exitProgress(rect).toFixed(4));
+
+        if (rect.height > viewportHeight) {
+            element.style.setProperty('--scrub-pin', pinProgress(rect, viewportHeight).toFixed(4));
+        }
     });
-
-    updateChrome(context);
-
-    subscribers.forEach((subscriber) => subscriber(context));
 }
 
 /**
- * Drive the reading progress bar and the auto hiding header.
+ * Publish reading progress and drive the auto hiding header.
  *
  * The header only hides once the visitor is clear of the first viewport, so a
  * small scroll near the top of the page never takes the navigation away.
  */
-function updateChrome({ scrollY, viewportHeight }) {
-    const scrollable = document.documentElement.scrollHeight - viewportHeight;
+function updateChrome({ scrollY, viewportHeight }, scrollable) {
+    if (scrollable > 0 && readers.length) {
+        const progress = clamp(scrollY / scrollable).toFixed(4);
 
-    if (progressBar && scrollable > 0) {
-        progressBar.style.setProperty('--progress', clamp(scrollY / scrollable).toFixed(4));
+        readers.forEach((reader) => reader.style.setProperty('--progress', progress));
     }
 
     const goingDown = scrollY > lastScrollY;
@@ -171,6 +212,8 @@ function request() {
  */
 export function refresh() {
     scrubbed = Array.prototype.slice.call(document.querySelectorAll(SCRUB_SELECTOR));
+
+    readers = Array.prototype.slice.call(document.querySelectorAll(READER_SELECTOR));
 
     request();
 }
@@ -214,8 +257,6 @@ export default function initScrollEngine() {
     window.addEventListener('resize', request, { passive: true });
 
     afterMount(() => {
-        progressBar = document.querySelector('.scroll-progress');
-
         refresh();
 
         const root = document.getElementById('app');

@@ -126,11 +126,46 @@
             Skip to main content
         </a>
 
-        <!-- Reading Progress -->
+        {{--
+            Reading progress, drawn as a dipstick being pulled out of the edge of
+            the page. It renders only once the scroll engine has armed motion,
+            because an indicator that cannot indicate anything is just noise.
+        --}}
         <div
             class="scroll-progress"
             role="presentation"
+            aria-hidden="true"
+            data-progress
         >
+        </div>
+
+        <div
+            class="dipstick"
+            role="presentation"
+            aria-hidden="true"
+            data-progress
+        >
+            <div class="dipstick__stem">
+                <span class="dipstick__mark dipstick__mark--max"></span>
+
+                <span class="dipstick__mark dipstick__mark--min"></span>
+
+                <span class="dipstick__oil"></span>
+
+                <svg
+                    class="dipstick__drop"
+                    viewBox="0 0 200 200"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                    focusable="false"
+                >
+                    <path
+                        d="M100 52 C120 84 136 106 136 124 A36 36 0 1 1 64 124 C64 106 80 84 100 52 Z"
+                        fill="#E8A33D"
+                    />
+                </svg>
+            </div>
         </div>
 
         <!-- Built With Bagisto -->

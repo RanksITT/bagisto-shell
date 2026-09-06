@@ -753,6 +753,38 @@ return [
             ],
         ],
 
+        'story' => [
+            'figures' => [
+                'grades' => 'Viskositätsklassen',
+                'products' => 'Produkte',
+                'title' => 'Unser Sortiment',
+                'vehicles' => 'Fahrzeugtypen',
+            ],
+
+            'protection' => [
+                'kept' => 'Geschützt',
+                'text' => 'Eine Lagerfläche verkratzt und pittet ohne Film zwischen dem Metall. Bleibt der Film, bleibt das Bauteil.',
+                'title' => 'Verschleiß entsteht, wo kein Öl ist',
+                'worn' => 'Ungeschützt',
+            ],
+
+            'viscosity' => [
+                'cold' => 'Kalt',
+                'hot' => 'Heiß',
+                'text' => 'Die erste Zahl steht für den Kaltfluss, die zweite für die Hitzestabilität. Ein Mehrbereichsöl leistet beides.',
+                'title' => 'Finden Sie Ihre Klasse',
+            ],
+
+            'engine' => [
+                'eyebrow' => 'Im Motor',
+                'step-gallery' => 'Steigt durch die Kanäle',
+                'step-ring' => 'Benetzt die Zylinderwand',
+                'step-sump' => 'Füllt die Ölwanne',
+                'text' => 'Original Shell Schmierstoff erreicht jedes bewegliche Teil, von der Ölwanne bis zum obersten Ring.',
+                'title' => 'Schutz bis ins Innerste',
+            ],
+        ],
+
         'categories' => [
             'scroller' => [
                 'scroll-hint' => 'Scrollen zum Entdecken',

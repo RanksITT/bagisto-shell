@@ -753,6 +753,38 @@ return [
             ],
         ],
 
+        'story' => [
+            'figures' => [
+                'grades' => 'Viscosity grades',
+                'products' => 'Products',
+                'title' => 'What we stock',
+                'vehicles' => 'Vehicle types',
+            ],
+
+            'protection' => [
+                'kept' => 'Protected',
+                'text' => 'A bearing surface scores and pits without a film between the metal. Keep the film, keep the part.',
+                'title' => 'Wear happens where oil is not',
+                'worn' => 'Unprotected',
+            ],
+
+            'viscosity' => [
+                'cold' => 'Cold',
+                'hot' => 'Hot',
+                'text' => 'The first number is how it flows cold, the second how it holds up hot. A multigrade does both.',
+                'title' => 'Find your grade',
+            ],
+
+            'engine' => [
+                'eyebrow' => 'Inside the engine',
+                'step-gallery' => 'Climbs the galleries',
+                'step-ring' => 'Films the bore',
+                'step-sump' => 'Floods the sump',
+                'text' => 'Genuine Shell lubricant reaches every moving part, from the sump to the top ring.',
+                'title' => 'Protection all the way through',
+            ],
+        ],
+
         'categories' => [
             'scroller' => [
                 'scroll-hint' => 'Scroll to explore',

@@ -753,6 +753,38 @@ return [
             ],
         ],
 
+        'story' => [
+            'figures' => [
+                'grades' => 'Viscositeitsklassen',
+                'products' => 'Producten',
+                'title' => 'Wat wij voeren',
+                'vehicles' => 'Voertuigtypen',
+            ],
+
+            'protection' => [
+                'kept' => 'Beschermd',
+                'text' => 'Een lagervlak krast en put zonder film tussen het metaal. Behoud de film en je behoudt het onderdeel.',
+                'title' => 'Slijtage ontstaat waar olie ontbreekt',
+                'worn' => 'Onbeschermd',
+            ],
+
+            'viscosity' => [
+                'cold' => 'Koud',
+                'hot' => 'Warm',
+                'text' => 'Het eerste getal staat voor de koude vloei, het tweede voor de warmtevastheid. Een multigrade doet beide.',
+                'title' => 'Vind uw klasse',
+            ],
+
+            'engine' => [
+                'eyebrow' => 'In de motor',
+                'step-gallery' => 'Klimt door de kanalen',
+                'step-ring' => 'Bedekt de cilinderwand',
+                'step-sump' => 'Vult het carter',
+                'text' => 'Originele Shell smeerolie bereikt elk bewegend deel, van carter tot bovenste zuigerveer.',
+                'title' => 'Bescherming tot in de kern',
+            ],
+        ],
+
         'categories' => [
             'scroller' => [
                 'scroll-hint' => 'Scroll om te ontdekken',

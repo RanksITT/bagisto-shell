@@ -98,6 +98,13 @@
                     aria-label="{{ trans('shop::app.home.index.categories-carousel') }}"
                 />
 
+                <!-- Engine Chapter, with the oil poured in and back out again -->
+                <x-shop::story.pour />
+
+                <x-shop::story.engine />
+
+                <x-shop::story.pour />
+
                 @break
             @case ($section::PRODUCT_CAROUSEL)
                 <!-- Product Carousel -->
@@ -107,6 +114,23 @@
                     :navigation-link="route('shop.search.index', $data['filters'] ?? [])"
                     aria-label="{{ trans('shop::app.home.index.product-carousel') }}"
                 />
+
+                {{--
+                    The remaining chapters hang off the first and second product
+                    carousels, so each sits between two blocks of catalogue rather
+                    than stacking against one another.
+                --}}
+                @if (! ($storyGradeFinder ?? false))
+                    @php ($storyGradeFinder = true)
+
+                    <x-shop::story.viscosity />
+
+                    <x-shop::story.protection />
+                @elseif (! ($storyFigures ?? false))
+                    @php ($storyFigures = true)
+
+                    <x-shop::story.figures />
+                @endif
 
                 @break
         @endswitch

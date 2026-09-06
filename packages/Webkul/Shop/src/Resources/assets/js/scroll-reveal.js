@@ -68,15 +68,21 @@ function prefersReducedMotion() {
  * The layout mounts on `DOMContentLoaded` and registers that listener while the
  * document is still parsing, which is before any deferred module runs, so a
  * listener added here is always called after the mount has replaced the markup.
+ *
+ * The readiness test is against `complete` rather than `loading` on purpose: a
+ * deferred module runs while the state is already `interactive`, which is after
+ * parsing but still before `DOMContentLoaded` and therefore before the mount.
+ * Treating `interactive` as ready would hand the callback the markup that is
+ * about to be thrown away.
  */
 export function afterMount(callback) {
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', callback);
+    if (document.readyState === 'complete') {
+        callback();
 
         return;
     }
 
-    callback();
+    document.addEventListener('DOMContentLoaded', callback);
 }
 
 /**

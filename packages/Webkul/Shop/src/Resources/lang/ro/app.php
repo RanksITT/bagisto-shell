@@ -753,6 +753,38 @@ return [
             ],
         ],
 
+        'story' => [
+            'figures' => [
+                'grades' => 'Grade de vascozitate',
+                'products' => 'Produse',
+                'title' => 'Ce avem in stoc',
+                'vehicles' => 'Tipuri de vehicul',
+            ],
+
+            'protection' => [
+                'kept' => 'Protejat',
+                'text' => 'O suprafata de lagar se zgarie si se ciupeste fara pelicula intre metale. Pastreaza pelicula si pastrezi piesa.',
+                'title' => 'Uzura apare acolo unde lipseste uleiul',
+                'worn' => 'Neprotejat',
+            ],
+
+            'viscosity' => [
+                'cold' => 'Rece',
+                'hot' => 'Cald',
+                'text' => 'Primul numar arata curgerea la rece, al doilea rezistenta la cald. Un multigrad le face pe amandoua.',
+                'title' => 'Gaseste-ti gradul',
+            ],
+
+            'engine' => [
+                'eyebrow' => 'În interiorul motorului',
+                'step-gallery' => 'Urcă prin galerii',
+                'step-ring' => 'Acoperă cămașa',
+                'step-sump' => 'Umple baia de ulei',
+                'text' => 'Lubrifiantul Shell original ajunge la fiecare piesă în mișcare, de la baie la segmentul superior.',
+                'title' => 'Protecție până în adânc',
+            ],
+        ],
+
         'categories' => [
             'scroller' => [
                 'scroll-hint' => 'Derulează pentru a explora',

@@ -753,6 +753,38 @@ return [
             ],
         ],
 
+        'story' => [
+            'figures' => [
+                'grades' => 'Graus de viscositat',
+                'products' => 'Productes',
+                'title' => 'El nostre estoc',
+                'vehicles' => 'Tipus de vehicle',
+            ],
+
+            'protection' => [
+                'kept' => 'Protegit',
+                'text' => 'Una superficie de coixinet es ratlla i es pica sense una pel·licula entre els metalls. Mantingueu la pel·licula i mantindreu la peca.',
+                'title' => 'El desgast apareix on no hi ha oli',
+                'worn' => 'Sense proteccio',
+            ],
+
+            'viscosity' => [
+                'cold' => 'Fred',
+                'hot' => 'Calent',
+                'text' => 'El primer numero indica com flueix en fred i el segon com aguanta en calent. Un multigrau fa les dues coses.',
+                'title' => 'Troba el teu grau',
+            ],
+
+            'engine' => [
+                'eyebrow' => 'Dins del motor',
+                'step-gallery' => 'Puja pels conductes',
+                'step-ring' => 'Recobreix el cilindre',
+                'step-sump' => 'Omple el càrter',
+                'text' => 'El lubricant Shell original arriba a cada peça mòbil, del càrter al segment superior.',
+                'title' => 'Protecció fins al fons',
+            ],
+        ],
+
         'categories' => [
             'scroller' => [
                 'scroll-hint' => 'Desplaceu-vos per explorar',
