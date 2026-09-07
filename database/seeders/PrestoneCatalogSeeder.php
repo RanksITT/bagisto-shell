@@ -25,7 +25,7 @@ class PrestoneCatalogSeeder extends Seeder
      */
     public const ATTRIBUTE_OPTIONS = [
         'brand' => ['Prestone'],
-        'pack_size' => ['355ml', '946ml', '3.78L', '9.46L'],
+        'pack_size' => ['1L', '4L'],
     ];
 
     /**
@@ -76,11 +76,8 @@ class PrestoneCatalogSeeder extends Seeder
     ) {}
 
     /**
-     * Seed the Prestone brand, its categories and its products.
-     *
-     * The catalog repositories hand the whole payload to the models and lean on their
-     * fillable lists to strip the keys that are not columns, so the models have to be
-     * guarded again for the length of the run. Artisan unguards them while seeding.
+     * Seed the Prestone brand, its categories and its products, guarding the models
+     * again first because Artisan unguards every one of them while seeding.
      */
     public function run(): void
     {
@@ -134,187 +131,60 @@ class PrestoneCatalogSeeder extends Seeder
     }
 
     /**
-     * The Prestone range.
-     *
-     * The five 3.78 L coolants carry the artwork supplied by the brand. The remaining
-     * entries are placeholder listings and are deliberately left without an image.
+     * The Radiator Cool line Rancon LubMart stocks. The brand has not supplied artwork
+     * for it yet, so each entry carries the nearest MAX jug as a stand-in.
      */
     protected function products(): array
     {
         return [
             [
-                'sku' => 'PRS-AF-ALL-3.78L',
-                'name' => 'Prestone Antifreeze+Coolant All Vehicles 3.78L',
+                'sku' => 'PRS-RC-GRN-1L',
+                'product_number' => 'FIMT-000253',
+                'name' => 'Prestone Radiator Cool Green Fluid 1L',
                 'category' => 'antifreeze-coolant',
-                'pack_size' => '3.78L',
-                'price' => 2450,
-                'weight' => 4.1,
+                'pack_size' => '1L',
+                'price' => 550,
+                'weight' => 1.1,
                 'featured' => 1,
-                'new' => 1,
-                'image' => 'prestone-antifreeze-coolant-all-vehicles.jpg',
-                'short_description' => 'Ready to use 50/50 antifreeze and coolant for every make, model and year.',
-                'description' => '<p>Prestone Antifreeze+Coolant is guaranteed for all makes, models and years, so a single jug covers the whole driveway. It arrives prediluted 50/50 and is ready to pour straight into the radiator or reservoir with no water to add.</p><p>The formula protects against rust and corrosion across the entire cooling system and carries a 10 year, 300,000 mile guarantee when used as directed.</p>',
-            ], [
-                'sku' => 'PRS-AF-ALL-946ML',
-                'name' => 'Prestone Antifreeze+Coolant All Vehicles 946ml',
-                'category' => 'antifreeze-coolant',
-                'pack_size' => '946ml',
-                'price' => 750,
-                'weight' => 1.05,
-                'image' => 'prestone-antifreeze-coolant-all-vehicles.jpg',
-                'short_description' => 'Top-up bottle of ready to use 50/50 antifreeze and coolant for all vehicles.',
-                'description' => '<p>The 946 ml bottle of Prestone Antifreeze+Coolant is sized for topping up between services and for keeping in the boot. Guaranteed for all makes, models and years, prediluted 50/50 and ready to use.</p><p>Protects against rust and corrosion across the whole cooling system, with a 10 year, 300,000 mile guarantee when used as directed.</p>',
-            ], [
-                'sku' => 'PRS-AF-ALL-9.46L',
-                'name' => 'Prestone Antifreeze+Coolant All Vehicles 9.46L',
-                'category' => 'antifreeze-coolant',
-                'pack_size' => '9.46L',
-                'price' => 5650,
-                'weight' => 10.2,
-                'image' => 'prestone-antifreeze-coolant-all-vehicles.jpg',
-                'short_description' => 'Workshop sized ready to use 50/50 antifreeze and coolant for all vehicles.',
-                'description' => '<p>The 9.46 L jug of Prestone Antifreeze+Coolant suits workshops and fleets that flush and fill more than one cooling system at a time. Guaranteed for all makes, models and years and prediluted 50/50, so it pours straight in.</p><p>Protects against rust and corrosion across the whole cooling system, with a 10 year, 300,000 mile guarantee when used as directed.</p>',
-            ], [
-                'sku' => 'PRS-MAX-ASN-RED-3.78L',
-                'name' => 'Prestone MAX Asian Vehicles Red Antifreeze+Coolant 3.78L',
-                'category' => 'antifreeze-coolant',
-                'pack_size' => '3.78L',
-                'price' => 2950,
-                'weight' => 4.1,
-                'featured' => 1,
-                'new' => 1,
-                'image' => 'prestone-max-asian-toyota-lexus-scion.jpg',
-                'short_description' => 'Red fluid coolant guaranteed for Toyota, Lexus and Scion, all years.',
-                'description' => '<p>Prestone MAX in red fluid is guaranteed for Toyota, Lexus and Scion vehicles of all years, matching the original equipment coolant those engines are built around.</p><p>Advanced Original Equipment Technology delivers industry-leading protection from engine-damaging rust and corrosion, with a 15 year, 350,000 mile fluid life. Prediluted 50/50 and ready to use, so no water is added.</p>',
-            ], [
-                'sku' => 'PRS-MAX-ASN-RED-946ML',
-                'name' => 'Prestone MAX Asian Vehicles Red Antifreeze+Coolant 946ml',
-                'category' => 'antifreeze-coolant',
-                'pack_size' => '946ml',
-                'price' => 890,
-                'weight' => 1.05,
-                'image' => 'prestone-max-asian-toyota-lexus-scion.jpg',
-                'short_description' => 'Top-up bottle of red fluid coolant for Toyota, Lexus and Scion.',
-                'description' => '<p>A 946 ml top-up bottle of Prestone MAX red fluid, guaranteed for Toyota, Lexus and Scion vehicles of all years and matched to the coolant those engines left the factory with.</p><p>Advanced Original Equipment Technology protects against rust and corrosion for up to 15 years or 350,000 miles. Prediluted 50/50 and ready to use.</p>',
-            ], [
-                'sku' => 'PRS-MAX-ASN-BLU-3.78L',
-                'name' => 'Prestone MAX Asian Vehicles Blue Antifreeze+Coolant 3.78L',
-                'category' => 'antifreeze-coolant',
-                'pack_size' => '3.78L',
-                'price' => 2950,
-                'weight' => 4.1,
-                'featured' => 1,
-                'new' => 1,
-                'image' => 'prestone-max-asian-honda-acura-nissan.jpg',
-                'short_description' => 'Blue fluid coolant for Honda and Acura, plus Nissan, Infiniti and Subaru from 2009.',
-                'description' => '<p>Prestone MAX in blue fluid is guaranteed for Honda and Acura vehicles of all years, and for Nissan, Infiniti and Subaru vehicles from 2009 onwards.</p><p>Advanced Original Equipment Technology delivers industry-leading protection from engine-damaging rust and corrosion, with a 15 year, 350,000 mile fluid life. Prediluted 50/50 and ready to use, so no water is added.</p>',
-            ], [
-                'sku' => 'PRS-MAX-ASN-BLU-946ML',
-                'name' => 'Prestone MAX Asian Vehicles Blue Antifreeze+Coolant 946ml',
-                'category' => 'antifreeze-coolant',
-                'pack_size' => '946ml',
-                'price' => 890,
-                'weight' => 1.05,
-                'image' => 'prestone-max-asian-honda-acura-nissan.jpg',
-                'short_description' => 'Top-up bottle of blue fluid coolant for Honda, Acura, Nissan, Infiniti and Subaru.',
-                'description' => '<p>A 946 ml top-up bottle of Prestone MAX blue fluid, guaranteed for Honda and Acura vehicles of all years and for Nissan, Infiniti and Subaru vehicles from 2009 onwards.</p><p>Advanced Original Equipment Technology protects against rust and corrosion for up to 15 years or 350,000 miles. Prediluted 50/50 and ready to use.</p>',
-            ], [
-                'sku' => 'PRS-MAX-ASN-GRN-3.78L',
-                'name' => 'Prestone MAX Asian Vehicles Green Antifreeze+Coolant 3.78L',
-                'category' => 'antifreeze-coolant',
-                'pack_size' => '3.78L',
-                'price' => 2950,
-                'weight' => 4.1,
                 'new' => 1,
                 'image' => 'prestone-max-asian-hyundai-kia-mazda.jpg',
-                'short_description' => 'Green fluid coolant for Hyundai, Kia, Mazda and Mitsubishi, all years.',
-                'description' => '<p>Prestone MAX in green fluid is guaranteed for Hyundai, Kia, Mazda and Mitsubishi vehicles of all years, for Suzuki up to 2010 and for Nissan, Infiniti and Subaru up to 2009.</p><p>Advanced Original Equipment Technology delivers industry-leading protection from engine-damaging rust and corrosion, with a 15 year, 350,000 mile fluid life. Prediluted 50/50 and ready to use, so no water is added.</p>',
+                'short_description' => 'Ready to use green radiator coolant for petrol and diesel engines.',
+                'description' => '<p>Prestone Radiator Cool in green fluid is a ready to use coolant for the petrol and diesel engines of everyday cars, vans and light commercials. It pours straight into the radiator or expansion tank with no water to add.</p><p>The inhibitor package guards the radiator, water pump, hoses and cylinder head against rust, scale and corrosion, and raises the boiling point so the engine holds its temperature in traffic.</p>',
             ], [
-                'sku' => 'PRS-MAX-EUR-VLT-3.78L',
-                'name' => 'Prestone MAX European Vehicles Violet Antifreeze+Coolant 3.78L',
+                'sku' => 'PRS-RC-PNK-1L',
+                'product_number' => 'FIMT-000254',
+                'name' => 'Prestone Radiator Cool Pink Fluid 1L',
                 'category' => 'antifreeze-coolant',
-                'pack_size' => '3.78L',
-                'price' => 3250,
-                'weight' => 4.1,
+                'pack_size' => '1L',
+                'price' => 550,
+                'weight' => 1.1,
+                'new' => 1,
+                'image' => 'prestone-max-asian-toyota-lexus-scion.jpg',
+                'short_description' => 'Ready to use pink long life radiator coolant for modern engines.',
+                'description' => '<p>Prestone Radiator Cool in pink fluid is the long life coolant for engines that left the factory on a pink or red organic acid coolant, common across Japanese and Korean models. It pours straight into the radiator or expansion tank with no water to add.</p><p>The organic acid inhibitors stay active far longer than a conventional coolant, protecting the radiator, water pump, hoses and cylinder head against rust, scale and corrosion.</p>',
+            ], [
+                'sku' => 'PRS-RC-GRN-4L',
+                'product_number' => 'FIMT-000255',
+                'name' => 'Prestone Radiator Cool Green Fluid 4L',
+                'category' => 'antifreeze-coolant',
+                'pack_size' => '4L',
+                'price' => 1850,
+                'weight' => 4.3,
                 'featured' => 1,
-                'new' => 1,
-                'image' => 'prestone-max-european-audi-vw-porsche-mercedes.jpg',
-                'short_description' => 'Violet fluid coolant for Audi, Volkswagen, Porsche and Mercedes.',
-                'description' => '<p>Prestone MAX in violet fluid is guaranteed for Audi from 2000, Volkswagen from 2009, Porsche from 2010 and Mercedes from 2014, matching the original equipment coolant those engines are built around.</p><p>Advanced Original Equipment Technology delivers maximum engine protection from rust and corrosion, with a 5 year, 150,000 mile fluid life. Prediluted 50/50 and ready to use, so no water is added.</p>',
+                'image' => 'prestone-max-asian-hyundai-kia-mazda.jpg',
+                'short_description' => 'Full flush and fill of ready to use green radiator coolant.',
+                'description' => '<p>The 4 L jug of Prestone Radiator Cool green fluid is sized for a complete drain and refill rather than a top up, and suits the petrol and diesel engines of everyday cars, vans and light commercials.</p><p>The inhibitor package guards the radiator, water pump, hoses and cylinder head against rust, scale and corrosion, and raises the boiling point so the engine holds its temperature in traffic. Ready to use with no water to add.</p>',
             ], [
-                'sku' => 'PRS-MAX-EUR-VLT-946ML',
-                'name' => 'Prestone MAX European Vehicles Violet Antifreeze+Coolant 946ml',
+                'sku' => 'PRS-RC-PNK-4L',
+                'product_number' => 'FIMT-000256',
+                'name' => 'Prestone Radiator Cool Pink Fluid 4L',
                 'category' => 'antifreeze-coolant',
-                'pack_size' => '946ml',
-                'price' => 980,
-                'weight' => 1.05,
-                'image' => 'prestone-max-european-audi-vw-porsche-mercedes.jpg',
-                'short_description' => 'Top-up bottle of violet fluid coolant for Audi, Volkswagen, Porsche and Mercedes.',
-                'description' => '<p>A 946 ml top-up bottle of Prestone MAX violet fluid, guaranteed for Audi from 2000, Volkswagen from 2009, Porsche from 2010 and Mercedes from 2014.</p><p>Advanced Original Equipment Technology protects against rust and corrosion for up to 5 years or 150,000 miles. Prediluted 50/50 and ready to use.</p>',
-            ], [
-                'sku' => 'PRS-BF-DOT3-355ML',
-                'name' => 'Prestone DOT 3 Brake Fluid 355ml',
-                'category' => 'brake-fluid',
-                'pack_size' => '355ml',
-                'price' => 480,
-                'weight' => 0.42,
-                'short_description' => 'DOT 3 brake fluid for hydraulic brake and clutch systems.',
-                'description' => '<p>Prestone DOT 3 Brake Fluid meets the FMVSS 116 DOT 3 specification and suits the hydraulic brake and clutch systems of most passenger cars and light trucks.</p><p>A high boiling point resists vapour lock under hard braking, and the corrosion inhibitors protect the metal and rubber parts of the system. Use only from a sealed container, as brake fluid absorbs moisture from the air.</p>',
-            ], [
-                'sku' => 'PRS-BF-DOT3-946ML',
-                'name' => 'Prestone DOT 3 Brake Fluid 946ml',
-                'category' => 'brake-fluid',
-                'pack_size' => '946ml',
-                'price' => 1150,
-                'weight' => 1.08,
-                'short_description' => 'Workshop bottle of DOT 3 brake fluid for hydraulic brake and clutch systems.',
-                'description' => '<p>The 946 ml bottle of Prestone DOT 3 Brake Fluid is sized for a full brake bleed. It meets the FMVSS 116 DOT 3 specification and suits the hydraulic brake and clutch systems of most passenger cars and light trucks.</p><p>A high boiling point resists vapour lock under hard braking, and the corrosion inhibitors protect the metal and rubber parts of the system.</p>',
-            ], [
-                'sku' => 'PRS-BF-DOT4-355ML',
-                'name' => 'Prestone DOT 4 Brake Fluid 355ml',
-                'category' => 'brake-fluid',
-                'pack_size' => '355ml',
-                'price' => 620,
-                'weight' => 0.42,
-                'new' => 1,
-                'short_description' => 'DOT 4 brake fluid with a higher boiling point for ABS equipped vehicles.',
-                'description' => '<p>Prestone DOT 4 Brake Fluid meets the FMVSS 116 DOT 4 specification and carries a higher dry and wet boiling point than DOT 3, which suits vehicles fitted with ABS and those driven hard or towing.</p><p>Compatible with DOT 3 systems where the manufacturer permits it. Use only from a sealed container, as brake fluid absorbs moisture from the air.</p>',
-            ], [
-                'sku' => 'PRS-PSF-946ML',
-                'name' => 'Prestone Power Steering Fluid 946ml',
-                'category' => 'power-steering-fluid',
-                'pack_size' => '946ml',
-                'price' => 890,
-                'weight' => 0.95,
-                'short_description' => 'Power steering fluid that quietens the pump and conditions the seals.',
-                'description' => '<p>Prestone Power Steering Fluid restores smooth, quiet steering in most domestic and imported vehicles that call for a conventional power steering fluid.</p><p>Seal conditioners keep the hoses and seals pliable to help stop weeping, and the anti-wear additives protect the pump. Stays fluid in cold weather so assistance is there from the first turn of the wheel.</p>',
-            ], [
-                'sku' => 'PRS-PSF-ASN-946ML',
-                'name' => 'Prestone Power Steering Fluid for Asian Vehicles 946ml',
-                'category' => 'power-steering-fluid',
-                'pack_size' => '946ml',
-                'price' => 1050,
-                'weight' => 0.95,
-                'short_description' => 'Power steering fluid formulated for Japanese and Korean steering systems.',
-                'description' => '<p>Prestone Power Steering Fluid for Asian Vehicles is formulated for the tighter tolerances and lower viscosity requirements of Japanese and Korean power steering systems.</p><p>Seal conditioners keep the hoses and seals pliable, and the anti-wear additives protect the pump. Check the handbook before use, as some vehicles specify an automatic transmission fluid instead.</p>',
-            ], [
-                'sku' => 'PRS-WW-BUGWASH-3.78L',
-                'name' => 'Prestone Bug Wash Windshield Washer Fluid 3.78L',
-                'category' => 'windshield-washer-fluid',
-                'pack_size' => '3.78L',
-                'price' => 620,
-                'weight' => 3.9,
-                'short_description' => 'Screen wash that lifts bugs and road film without streaking.',
-                'description' => '<p>Prestone Bug Wash cuts through insect residue, road film and grime that ordinary water leaves behind, clearing the screen on the first pass of the wipers.</p><p>Ready to use with no dilution needed, and safe for painted surfaces, glass and wiper rubber. Fills the reservoir straight from the jug.</p>',
-            ], [
-                'sku' => 'PRS-WW-ALLSEASON-3.78L',
-                'name' => 'Prestone All Season Windshield Washer Fluid 3.78L',
-                'category' => 'windshield-washer-fluid',
-                'pack_size' => '3.78L',
-                'price' => 540,
-                'weight' => 3.9,
-                'short_description' => 'Year round screen wash for everyday road grime.',
-                'description' => '<p>Prestone All Season Windshield Washer Fluid handles the dust, road film and light grime of everyday driving, whatever the month.</p><p>Ready to use with no dilution needed, and safe for painted surfaces, glass and wiper rubber. Fills the reservoir straight from the jug.</p>',
+                'pack_size' => '4L',
+                'price' => 1850,
+                'weight' => 4.3,
+                'image' => 'prestone-max-asian-toyota-lexus-scion.jpg',
+                'short_description' => 'Full flush and fill of ready to use pink long life radiator coolant.',
+                'description' => '<p>The 4 L jug of Prestone Radiator Cool pink fluid is sized for a complete drain and refill of an engine that runs a pink or red organic acid coolant, common across Japanese and Korean models.</p><p>The organic acid inhibitors stay active far longer than a conventional coolant, protecting the radiator, water pump, hoses and cylinder head against rust, scale and corrosion. Ready to use with no water to add.</p>',
             ],
         ];
     }
@@ -421,6 +291,7 @@ class PrestoneCatalogSeeder extends Seeder
 
         $data = self::SHARED_ATTRIBUTES + [
             'sku' => $product['sku'],
+            'product_number' => $product['product_number'],
             'name' => $product['name'],
             'url_key' => $urlKey,
             'price' => $product['price'],
@@ -458,10 +329,8 @@ class PrestoneCatalogSeeder extends Seeder
     }
 
     /**
-     * Spell a category's translated fields out for every locale the store runs.
-     *
-     * The repository reads translations off locale keyed sub arrays on both create and
-     * update, so the same category text is repeated under each locale code.
+     * Spell a category's translated fields out under every locale code, which is how
+     * the repository reads them on both create and update.
      */
     protected function categoryTranslations(array $category): array
     {
@@ -482,10 +351,8 @@ class PrestoneCatalogSeeder extends Seeder
     }
 
     /**
-     * Run the callback against a request carrying the given logo files.
-     *
-     * The category repository reads its images off the current request rather than off
-     * the payload, so seeding one has to put the files where it looks for them.
+     * Run the callback against a request carrying the given logo files, which is where
+     * the category repository reads its images from rather than off the payload.
      */
     protected function withUploadedRequestFiles(array $files, callable $callback): mixed
     {
