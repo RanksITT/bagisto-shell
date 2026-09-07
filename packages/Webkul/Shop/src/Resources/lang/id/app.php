@@ -753,6 +753,45 @@ return [
             ],
         ],
 
+        'story' => [
+            'figures' => [
+                'grades' => 'Tingkat kekentalan',
+                'products' => 'Produk',
+                'title' => 'Yang kami sediakan',
+                'vehicles' => 'Jenis kendaraan',
+            ],
+
+            'protection' => [
+                'kept' => 'Terlindungi',
+                'text' => 'Permukaan bantalan tergores dan berlubang tanpa lapisan di antara logam. Jaga lapisannya, komponen ikut terjaga.',
+                'title' => 'Keausan terjadi di tempat tanpa oli',
+                'worn' => 'Tanpa perlindungan',
+            ],
+
+            'viscosity' => [
+                'cold' => 'Dingin',
+                'hot' => 'Panas',
+                'text' => 'Angka pertama menunjukkan aliran saat dingin, angka kedua ketahanan saat panas. Multigrade melakukan keduanya.',
+                'title' => 'Temukan tingkat Anda',
+            ],
+
+            'engine' => [
+                'eyebrow' => 'Di dalam mesin',
+                'step-gallery' => 'Naik melalui saluran',
+                'step-ring' => 'Melapisi dinding silinder',
+                'step-sump' => 'Mengisi karter',
+                'text' => 'Pelumas Shell asli menjangkau setiap komponen bergerak, dari karter hingga ring teratas.',
+                'title' => 'Perlindungan sampai ke dalam',
+            ],
+        ],
+
+        'categories' => [
+            'scroller' => [
+                'scroll-hint' => 'Gulir untuk menjelajah',
+                'view-range' => 'Lihat Rangkaian',
+            ],
+        ],
+
         'range-slider' => [
             'max-range' => 'Jangkauan Maksimal',
             'min-range' => 'Jangkauan Minimal',
@@ -760,6 +799,7 @@ return [
         ],
 
         'carousel' => [
+            'explore-range' => 'Jelajahi Rangkaian',
             'image-slide' => 'Slide Gambar',
             'next' => 'Berikutnya',
             'previous' => 'Sebelumnya',

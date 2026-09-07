@@ -753,6 +753,45 @@ return [
             ],
         ],
 
+        'story' => [
+            'figures' => [
+                'grades' => 'Viskozite dereceleri',
+                'products' => 'Ürünler',
+                'title' => 'Elimizdekiler',
+                'vehicles' => 'Araç tipleri',
+            ],
+
+            'protection' => [
+                'kept' => 'Korumalı',
+                'text' => 'Metaller arasında film olmadan yatak yüzeyi çizilir ve çukurlaşır. Filmi koruyun, parçayı korursunuz.',
+                'title' => 'Aşınma yağın olmadığı yerde başlar',
+                'worn' => 'Korumasız',
+            ],
+
+            'viscosity' => [
+                'cold' => 'Soğuk',
+                'hot' => 'Sıcak',
+                'text' => 'İlk sayı soğukta akışı, ikincisi sıcakta dayanımı gösterir. Çok dereceli yağ ikisini birden yapar.',
+                'title' => 'Kendi derecenizi bulun',
+            ],
+
+            'engine' => [
+                'eyebrow' => 'Motorun içinde',
+                'step-gallery' => 'Kanallardan yükselir',
+                'step-ring' => 'Silindiri kaplar',
+                'step-sump' => 'Karteri doldurur',
+                'text' => 'Orijinal Shell yağı karterden üst segmana kadar her hareketli parçaya ulaşır.',
+                'title' => 'Ta derinlere kadar koruma',
+            ],
+        ],
+
+        'categories' => [
+            'scroller' => [
+                'scroll-hint' => 'Keşfetmek için kaydırın',
+                'view-range' => 'Ürün Yelpazesini Gör',
+            ],
+        ],
+
         'range-slider' => [
             'max-range' => 'Maksimum',
             'min-range' => 'Minimum',
@@ -760,6 +799,7 @@ return [
         ],
 
         'carousel' => [
+            'explore-range' => 'Ürün Yelpazesini Keşfet',
             'image-slide' => 'Resim',
             'next' => 'Sonraki',
             'previous' => 'Önceki',

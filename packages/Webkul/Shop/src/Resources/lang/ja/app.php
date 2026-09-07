@@ -753,6 +753,45 @@ return [
             ],
         ],
 
+        'story' => [
+            'figures' => [
+                'grades' => '粘度グレード',
+                'products' => '製品数',
+                'title' => '取り扱い一覧',
+                'vehicles' => '車両タイプ',
+            ],
+
+            'protection' => [
+                'kept' => '保護あり',
+                'text' => '金属どうしの間に油膜がなければ、軸受面は傷つき点食します。油膜を保てば部品が保たれます。',
+                'title' => '摩耗は油膜のないところで起きる',
+                'worn' => '保護なし',
+            ],
+
+            'viscosity' => [
+                'cold' => '低温',
+                'hot' => '高温',
+                'text' => '最初の数字は低温での流れ、次の数字は高温での保持力。マルチグレードは両方を満たします。',
+                'title' => 'グレードを選ぶ',
+            ],
+
+            'engine' => [
+                'eyebrow' => 'エンジンの内側へ',
+                'step-gallery' => '油路を上がる',
+                'step-ring' => 'シリンダー壁を覆う',
+                'step-sump' => 'オイルパンを満たす',
+                'text' => '純正シェル潤滑油が、オイルパンからトップリングまで可動部のすべてに行き渡ります。',
+                'title' => 'すみずみまで守る',
+            ],
+        ],
+
+        'categories' => [
+            'scroller' => [
+                'scroll-hint' => 'スクロールして見る',
+                'view-range' => 'ラインナップを見る',
+            ],
+        ],
+
         'range-slider' => [
             'max-range' => '最大範囲',
             'min-range' => '最小範囲',
@@ -760,6 +799,7 @@ return [
         ],
 
         'carousel' => [
+            'explore-range' => 'ラインナップを見る',
             'image-slide' => '画像スライド',
             'next' => '次へ',
             'previous' => '前へ',

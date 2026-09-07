@@ -15,6 +15,20 @@ img.lazy {
 }
 
 @layer components {
+    /**
+     * Height of the sticky site header, which several scroll effects need to
+     * offset against. Matches the `min-h-[78px]` on the desktop header bar.
+     */
+    :root {
+        --header-h: 78px;
+    }
+
+    @media (max-width: 1023px) {
+        :root {
+            --header-h: 62px;
+        }
+    }
+
     body {
         @apply bg-navyBlue text-offWhite;
     }
@@ -528,5 +542,634 @@ img.lazy {
 
     .skip-to-main-content-link:focus {
         @apply ltr:left-1/2 rtl:right-1/2 ltr:translate-x-1/2 rtl:translate-x-[-50%] opacity-100;
+    }
+
+    /**
+     * Scroll reveal primitive. The hidden state is scoped to the `js-motion`
+     * class so a failed bundle or a reduced motion preference leaves the
+     * document fully painted.
+     */
+    @media (prefers-reduced-motion: no-preference) {
+        .js-motion [data-reveal] {
+            opacity: 0;
+            transition:
+                opacity .6s cubic-bezier(.22, 1, .36, 1),
+                translate .6s cubic-bezier(.22, 1, .36, 1),
+                scale .6s cubic-bezier(.22, 1, .36, 1),
+                clip-path .7s cubic-bezier(.22, 1, .36, 1);
+            transition-delay: var(--reveal-delay, 0ms);
+        }
+
+        .js-motion [data-reveal="up"] {
+            translate: 0 24px;
+        }
+
+        .js-motion [data-reveal="left"] {
+            translate: -28px 0;
+        }
+
+        .js-motion [data-reveal="right"] {
+            translate: 28px 0;
+        }
+
+        .js-motion[dir="rtl"] [data-reveal="left"] {
+            translate: 28px 0;
+        }
+
+        .js-motion[dir="rtl"] [data-reveal="right"] {
+            translate: -28px 0;
+        }
+
+        .js-motion [data-reveal="scale"] {
+            scale: .96;
+        }
+
+        .js-motion [data-reveal="clip"] {
+            clip-path: inset(100% 0 0 0);
+        }
+
+        .js-motion [data-reveal].is-visible {
+            opacity: 1;
+            translate: none;
+            scale: none;
+            clip-path: inset(0 0 0 0);
+        }
+    }
+
+    /**
+     * Hero takeover. The image drifts and swells as the first viewport scrolls
+     * away while the headline lifts out ahead of it, so the hero reads as one
+     * moving plate rather than a static banner. Both are driven by `--scrub-exit`
+     * from the shared scroll engine and both fall back to a still hero when that
+     * property never arrives.
+     */
+    .hero-parallax {
+        overflow: hidden;
+    }
+
+    /**
+     * The hero is a full viewport image sitting below an in flow sticky header, so
+     * its lower edge always falls the height of that header below the fold. The
+     * scrim still covers the whole image, but the copy is padded clear of the
+     * overflow so the call to action is never cut off.
+     */
+    .hero-overlay {
+        @apply pointer-events-none absolute inset-x-0 bottom-0 pt-32 max-md:pt-20;
+        padding-bottom: calc(4rem + var(--header-h, 78px));
+        background: linear-gradient(to top, rgba(17, 17, 19, .96) 0%, rgba(17, 17, 19, .88) 30%, rgba(17, 17, 19, .55) 62%, transparent 100%);
+    }
+
+    .hero-overlay__title {
+        @apply max-w-[18ch] text-5xl leading-tight text-offWhite max-lg:text-4xl max-md:text-3xl max-sm:text-2xl;
+    }
+
+    .hero-overlay__rule {
+        @apply mt-5 block h-px w-24 bg-darkBlue max-md:mt-3;
+        transform-origin: left center;
+    }
+
+    [dir="rtl"] .hero-overlay__rule {
+        transform-origin: right center;
+    }
+
+    .hero-overlay__cta {
+        @apply pointer-events-auto mt-7 max-md:mt-5 max-sm:px-6 max-sm:py-3 max-sm:text-sm;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        .js-motion .hero-parallax > * {
+            scale: calc(1 + var(--scrub-exit, 0) * .12);
+            translate: 0 calc(var(--scrub-exit, 0) * -4%);
+        }
+
+        .js-motion .hero-overlay {
+            opacity: calc(1 - var(--scrub-exit, 0) * 2.2);
+            translate: 0 calc(var(--scrub-exit, 0) * -60px);
+        }
+
+        .js-motion .hero-overlay__rule[data-reveal] {
+            scale: 0 1;
+        }
+
+        .js-motion .hero-overlay__rule[data-reveal].is-visible {
+            scale: 1 1;
+        }
+    }
+
+    /**
+     * Reading progress, drawn as a dipstick.
+     *
+     * The stem is pulled a little further out of the edge of the page as the
+     * visitor descends, while the oil column inside it rises to the same reading
+     * and carries the brand droplet at its surface. Hidden entirely without the
+     * scroll engine, since a progress indicator that cannot move is only clutter,
+     * and hidden on small screens where the edge is already spoken for.
+     */
+    /**
+     * Sits above ordinary page content but below every overlay: the modal backdrop
+     * and the mobile bars are `z-10`, the drawer backdrop is `z-20`, and a 440px
+     * dipstick floating over a dimmed modal would be very obvious.
+     */
+    .dipstick {
+        @apply pointer-events-none fixed top-1/2 z-[9] hidden h-[46svh] w-8 -translate-y-1/2 ltr:right-0 rtl:left-0;
+    }
+
+    .js-motion .dipstick {
+        @apply lg:block;
+    }
+
+    /**
+     * The dipstick is a desktop margin object, so small screens keep the plain
+     * reading bar rather than losing progress feedback altogether.
+     */
+    .scroll-progress {
+        @apply pointer-events-none fixed inset-x-0 top-0 z-[9] hidden h-0.5 origin-left bg-darkBlue;
+        transform: scaleX(var(--progress, 0));
+    }
+
+    .js-motion .scroll-progress {
+        @apply block lg:hidden;
+    }
+
+    .dipstick__stem {
+        @apply relative h-full w-2.5 rounded-full border border-navyBorder bg-navySurface ltr:ml-auto rtl:mr-auto;
+        translate: 0 calc(var(--progress, 0) * 10px);
+        transition: translate .2s linear;
+    }
+
+    .dipstick__mark {
+        @apply absolute h-px bg-mutedBlue ltr:right-full rtl:left-full;
+        width: 10px;
+    }
+
+    .dipstick__mark--max {
+        top: 18%;
+    }
+
+    .dipstick__mark--min {
+        top: 82%;
+    }
+
+    .dipstick__oil {
+        @apply absolute inset-x-px bottom-px block rounded-full bg-darkBlue;
+        height: calc(var(--progress, 0) * 100%);
+    }
+
+    .dipstick__drop {
+        @apply absolute h-3.5 w-3.5;
+        left: 50%;
+        bottom: calc(var(--progress, 0) * 100%);
+        translate: -50% 40%;
+    }
+
+    /**
+     * Catalogue odometer.
+     *
+     * Each digit is a reel of ten glyphs inside a one line window. The base rule
+     * parks every reel on its real digit, so without motion the figures simply
+     * read correctly; only the motion rule rolls them up from zero.
+     */
+    .odo-card {
+        @apply rounded-xl border border-navyBorder bg-navySurface p-6 max-sm:p-5;
+    }
+
+    .odo {
+        @apply flex font-dmserif text-5xl leading-none text-darkBlue max-sm:text-4xl;
+    }
+
+    .odo__window {
+        @apply block overflow-hidden;
+        height: 1em;
+    }
+
+    .odo__reel {
+        @apply block;
+        translate: 0 calc(var(--digit, 0) * -1em);
+    }
+
+    .odo__digit {
+        @apply block text-center;
+        height: 1em;
+        line-height: 1;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        .js-motion .odo__reel {
+            --roll: clamp(0, calc((var(--scrub, 1) - var(--reel-delay, 0) - .3) * 4), 1);
+            translate: 0 calc(var(--digit, 0) * var(--roll) * -1em);
+        }
+    }
+
+    /**
+     * Wear against protection.
+     *
+     * The protected surface sits over the worn one and is clipped back as the
+     * section passes, so the scroll acts as a squeegee. Left unguarded the
+     * protected layer covers the whole panel, which is the on message still.
+     */
+    .wipe {
+        @apply relative overflow-hidden rounded-xl border border-navyBorder;
+    }
+
+    .wipe__layer {
+        @apply inset-0 block;
+    }
+
+    .wipe__layer--protected {
+        @apply absolute;
+    }
+
+    .wipe__svg {
+        @apply block h-full w-full;
+    }
+
+    .wipe__scar {
+        stroke: #4A4741;
+        stroke-width: 3;
+        stroke-linecap: round;
+    }
+
+    .wipe__pit {
+        fill: #16161A;
+    }
+
+    .wipe__film {
+        fill: #E8A33D;
+        opacity: .5;
+    }
+
+    .wipe__sheen {
+        stroke: #F0B85C;
+        stroke-width: 2;
+        opacity: .3;
+    }
+
+    .wipe__edge {
+        @apply pointer-events-none absolute inset-y-0 block w-0.5 bg-darkBlue opacity-0 ltr:left-0 rtl:right-0;
+    }
+
+    .wipe__label {
+        @apply text-mutedBlue;
+    }
+
+    .wipe__label--kept {
+        @apply text-darkBlue;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        .js-motion .wipe__layer--protected {
+            clip-path: inset(0 calc((1 - var(--scrub, 1)) * 100%) 0 0);
+        }
+
+        [dir="rtl"] .js-motion .wipe__layer--protected {
+            clip-path: inset(0 0 0 calc((1 - var(--scrub, 1)) * 100%));
+        }
+
+        .js-motion .wipe__edge {
+            @apply opacity-100;
+            translate: calc(var(--scrub, 1) * 100%) 0;
+        }
+
+        [dir="rtl"] .js-motion .wipe__edge {
+            translate: calc(var(--scrub, 1) * -100%) 0;
+        }
+    }
+
+    /**
+     * Viscosity dial. The needle sweeps as the section passes and the arc fills
+     * with it, while the grades beside it stay ordinary links.
+     */
+    .visc {
+        @apply mx-auto w-full max-w-[360px];
+    }
+
+    .visc__svg {
+        @apply block w-full;
+    }
+
+    .visc__track {
+        stroke: #302F2A;
+        stroke-width: 10;
+        stroke-linecap: round;
+    }
+
+    .visc__fill {
+        stroke: #E8A33D;
+        stroke-width: 10;
+        stroke-linecap: round;
+    }
+
+    .visc__needle {
+        stroke: #F5F3EE;
+        stroke-width: 4;
+        fill: #1A1A1D;
+        transform-origin: 100px 124px;
+    }
+
+    .visc__scale {
+        @apply -mt-2 flex justify-between text-xs uppercase tracking-[.18em] text-mutedBlue;
+    }
+
+    .grade-chip {
+        @apply block rounded-full border border-navyBorder bg-navySurface px-4 py-2 text-sm font-medium text-offWhite transition-colors duration-300 hover:border-darkBlue hover:text-darkBlue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-darkBlue;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        .js-motion .visc {
+            --visc: clamp(0, calc((var(--scrub, 1) - .3) * 2.5), 1);
+        }
+
+        .js-motion .visc__fill {
+            stroke-dasharray: 1;
+            stroke-dashoffset: calc(1 - var(--visc, 1));
+        }
+
+        .js-motion .visc__needle {
+            rotate: calc(-90deg + var(--visc, 1) * 180deg);
+        }
+    }
+
+    /**
+     * The pour between chapters.
+     *
+     * The stream is drawn with a normalised path length, so one custom property
+     * runs it from empty to full regardless of the curve. The base rule leaves it
+     * fully drawn: without motion the page shows completed pours rather than
+     * missing ones.
+     */
+    .pour {
+        @apply pointer-events-none mx-auto block h-[220px] w-[120px] max-lg:h-[110px];
+    }
+
+    .pour__svg {
+        @apply block h-full w-full;
+    }
+
+    .pour__stream {
+        stroke: #E8A33D;
+        stroke-width: 3.5;
+        stroke-linecap: round;
+        fill: none;
+        filter: drop-shadow(0 0 6px rgba(232, 163, 61, .35));
+    }
+
+    .pour__lip,
+    .pour__pool {
+        fill: #E8A33D;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        .js-motion .pour {
+            --pour: clamp(0, calc((var(--scrub, 1) - .3) * 2.94), 1);
+        }
+
+        .js-motion .pour__stream {
+            stroke-dasharray: 1;
+            stroke-dashoffset: calc(1 - var(--pour, 1));
+        }
+
+        .js-motion .pour__pool {
+            opacity: clamp(0, calc((var(--pour, 1) - .8) * 5), 1);
+        }
+    }
+
+    /**
+     * A stage that holds its contents still while the page scrolls past it.
+     *
+     * The outer element is given height so the page has something to scroll, and
+     * the inner element sticks inside it. Only desktop pins: on a narrow screen
+     * the stage collapses to its natural height and the scene simply reads as a
+     * static illustration. `svh` rather than `vh` keeps a mobile browser's
+     * retracting URL bar from resizing the stage mid scroll.
+     */
+    .pin-stage__inner {
+        @apply grid place-content-center;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        @media (min-width: 1024px) {
+            .js-motion .pin-stage {
+                height: calc(var(--pin-length, 2) * 100svh);
+            }
+
+            .js-motion .pin-stage__inner {
+                @apply sticky top-0 overflow-hidden;
+                height: 100svh;
+            }
+        }
+    }
+
+    /**
+     * The engine chapter.
+     *
+     * Line art of a cylinder, piston and crank, with the oil galleries drawn as a
+     * separate amber layer that a rising clip reveals from the sump upwards. The
+     * clip and the moving parts are all driven by `--scrub-pin`, so the scene
+     * costs no work per frame beyond the one custom property the scroll engine
+     * already writes. With motion unavailable the clip is never applied, which
+     * leaves the engine drawn full of oil: the correct still image.
+     */
+    .engine-stage {
+        --pin-length: 2.6;
+    }
+
+    .engine-svg {
+        @apply mx-auto w-full max-w-[420px];
+    }
+
+    .engine-lines {
+        stroke: #A8A29A;
+        stroke-width: 3;
+        fill: none;
+    }
+
+    .engine-piston,
+    .engine-crank {
+        stroke: #F5F3EE;
+        stroke-width: 3;
+        fill: #1A1A1D;
+    }
+
+    .engine-oil {
+        fill: url(#rlmEngineOil);
+    }
+
+    .engine-oil--film {
+        opacity: .75;
+    }
+
+    .engine-bubble {
+        fill: #F5F3EE;
+        opacity: .35;
+    }
+
+    .engine-step {
+        @apply flex items-center gap-3 text-base text-mutedBlue max-sm:text-sm;
+    }
+
+    .engine-step__dot {
+        @apply block h-1.5 w-1.5 shrink-0 rounded-full bg-darkBlue;
+    }
+
+    .engine-flash {
+        fill: #F0B85C;
+        opacity: 0;
+    }
+
+    .engine-rod {
+        stroke: #F5F3EE;
+        stroke-width: 3;
+        fill: #1A1A1D;
+        transform-origin: 180px 132px;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        /**
+         * Everything below depends on `--scrub-pin`, which the scroll engine only
+         * publishes for a stage taller than the viewport. Below the pinning
+         * breakpoint no such value exists, so these rules must not apply at all:
+         * with them inert the base styles paint the engine full of oil, which is
+         * the correct still image.
+         */
+        @media (min-width: 1024px) {
+            .js-motion .engine-stage {
+                --stroke-delay: calc(var(--scrub-pin, 0) * -4s);
+                --ignition: clamp(0, calc((var(--scrub-pin, 0) - .88) / .12), 1);
+            }
+
+            .js-motion .engine-oil-clip {
+                transform: translateY(calc((1 - var(--scrub-pin, 0)) * 470px));
+            }
+
+            /**
+             * The linkage is solved in `engine-scene.js`, so the piston, the rod and
+             * the crank all read from one solution and cannot disagree with each other.
+             */
+            .js-motion .engine-piston {
+                translate: 0 calc(var(--piston-y, 0) * 1px);
+            }
+
+            .js-motion .engine-rod {
+                translate: 0 calc(var(--piston-y, 0) * 1px);
+                rotate: calc(var(--rod-angle, 0) * -1deg);
+            }
+
+            .js-motion .engine-crank {
+                rotate: calc(var(--crank-angle, 0) * 1deg);
+                transform-origin: 180px 342px;
+            }
+
+            /**
+             * The flash shares the stroke timing expression, so it fires at top dead
+             * centre by construction rather than by a duplicated constant.
+             */
+            .js-motion .engine-flash {
+                animation: engine-flash 1s linear infinite;
+                animation-play-state: paused;
+                animation-delay: var(--stroke-delay);
+            }
+
+            .js-motion .engine-lines {
+                stroke: color-mix(in srgb, #E8A33D calc(var(--ignition) * 100%), #A8A29A);
+            }
+
+            /**
+             * The engine catches. A single shudder played once through, scrubbed by
+             * the ignition ramp rather than by the stroke clock, so it happens at the
+             * end of the chapter and settles rather than looping.
+             */
+            .js-motion .engine-svg {
+                animation: engine-catch 1s linear 1 both;
+                animation-play-state: paused;
+                animation-delay: calc(var(--ignition) * -1s);
+            }
+
+            .js-motion .engine-bubble {
+                animation: engine-rise 1s linear infinite;
+                animation-play-state: paused;
+            }
+
+            .js-motion .engine-bubble--a {
+                animation-delay: calc(var(--scrub-pin, 0) * -3s);
+            }
+
+            .js-motion .engine-bubble--b {
+                animation-delay: calc(var(--scrub-pin, 0) * -3s - .45s);
+            }
+
+            .js-motion .engine-bubble--c {
+                animation-delay: calc(var(--scrub-pin, 0) * -3s - .8s);
+            }
+
+        }
+    }
+
+    @keyframes engine-catch {
+        0% {
+            translate: 0 0;
+        }
+
+        18% {
+            translate: -3px 0;
+        }
+
+        34% {
+            translate: 2.5px 0;
+        }
+
+        50% {
+            translate: -1.5px 0;
+        }
+
+        68% {
+            translate: 1px 0;
+        }
+
+        100% {
+            translate: 0 0;
+        }
+    }
+
+    @keyframes engine-flash {
+        0% {
+            opacity: .85;
+        }
+
+        14% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes engine-rise {
+        0% {
+            translate: 0 0;
+            opacity: 0;
+        }
+
+        20% {
+            opacity: .35;
+        }
+
+        100% {
+            translate: 0 -110px;
+            opacity: 0;
+        }
+    }
+
+    .range-scroller-track {
+        transition: transform .12s linear;
+        will-change: transform;
+    }
+
+    .range-scroller-swipe {
+        scroll-snap-type: x mandatory;
+    }
+
+    .range-scroller-swipe > * {
+        scroll-snap-align: center;
     }
 }

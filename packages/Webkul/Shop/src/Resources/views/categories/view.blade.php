@@ -80,6 +80,7 @@
                         <!-- Product List Card Container -->
                         <div
                             class="mt-8 grid grid-cols-1 gap-6"
+                            data-reveal-group
                             v-if="(filters.toolbar.applied.mode ?? filters.toolbar.default.mode) === 'list'"
                         >
                             <!-- Product Card Shimmer Effect -->
@@ -136,7 +137,10 @@
                             <!-- Product Card Listing -->
                             <template v-else>
                                 <template v-if="products.length">
-                                    <div class="grid grid-cols-3 gap-8 max-1060:grid-cols-2 max-md:justify-items-center max-md:gap-x-4">
+                                    <div
+                                        class="grid grid-cols-3 gap-8 max-1060:grid-cols-2 max-md:justify-items-center max-md:gap-x-4"
+                                        data-reveal-group
+                                    >
                                         <x-shop::products.card
                                             ::mode="'grid'"
                                             v-for="product in products"

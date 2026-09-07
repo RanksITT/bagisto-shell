@@ -9,6 +9,20 @@ import.meta.glob(["../images/**", "../fonts/**"]);
 import { createApp } from "vue/dist/vue.esm-bundler";
 
 /**
+ * Scroll driven motion, booted before the application mounts so server rendered
+ * markup is observed on the first paint.
+ */
+import initScrollReveal from "./scroll-reveal";
+import initScrollEngine from "./scroll-engine";
+import initEngineScene from "./engine-scene";
+
+initScrollReveal();
+
+initScrollEngine();
+
+initEngineScene();
+
+/**
  * Main root application registry.
  */
 window.app = createApp({

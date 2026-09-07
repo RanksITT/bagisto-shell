@@ -753,6 +753,45 @@ return [
             ],
         ],
 
+        'story' => [
+            'figures' => [
+                'grades' => '粘度等级',
+                'products' => '产品',
+                'title' => '我们的库存',
+                'vehicles' => '车辆类型',
+            ],
+
+            'protection' => [
+                'kept' => '已保护',
+                'text' => '金属之间没有油膜，轴承表面就会划伤和点蚀。留住油膜，就留住了零件。',
+                'title' => '没有油膜的地方就有磨损',
+                'worn' => '无保护',
+            ],
+
+            'viscosity' => [
+                'cold' => '低温',
+                'hot' => '高温',
+                'text' => '第一个数字代表低温流动性，第二个代表高温保持力。多级油两者兼备。',
+                'title' => '找到你的等级',
+            ],
+
+            'engine' => [
+                'eyebrow' => '走进发动机',
+                'step-gallery' => '沿油道上行',
+                'step-ring' => '覆盖缸壁',
+                'step-sump' => '注满油底壳',
+                'text' => '正品壳牌润滑油抵达每一个运动部件，从油底壳到第一道活塞环。',
+                'title' => '彻底的保护',
+            ],
+        ],
+
+        'categories' => [
+            'scroller' => [
+                'scroll-hint' => '滚动浏览',
+                'view-range' => '查看系列',
+            ],
+        ],
+
         'range-slider' => [
             'max-range' => '最大范围',
             'min-range' => '最小范围',
@@ -760,6 +799,7 @@ return [
         ],
 
         'carousel' => [
+            'explore-range' => '探索系列',
             'image-slide' => '图片幻灯片',
             'next' => '下一个',
             'previous' => '上一个',

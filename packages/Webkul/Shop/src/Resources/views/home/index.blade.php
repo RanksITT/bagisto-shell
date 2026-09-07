@@ -73,15 +73,41 @@
                     @endpush
                 @endif
 
-                <!-- Render HTML -->
+                {{--
+                    Admin authored markup is purified, which drops any `data-*`
+                    hook it was written with. Wrapping it in a scrubbed element
+                    publishes the section's scroll progress as a custom property
+                    that the `rl-` classes inside can inherit and animate against.
+                --}}
                 @if (! empty($data['html']))
-                    {!! $data['html'] !!}
+                    <div
+                        class="static-chapter"
+                        data-scrub="section"
+                    >
+                        {!! $data['html'] !!}
+                    </div>
+                @endif
+
+                {{--
+                    The engine chapter follows the first static block, so the page
+                    opens with the banner and the category shortcuts before it asks
+                    the visitor to stop and read. Anchored here rather than to the
+                    category carousel, which the store does not publish.
+                --}}
+                @if (! ($storyEngine ?? false))
+                    @php ($storyEngine = true)
+
+                    <x-shop::story.pour />
+
+                    <x-shop::story.engine />
+
+                    <x-shop::story.pour />
                 @endif
 
                 @break
             @case ($section::CATEGORY_CAROUSEL)
-                <!-- Categories carousel -->
-                <x-shop::categories.carousel
+                <!-- Categories scroller -->
+                <x-shop::categories.scroller
                     :title="$data['title'] ?? ''"
                     :src="route('shop.api.categories.index', $data['filters'] ?? [])"
                     :navigation-link="route('shop.home.index')"
@@ -97,6 +123,21 @@
                     :navigation-link="route('shop.search.index', $data['filters'] ?? [])"
                     aria-label="{{ trans('shop::app.home.index.product-carousel') }}"
                 />
+
+                {{--
+                    The remaining chapters hang off the first and second product
+                    carousels, so each sits between two blocks of catalogue rather
+                    than stacking against one another.
+                --}}
+                @if (! ($storyGradeFinder ?? false))
+                    @php ($storyGradeFinder = true)
+
+                    <x-shop::story.viscosity />
+                @elseif (! ($storyFigures ?? false))
+                    @php ($storyFigures = true)
+
+                    <x-shop::story.figures />
+                @endif
 
                 @break
         @endswitch

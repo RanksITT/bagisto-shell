@@ -753,6 +753,45 @@ return [
             ],
         ],
 
+        'story' => [
+            'figures' => [
+                'grades' => 'Gradazioni di viscosita',
+                'products' => 'Prodotti',
+                'title' => 'Cosa teniamo',
+                'vehicles' => 'Tipi di veicolo',
+            ],
+
+            'protection' => [
+                'kept' => 'Protetto',
+                'text' => 'Una superficie di appoggio si riga e si vaiola senza un film fra i metalli. Mantieni il film e mantieni il pezzo.',
+                'title' => 'L usura nasce dove manca il lubrificante',
+                'worn' => 'Non protetto',
+            ],
+
+            'viscosity' => [
+                'cold' => 'Freddo',
+                'hot' => 'Caldo',
+                'text' => 'Il primo numero indica il flusso a freddo, il secondo la tenuta a caldo. Una multigrado fa entrambe le cose.',
+                'title' => 'Trova la tua gradazione',
+            ],
+
+            'engine' => [
+                'eyebrow' => 'Dentro il motore',
+                'step-gallery' => 'Sale nei condotti',
+                'step-ring' => 'Riveste la canna',
+                'step-sump' => 'Riempie la coppa',
+                'text' => 'Il lubrificante Shell originale raggiunge ogni parte in movimento, dalla coppa al primo segmento.',
+                'title' => 'Protezione fino in fondo',
+            ],
+        ],
+
+        'categories' => [
+            'scroller' => [
+                'scroll-hint' => 'Scorri per esplorare',
+                'view-range' => 'Vedi la gamma',
+            ],
+        ],
+
         'range-slider' => [
             'max-range' => 'Intervallo massimo',
             'min-range' => 'Intervallo minimo',
@@ -760,6 +799,7 @@ return [
         ],
 
         'carousel' => [
+            'explore-range' => 'Esplora la gamma',
             'image-slide' => 'Diapositiva immagine',
             'next' => 'Successivo',
             'previous' => 'Precedente',

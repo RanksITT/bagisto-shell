@@ -753,6 +753,45 @@ return [
             ],
         ],
 
+        'story' => [
+            'figures' => [
+                'grades' => 'Grados de viscosidad',
+                'products' => 'Productos',
+                'title' => 'Nuestro surtido',
+                'vehicles' => 'Tipos de vehiculo',
+            ],
+
+            'protection' => [
+                'kept' => 'Protegido',
+                'text' => 'Una superficie de apoyo se raya y se pica sin una pelicula entre los metales. Conserve la pelicula y conservara la pieza.',
+                'title' => 'El desgaste aparece donde no hay aceite',
+                'worn' => 'Sin proteccion',
+            ],
+
+            'viscosity' => [
+                'cold' => 'Frio',
+                'hot' => 'Caliente',
+                'text' => 'El primer numero indica como fluye en frio y el segundo como resiste en caliente. Un multigrado hace ambas cosas.',
+                'title' => 'Encuentra tu grado',
+            ],
+
+            'engine' => [
+                'eyebrow' => 'Dentro del motor',
+                'step-gallery' => 'Sube por los conductos',
+                'step-ring' => 'Recubre el cilindro',
+                'step-sump' => 'Llena el cárter',
+                'text' => 'El lubricante Shell original llega a cada pieza móvil, del cárter al segmento superior.',
+                'title' => 'Protección hasta el fondo',
+            ],
+        ],
+
+        'categories' => [
+            'scroller' => [
+                'scroll-hint' => 'Desplázate para explorar',
+                'view-range' => 'Ver la gama',
+            ],
+        ],
+
         'range-slider' => [
             'max-range' => 'Rango máximo',
             'min-range' => 'Rango mínimo',
@@ -760,6 +799,7 @@ return [
         ],
 
         'carousel' => [
+            'explore-range' => 'Explora la gama',
             'image-slide' => 'Diapositiva de imagen',
             'next' => 'Siguiente',
             'previous' => 'Anterior',

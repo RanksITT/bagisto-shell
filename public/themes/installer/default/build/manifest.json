@@ -9,7 +9,7 @@
     "src": "src/Resources/assets/fonts/bagisto-installer.woff"
   },
   "src/Resources/assets/images/installer/bagisto-logo.svg": {
-    "file": "assets/bagisto-logo-CXf-crI0.svg",
+    "file": "assets/bagisto-logo-CLwnLl2q.svg",
     "src": "src/Resources/assets/images/installer/bagisto-logo.svg"
   },
   "src/Resources/assets/images/installer/favicon.ico": {
@@ -21,7 +21,7 @@
     "src": "src/Resources/assets/images/installer/spinner.svg"
   },
   "src/Resources/assets/js/app.js": {
-    "file": "assets/app-DF6f1EZP.js",
+    "file": "assets/app-KiPs6aG6.js",
     "name": "app",
     "src": "src/Resources/assets/js/app.js",
     "isEntry": true

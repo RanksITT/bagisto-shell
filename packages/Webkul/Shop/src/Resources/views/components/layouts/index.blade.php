@@ -76,6 +76,30 @@
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap"
         />
 
+        {{--
+            Arm the scroll reveal primitive before the first paint so revealable
+            markup never flashes in before it is hidden. The failsafe drops the
+            class again if the bundle never boots, leaving the page readable.
+        --}}
+        <script>
+            (function () {
+                if (
+                    ! ('IntersectionObserver' in window)
+                    || window.matchMedia('(prefers-reduced-motion: reduce)').matches
+                ) {
+                    return;
+                }
+
+                document.documentElement.classList.add('js-motion');
+
+                window.setTimeout(function () {
+                    if (! document.documentElement.dataset.revealReady) {
+                        document.documentElement.classList.remove('js-motion');
+                    }
+                }, 4000);
+            })();
+        </script>
+
         @stack('styles')
 
         <style>
@@ -101,6 +125,48 @@
         >
             Skip to main content
         </a>
+
+        {{--
+            Reading progress, drawn as a dipstick being pulled out of the edge of
+            the page. It renders only once the scroll engine has armed motion,
+            because an indicator that cannot indicate anything is just noise.
+        --}}
+        <div
+            class="scroll-progress"
+            role="presentation"
+            aria-hidden="true"
+            data-progress
+        >
+        </div>
+
+        <div
+            class="dipstick"
+            role="presentation"
+            aria-hidden="true"
+            data-progress
+        >
+            <div class="dipstick__stem">
+                <span class="dipstick__mark dipstick__mark--max"></span>
+
+                <span class="dipstick__mark dipstick__mark--min"></span>
+
+                <span class="dipstick__oil"></span>
+
+                <svg
+                    class="dipstick__drop"
+                    viewBox="0 0 200 200"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                    focusable="false"
+                >
+                    <path
+                        d="M100 52 C120 84 136 106 136 124 A36 36 0 1 1 64 124 C64 106 80 84 100 52 Z"
+                        fill="#E8A33D"
+                    />
+                </svg>
+            </div>
+        </div>
 
         <!-- Built With Bagisto -->
         <div id="app">
