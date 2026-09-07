@@ -800,6 +800,7 @@ return [
 
         'carousel' => [
             'explore-range' => 'Explorer la gamme',
+            'go-to-slide' => 'Aller à la diapositive :number',
             'image-slide' => 'Diapositive d\'image',
             'next' => 'Suivant',
             'previous' => 'Précédent',
@@ -813,6 +814,17 @@ return [
     ],
 
     'products' => [
+        'catalog' => [
+            'all-products' => 'All Products',
+            'browse-by-category' => 'Browse by Category',
+            'browse-by-spec' => 'Browse by Specification',
+            'empty' => 'No products match these filters.',
+            'heading' => 'The Complete Catalogue',
+            'meta-description' => 'Browse the complete product catalogue by category, brand and specification.',
+            'showing' => 'Showing :count of :total products',
+            'subtitle' => 'Everything we stock, in one place. Browse by category, by brand, or by the specification you need.',
+            'title' => 'All Products',
+        ],
         'prices' => [
             'grouped' => [
                 'starting-at' => 'À partir de',
@@ -1311,6 +1323,7 @@ return [
         ],
 
         'index' => [
+            'brand-strip' => 'Bandeau de marques',
             'categories-carousel' => 'Carrousel de catégories',
             'image-carousel' => 'Carrousel d\'images',
             'offer' => 'Obtenez JUSQU\'À 40% DE RÉDUCTION sur votre 1ère commande, ACHETEZ MAINTENANT',

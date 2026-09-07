@@ -800,6 +800,7 @@ return [
 
         'carousel' => [
             'explore-range' => '探索系列',
+            'go-to-slide' => '转到第 :number 张幻灯片',
             'image-slide' => '图片幻灯片',
             'next' => '下一个',
             'previous' => '上一个',
@@ -813,6 +814,17 @@ return [
     ],
 
     'products' => [
+        'catalog' => [
+            'all-products' => 'All Products',
+            'browse-by-category' => 'Browse by Category',
+            'browse-by-spec' => 'Browse by Specification',
+            'empty' => 'No products match these filters.',
+            'heading' => 'The Complete Catalogue',
+            'meta-description' => 'Browse the complete product catalogue by category, brand and specification.',
+            'showing' => 'Showing :count of :total products',
+            'subtitle' => 'Everything we stock, in one place. Browse by category, by brand, or by the specification you need.',
+            'title' => 'All Products',
+        ],
         'prices' => [
             'grouped' => [
                 'starting-at' => '起价',
@@ -1311,6 +1323,7 @@ return [
         ],
 
         'index' => [
+            'brand-strip' => '品牌栏',
             'categories-carousel' => '分类轮播',
             'image-carousel' => '图片轮播',
             'offer' => '首单最高可享40%折扣，立即购买',

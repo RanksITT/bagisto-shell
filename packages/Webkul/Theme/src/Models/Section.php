@@ -55,6 +55,27 @@ class Section extends TranslatableModel implements SectionContract
     public const SERVICES_CONTENT = 'services_content';
 
     /**
+     * Brand strip precision.
+     *
+     * @var string
+     */
+    public const BRAND_STRIP = 'brand_strip';
+
+    /**
+     * A single scroll driven chapter of the storefront's story.
+     *
+     * @var string
+     */
+    public const STORY_CHAPTER = 'story_chapter';
+
+    /**
+     * The chapters a story section may be set to draw.
+     *
+     * @var array
+     */
+    public const STORY_CHAPTERS = ['engine', 'viscosity', 'figures', 'protection'];
+
+    /**
      * Every type a section may take.
      *
      * @var array
@@ -66,6 +87,8 @@ class Section extends TranslatableModel implements SectionContract
         self::FOOTER_LINKS,
         self::STATIC_CONTENT,
         self::SERVICES_CONTENT,
+        self::BRAND_STRIP,
+        self::STORY_CHAPTER,
     ];
 
     /**

@@ -44,6 +44,8 @@
             $section::STATIC_CONTENT,
             $section::CATEGORY_CAROUSEL,
             $section::PRODUCT_CAROUSEL,
+            $section::BRAND_STRIP,
+            $section::STORY_CHAPTER,
         ]))
 
         @if ($marks)
@@ -88,21 +90,10 @@
                     </div>
                 @endif
 
-                {{--
-                    The engine chapter follows the first static block, so the page
-                    opens with the banner and the category shortcuts before it asks
-                    the visitor to stop and read. Anchored here rather than to the
-                    category carousel, which the store does not publish.
-                --}}
-                @if (! ($storyEngine ?? false))
-                    @php ($storyEngine = true)
-
-                    <x-shop::story.pour />
-
-                    <x-shop::story.engine />
-
-                    <x-shop::story.pour />
-                @endif
+                @break
+            @case ($section::STORY_CHAPTER)
+                <!-- One chapter of the story -->
+                <x-shop::story.chapter :chapter="$data['chapter'] ?? ''" />
 
                 @break
             @case ($section::CATEGORY_CAROUSEL)
@@ -115,6 +106,15 @@
                 />
 
                 @break
+            @case ($section::BRAND_STRIP)
+                <!-- Brands we carry -->
+                <x-shop::brands.strip
+                    :title="$data['title'] ?? ''"
+                    :brands="$data['brands'] ?? []"
+                    aria-label="{{ trans('shop::app.home.index.brand-strip') }}"
+                />
+
+                @break
             @case ($section::PRODUCT_CAROUSEL)
                 <!-- Product Carousel -->
                 <x-shop::products.carousel
@@ -123,21 +123,6 @@
                     :navigation-link="route('shop.search.index', $data['filters'] ?? [])"
                     aria-label="{{ trans('shop::app.home.index.product-carousel') }}"
                 />
-
-                {{--
-                    The remaining chapters hang off the first and second product
-                    carousels, so each sits between two blocks of catalogue rather
-                    than stacking against one another.
-                --}}
-                @if (! ($storyGradeFinder ?? false))
-                    @php ($storyGradeFinder = true)
-
-                    <x-shop::story.viscosity />
-                @elseif (! ($storyFigures ?? false))
-                    @php ($storyFigures = true)
-
-                    <x-shop::story.figures />
-                @endif
 
                 @break
         @endswitch

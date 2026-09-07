@@ -4,7 +4,7 @@
     data-engine-scene
 >
     <div class="pin-stage__inner">
-        <div class="container grid grid-cols-2 items-center gap-16 max-lg:grid-cols-1 max-lg:gap-8 max-lg:px-8 max-sm:!px-4">
+        <div class="container grid grid-cols-[1fr_auto] items-center gap-12 max-lg:grid-cols-1 max-lg:gap-8 max-lg:px-8 max-sm:!px-4">
             <div class="engine-copy">
                 <p
                     class="text-sm uppercase tracking-[.2em] text-darkBlue"

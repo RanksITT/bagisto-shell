@@ -800,6 +800,7 @@ return [
 
         'carousel' => [
             'explore-range' => 'පරාසය ගවේෂණය කරන්න',
+            'go-to-slide' => 'ස්ලයිඩ් :number වෙත යන්න',
             'image-slide' => 'රූප ස්ලයිඩ්',
             'next' => 'ඊළඟ',
             'previous' => 'පෙර',
@@ -813,6 +814,17 @@ return [
     ],
 
     'products' => [
+        'catalog' => [
+            'all-products' => 'All Products',
+            'browse-by-category' => 'Browse by Category',
+            'browse-by-spec' => 'Browse by Specification',
+            'empty' => 'No products match these filters.',
+            'heading' => 'The Complete Catalogue',
+            'meta-description' => 'Browse the complete product catalogue by category, brand and specification.',
+            'showing' => 'Showing :count of :total products',
+            'subtitle' => 'Everything we stock, in one place. Browse by category, by brand, or by the specification you need.',
+            'title' => 'All Products',
+        ],
         'prices' => [
             'grouped' => [
                 'starting-at' => 'නියමයෙන්',
@@ -1311,6 +1323,7 @@ return [
         ],
 
         'index' => [
+            'brand-strip' => 'වෙළඳ නාම තීරුව',
             'categories-carousel' => 'කාණ්ඩ කාරසෙල්',
             'image-carousel' => 'රූප කාරසෙල්',
             'offer' => 'ඔබේ පළමු ඇනවුමට 40% ක විශේෂ වට්ටම් ලබා ගන්න, දැන් සෙවීම',

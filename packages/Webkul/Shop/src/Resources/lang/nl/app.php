@@ -800,6 +800,7 @@ return [
 
         'carousel' => [
             'explore-range' => 'Ontdek het assortiment',
+            'go-to-slide' => 'Ga naar dia :number',
             'image-slide' => 'Afbeeldingslide',
             'next' => 'Volgende',
             'previous' => 'Vorige',
@@ -813,6 +814,17 @@ return [
     ],
 
     'products' => [
+        'catalog' => [
+            'all-products' => 'All Products',
+            'browse-by-category' => 'Browse by Category',
+            'browse-by-spec' => 'Browse by Specification',
+            'empty' => 'No products match these filters.',
+            'heading' => 'The Complete Catalogue',
+            'meta-description' => 'Browse the complete product catalogue by category, brand and specification.',
+            'showing' => 'Showing :count of :total products',
+            'subtitle' => 'Everything we stock, in one place. Browse by category, by brand, or by the specification you need.',
+            'title' => 'All Products',
+        ],
         'prices' => [
             'grouped' => [
                 'starting-at' => 'Vanaf',
@@ -1311,6 +1323,7 @@ return [
         ],
 
         'index' => [
+            'brand-strip' => 'Merkenbalk',
             'categories-carousel' => 'Categorieën Carrousel',
             'image-carousel' => 'Afbeeldingen Carrousel',
             'offer' => 'Krijg TOT 40% KORTING op je eerste bestelling, WINKEL NU',

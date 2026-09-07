@@ -800,6 +800,7 @@ return [
 
         'carousel' => [
             'explore-range' => 'Explorează gama',
+            'go-to-slide' => 'Mergi la slide-ul :number',
             'image-slide' => 'Diapozitiv imagine',
             'next' => 'Următorul',
             'previous' => 'Anteriorul',
@@ -813,6 +814,17 @@ return [
     ],
 
     'products' => [
+        'catalog' => [
+            'all-products' => 'All Products',
+            'browse-by-category' => 'Browse by Category',
+            'browse-by-spec' => 'Browse by Specification',
+            'empty' => 'No products match these filters.',
+            'heading' => 'The Complete Catalogue',
+            'meta-description' => 'Browse the complete product catalogue by category, brand and specification.',
+            'showing' => 'Showing :count of :total products',
+            'subtitle' => 'Everything we stock, in one place. Browse by category, by brand, or by the specification you need.',
+            'title' => 'All Products',
+        ],
         'prices' => [
             'grouped' => [
                 'starting-at' => 'Începând de la',
@@ -1311,6 +1323,7 @@ return [
         ],
 
         'index' => [
+            'brand-strip' => 'Bandă de mărci',
             'categories-carousel' => 'Carusel categorii',
             'image-carousel' => 'Carusel imagini',
             'offer' => 'Obțineți până la 40% REDUCERE la prima comandă CUMPĂRĂ ACUM',

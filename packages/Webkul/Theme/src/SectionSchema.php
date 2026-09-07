@@ -43,6 +43,11 @@ class SectionSchema
     public const FILTERS = 'filters';
 
     /**
+     * One value picked from a fixed list.
+     */
+    public const SELECT = 'select';
+
+    /**
      * Create a new schema instance.
      */
     public function __construct(protected CategoryRepository $categoryRepository) {}
@@ -59,6 +64,8 @@ class SectionSchema
             Section::FOOTER_LINKS => $this->footerLinks(),
             Section::STATIC_CONTENT => $this->staticContent(),
             Section::SERVICES_CONTENT => $this->servicesContent(),
+            Section::BRAND_STRIP => $this->brandStrip(),
+            Section::STORY_CHAPTER => $this->storyChapter(),
         ];
     }
 
@@ -92,6 +99,49 @@ class SectionSchema
                 'fields' => [
                     ['key' => 'image', 'type' => self::IMAGE, 'label' => $this->label('slider-image')],
                     ['key' => 'title', 'type' => self::TEXT, 'label' => $this->label('image-title')],
+                    ['key' => 'link', 'type' => self::TEXT, 'label' => $this->label('link')],
+                ],
+            ],
+        ];
+    }
+
+    /**
+     * Which chapter of the story this section draws.
+     *
+     * The chapters used to be emitted as a side effect of the section loop, hanging off
+     * whichever carousel or static block happened to come first. Disabling one of those
+     * moved a chapter halfway down the page, so each is placed on its own row instead.
+     */
+    protected function storyChapter(): array
+    {
+        return [
+            [
+                'key' => 'chapter',
+                'type' => self::SELECT,
+                'label' => $this->label('chapter'),
+                'options' => array_map(fn ($chapter) => [
+                    'value' => $chapter,
+                    'label' => $this->label('chapter-'.$chapter),
+                ], Section::STORY_CHAPTERS),
+            ],
+        ];
+    }
+
+    /**
+     * The brands the store carries, each with the mark it is recognised by.
+     */
+    protected function brandStrip(): array
+    {
+        return [
+            ['key' => 'title', 'type' => self::TEXT, 'label' => $this->label('filter-title')],
+            [
+                'key' => 'brands',
+                'type' => self::REPEATER,
+                'label' => $this->label('brands'),
+                'add_label' => $this->label('brand-add-btn'),
+                'fields' => [
+                    ['key' => 'logo', 'type' => self::IMAGE, 'label' => $this->label('brand-logo')],
+                    ['key' => 'name', 'type' => self::TEXT, 'label' => $this->label('brand-name')],
                     ['key' => 'link', 'type' => self::TEXT, 'label' => $this->label('link')],
                 ],
             ],

@@ -644,4 +644,46 @@ class ProductRepository extends Repository
 
         return $query->max('attr_pav.float_value') ?? 0;
     }
+
+    /**
+     * Product counts per option for the given filterable attributes.
+     *
+     * Powers the storefront's browse-by-spec rails, which show how many products sit behind
+     * each option and drop the options nothing is stocked against. Only enabled, individually
+     * visible products are counted, so a rail never promises more than the listing delivers.
+     * Returned keyed as attribute id => option id => count.
+     */
+    public function getFilterableOptionCounts(array $attributeIds): Collection
+    {
+        if (empty($attributeIds)) {
+            return collect();
+        }
+
+        $requiredAttributes = $this->attributeRepository->findWhereIn('code', [
+            'status',
+            'visible_individually',
+        ]);
+
+        $query = $this->model
+            ->join('product_attribute_values as option_values', 'products.id', '=', 'option_values.product_id')
+            ->whereIn('option_values.attribute_id', $attributeIds)
+            ->whereNotNull('option_values.integer_value');
+
+        foreach ($requiredAttributes as $index => $attribute) {
+            $alias = 'required_values_'.$index;
+
+            $query->join('product_attribute_values as '.$alias, function ($join) use ($alias, $attribute) {
+                $join->on('products.id', '=', $alias.'.product_id')
+                    ->where($alias.'.attribute_id', $attribute->id)
+                    ->where($alias.'.boolean_value', 1);
+            });
+        }
+
+        return $query->groupBy('option_values.attribute_id', 'option_values.integer_value')
+            ->select('option_values.attribute_id', 'option_values.integer_value')
+            ->selectRaw('COUNT(DISTINCT '.DB::getTablePrefix().'products.id) as total')
+            ->get()
+            ->groupBy('attribute_id')
+            ->map(fn ($options) => $options->pluck('total', 'integer_value'));
+    }
 }

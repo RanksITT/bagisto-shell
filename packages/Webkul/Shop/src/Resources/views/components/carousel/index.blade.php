@@ -28,7 +28,7 @@
 @endif
 
 <v-carousel :images="{{ json_encode($carouselImages) }}">
-    <div class="overflow-hidden">
+    <div class="relative overflow-hidden">
         @if ($firstImage)
             {{--
                 Server-rendered first slide so the browser can discover and
@@ -47,10 +47,14 @@
                 sizes="100vw"
                 class="aspect-[2.2/1] max-h-screen w-screen select-none object-cover"
                 style="width:100vw;aspect-ratio:2.2/1;max-height:100vh;object-fit:cover;display:block"
-                alt="{{ $firstImageTitle ?? trans('shop::app.home.index.image-carousel') }}"
+                alt="{{ $firstImageTitle ?: trans('shop::app.home.index.image-carousel') }}"
                 fetchpriority="high"
                 decoding="sync"
             >
+
+            @if (! $firstImageTitle)
+                <div class="hero-vignette"></div>
+            @endif
         @else
             <div class="shimmer aspect-[2.2/1] max-h-screen w-screen"></div>
         @endif
@@ -121,53 +125,79 @@
                             </a>
                         </div>
                     </div>
+
+                    {{--
+                        A banner that carries its own artwork gets no scrim over it, only
+                        the vignette, so the edges settle against the page instead of
+                        stopping at a hard line.
+                    --}}
+                    <div
+                        class="hero-vignette"
+                        v-else
+                    >
+                    </div>
                 </div>
             </div>
 
             <!-- Navigation -->
-            <span
-                class="icon-arrow-left absolute left-2.5 top-1/2 -mt-[22px] hidden w-auto rounded-full bg-black/80 p-3 text-2xl font-bold text-white opacity-30 transition-all md:inline-block"
-                :class="{
-                    'cursor-not-allowed': direction == 'ltr' && currentIndex == 0,
-                    'cursor-pointer hover:opacity-100': direction == 'ltr' ? currentIndex > 0 : currentIndex <= 0
-                }"
-                role="button"
-                aria-label="@lang('shop::components.carousel.previous')"
-                tabindex="0"
+            <button
+                class="hero-nav icon-arrow-left left-6"
+                type="button"
+                aria-label="@lang('shop::app.components.carousel.previous')"
                 v-if="images?.length >= 2"
                 @click="navigate('prev')"
             >
-            </span>
+            </button>
 
-            <span
-                class="icon-arrow-right absolute right-2.5 top-1/2 -mt-[22px] hidden w-auto rounded-full bg-black/80 p-3 text-2xl font-bold text-white opacity-30 transition-all md:inline-block"
-                :class="{
-                    'cursor-not-allowed': direction == 'rtl' && currentIndex == 0,
-                    'cursor-pointer hover:opacity-100': direction == 'rtl' ? currentIndex < 0 : currentIndex >= 0
-                }"
-                role="button"
-                aria-label="@lang('shop::components.carousel.next')"
-                tabindex="0"
+            <button
+                class="hero-nav icon-arrow-right right-6"
+                type="button"
+                aria-label="@lang('shop::app.components.carousel.next')"
                 v-if="images?.length >= 2"
                 @click="navigate('next')"
             >
-            </span>
+            </button>
 
             <!-- Pagination -->
-            <div class="absolute bottom-5 left-0 flex w-full justify-center max-md:bottom-3.5 max-sm:bottom-2.5">
-                <div
-                    v-for="(image, index) in images"
-                    :key="index"
-                    class="sm:p-2.5 mx-1 h-3 w-3 cursor-pointer rounded-full max-md:h-2 max-md:w-2 max-sm:h-1.5 max-sm:w-1.5
-                    p-2 focus:outline-none"
-                    :class="{ 'bg-darkBlue': index === Math.abs(currentIndex), 'opacity-60 bg-mutedBlue': index !== Math.abs(currentIndex) }"
-                    role="button"
-                    tabindex="0"
-                    :aria-label="'Go to slide ' + (index + 1)"
-                    @click="navigateByPagination(index)"
-                    @keydown.enter="navigateByPagination(index)"
-                    @keydown.space.prevent="navigateByPagination(index)"
-                >
+            <div
+                class="hero-progress"
+                v-if="images?.length >= 2"
+            >
+                <div class="container max-lg:px-8 max-sm:!px-4">
+                    <div class="hero-progress__inner">
+                        <p class="hero-progress__count">
+                            <span v-text="padded(activeIndex + 1)"></span>
+
+                            <i>/</i>
+
+                            <span
+                                class="hero-progress__total"
+                                v-text="padded(images.length)"
+                            >
+                            </span>
+                        </p>
+
+                        <div class="hero-progress__rail">
+                            <span
+                                class="hero-progress__bar"
+                                :style="barStyle"
+                            >
+                            </span>
+
+                            <div class="hero-progress__segs">
+                                <button
+                                    class="hero-progress__seg"
+                                    type="button"
+                                    v-for="(image, index) in images"
+                                    :key="index"
+                                    :aria-label="slideLabel(index)"
+                                    :aria-current="index === activeIndex"
+                                    @click="navigateByPagination(index)"
+                                >
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -193,6 +223,21 @@
                     direction: 'ltr',
                     startFrom: 1,
                 };
+            },
+
+            computed: {
+                activeIndex() {
+                    return Math.abs(this.currentIndex);
+                },
+
+                barStyle() {
+                    const span = 100 / (this.images?.length || 1);
+
+                    return {
+                        width: span + '%',
+                        transform: `translateX(${this.direction == 'rtl' ? -this.activeIndex * 100 : this.activeIndex * 100}%)`,
+                    };
+                },
             },
 
             mounted() {
@@ -340,6 +385,14 @@
                     if (this.slider) {
                         this.slider.style.transform = `translateX(${this.currentTranslate}px)`;
                     }
+                },
+
+                padded(number) {
+                    return String(number).padStart(2, '0');
+                },
+
+                slideLabel(index) {
+                    return @json(trans('shop::app.components.carousel.go-to-slide')).replace(':number', index + 1);
                 },
 
                 visitLink(image) {

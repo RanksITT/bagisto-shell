@@ -800,6 +800,7 @@ return [
 
         'carousel' => [
             'explore-range' => 'גלה את הסדרה',
+            'go-to-slide' => 'מעבר לשקופית :number',
             'image-slide' => 'שקופית תמונה',
             'next' => 'הבא',
             'previous' => 'הקודם',
@@ -813,6 +814,17 @@ return [
     ],
 
     'products' => [
+        'catalog' => [
+            'all-products' => 'All Products',
+            'browse-by-category' => 'Browse by Category',
+            'browse-by-spec' => 'Browse by Specification',
+            'empty' => 'No products match these filters.',
+            'heading' => 'The Complete Catalogue',
+            'meta-description' => 'Browse the complete product catalogue by category, brand and specification.',
+            'showing' => 'Showing :count of :total products',
+            'subtitle' => 'Everything we stock, in one place. Browse by category, by brand, or by the specification you need.',
+            'title' => 'All Products',
+        ],
         'prices' => [
             'grouped' => [
                 'starting-at' => 'החל מ-',
@@ -1311,6 +1323,7 @@ return [
         ],
 
         'index' => [
+            'brand-strip' => 'רצועת מותגים',
             'categories-carousel' => 'קרוסלת קטגוריות',
             'image-carousel' => 'קרוסלת תמונות',
             'offer' => 'קבל עד 40% הנחה על ההזמנה הראשונה שלך, קנה עכשיו',

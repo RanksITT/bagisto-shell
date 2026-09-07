@@ -294,6 +294,16 @@
 
                     {!! view_render_event('bagisto.shop.components.layouts.header.mobile.drawer.categories.before') !!}
 
+                    <!-- The whole catalogue, ahead of the category tree -->
+                    <a
+                        class="flex items-center justify-between border-b border-navyBorder p-4 text-base font-medium"
+                        href="{{ route('shop.products.index') }}"
+                    >
+                        @lang('shop::app.products.catalog.all-products')
+
+                        <i class="icon-arrow-right text-2xl"></i>
+                    </a>
+
                     <!-- Mobile category view -->
                     <v-mobile-category ref="mobileCategory"></v-mobile-category>
 

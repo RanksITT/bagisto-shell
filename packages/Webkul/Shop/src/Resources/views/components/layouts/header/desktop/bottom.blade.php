@@ -342,6 +342,15 @@
                     </div>
                 </div>
             </div>
+
+            <!-- The whole catalogue, for a shopper who would rather browse than pick a category -->
+            <a
+                class="flex h-[77px] items-center border-b-4 border-transparent px-5 uppercase hover:border-b-4 hover:border-darkBlue"
+                href="{{ route('shop.products.index') }}"
+            >
+                @lang('shop::app.products.catalog.all-products')
+            </a>
+
         </div>
 
         <!-- Sidebar category layout -->
@@ -408,6 +417,15 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- The whole catalogue, for a shopper who would rather browse than pick a category -->
+                <a
+                    class="flex h-[77px] items-center border-b-4 border-transparent px-5 uppercase hover:border-b-4 hover:border-darkBlue"
+                    href="{{ route('shop.products.index') }}"
+                >
+                    @lang('shop::app.products.catalog.all-products')
+                </a>
+
             </div>
 
             <!-- Bagisto Drawer Integration -->

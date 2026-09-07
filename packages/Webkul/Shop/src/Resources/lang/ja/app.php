@@ -800,6 +800,7 @@ return [
 
         'carousel' => [
             'explore-range' => 'ラインナップを見る',
+            'go-to-slide' => 'スライド :number へ移動',
             'image-slide' => '画像スライド',
             'next' => '次へ',
             'previous' => '前へ',
@@ -813,6 +814,17 @@ return [
     ],
 
     'products' => [
+        'catalog' => [
+            'all-products' => 'All Products',
+            'browse-by-category' => 'Browse by Category',
+            'browse-by-spec' => 'Browse by Specification',
+            'empty' => 'No products match these filters.',
+            'heading' => 'The Complete Catalogue',
+            'meta-description' => 'Browse the complete product catalogue by category, brand and specification.',
+            'showing' => 'Showing :count of :total products',
+            'subtitle' => 'Everything we stock, in one place. Browse by category, by brand, or by the specification you need.',
+            'title' => 'All Products',
+        ],
         'prices' => [
             'grouped' => [
                 'starting-at' => '最低価格',
@@ -1311,6 +1323,7 @@ return [
         ],
 
         'index' => [
+            'brand-strip' => 'ブランドストリップ',
             'categories-carousel' => 'カテゴリカルーセル',
             'image-carousel' => '画像カルーセル',
             'offer' => '初回注文で最大40%オフ、今すぐ購入',

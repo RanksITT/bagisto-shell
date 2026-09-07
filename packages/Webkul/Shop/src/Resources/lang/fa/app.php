@@ -800,6 +800,7 @@ return [
 
         'carousel' => [
             'explore-range' => 'کاوش در مجموعه',
+            'go-to-slide' => 'رفتن به اسلاید :number',
             'image-slide' => 'اسلاید تصویر',
             'next' => 'بعدی',
             'previous' => 'قبلی',
@@ -813,6 +814,17 @@ return [
     ],
 
     'products' => [
+        'catalog' => [
+            'all-products' => 'All Products',
+            'browse-by-category' => 'Browse by Category',
+            'browse-by-spec' => 'Browse by Specification',
+            'empty' => 'No products match these filters.',
+            'heading' => 'The Complete Catalogue',
+            'meta-description' => 'Browse the complete product catalogue by category, brand and specification.',
+            'showing' => 'Showing :count of :total products',
+            'subtitle' => 'Everything we stock, in one place. Browse by category, by brand, or by the specification you need.',
+            'title' => 'All Products',
+        ],
         'prices' => [
             'grouped' => [
                 'starting-at' => 'شروع از',
@@ -1311,6 +1323,7 @@ return [
         ],
 
         'index' => [
+            'brand-strip' => 'نوار برندها',
             'categories-carousel' => 'چرخ فلک دسته‌ها',
             'image-carousel' => 'چرخ فلک تصاویر',
             'offer' => 'تا ۴۰% تخفیف برای سفارش اول شما، اکنون خرید کنید',

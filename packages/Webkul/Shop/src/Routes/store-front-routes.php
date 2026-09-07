@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Webkul\Core\Http\Middleware\NoCacheMiddleware;
 use Webkul\Shop\Http\Controllers\BookingProductController;
+use Webkul\Shop\Http\Controllers\CatalogController;
 use Webkul\Shop\Http\Controllers\CompareController;
 use Webkul\Shop\Http\Controllers\EUWithdrawalController;
 use Webkul\Shop\Http\Controllers\HomeController;
@@ -41,6 +42,16 @@ Route::prefix('withdraw')->middleware([NoCacheMiddleware::class])->group(functio
             ->name('shop.eu-withdrawal.guest.confirmation');
     });
 });
+
+/**
+ * The full catalogue.
+ *
+ * Declared before the catch-all fallback so its URL matches first, and deliberately without
+ * `cache.response`: the full page cache keys on the path alone, so every narrowing of this
+ * page would be served the body of the unnarrowed one. The JSON behind it is cached instead.
+ */
+Route::get('products', [CatalogController::class, 'index'])
+    ->name('shop.products.index');
 
 /**
  * CMS pages.

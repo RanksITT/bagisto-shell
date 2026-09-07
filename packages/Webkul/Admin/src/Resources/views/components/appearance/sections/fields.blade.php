@@ -188,6 +188,27 @@
                     />
                 </div>
 
+                <!-- One Of A Fixed List -->
+                <div v-else-if="field.type === 'select'">
+                    <p class="mb-1.5 text-xs font-medium text-gray-800 dark:text-white">
+                        @{{ field.label }}
+                    </p>
+
+                    <select
+                        class="w-full rounded-md border px-3 py-2.5 text-sm text-gray-600 transition-all hover:border-gray-400 focus:border-gray-400 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-gray-400 dark:focus:border-gray-400"
+                        v-model="model[field.key]"
+                        @change="bubble"
+                    >
+                        <option
+                            v-for="option in (field.options ?? [])"
+                            :key="option.value"
+                            :value="option.value"
+                        >
+                            @{{ option.label }}
+                        </option>
+                    </select>
+                </div>
+
                 <!-- Long Text -->
                 <div v-else-if="field.type === 'textarea'">
                     <p class="mb-1.5 text-xs font-medium text-gray-800 dark:text-white">

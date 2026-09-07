@@ -800,6 +800,7 @@ return [
 
         'carousel' => [
             'explore-range' => 'Explore the Range',
+            'go-to-slide' => 'Go to slide :number',
             'image-slide' => 'Image Slide',
             'next' => 'Next',
             'previous' => 'Previous',
@@ -813,6 +814,17 @@ return [
     ],
 
     'products' => [
+        'catalog' => [
+            'all-products' => 'All Products',
+            'browse-by-category' => 'Browse by Category',
+            'browse-by-spec' => 'Browse by Specification',
+            'empty' => 'No products match these filters.',
+            'heading' => 'The Complete Catalogue',
+            'meta-description' => 'Browse the complete product catalogue by category, brand and specification.',
+            'showing' => 'Showing :count of :total products',
+            'subtitle' => 'Everything we stock, in one place. Browse by category, by brand, or by the specification you need.',
+            'title' => 'All Products',
+        ],
         'prices' => [
             'grouped' => [
                 'starting-at' => 'Starting at',
@@ -1311,6 +1323,7 @@ return [
         ],
 
         'index' => [
+            'brand-strip' => 'Brand Strip',
             'categories-carousel' => 'Categories Carousel',
             'image-carousel' => 'Image Carousel',
             'offer' => 'Get UPTO 40% OFF on your 1st order SHOP NOW',

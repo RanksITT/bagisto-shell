@@ -800,6 +800,7 @@ return [
 
         'carousel' => [
             'explore-range' => 'Explora la gamma',
+            'go-to-slide' => 'Ves a la diapositiva :number',
             'image-slide' => 'Diapositiva d’imatge',
             'next' => 'Següent',
             'previous' => 'Anterior',
@@ -813,6 +814,17 @@ return [
     ],
 
     'products' => [
+        'catalog' => [
+            'all-products' => 'All Products',
+            'browse-by-category' => 'Browse by Category',
+            'browse-by-spec' => 'Browse by Specification',
+            'empty' => 'No products match these filters.',
+            'heading' => 'The Complete Catalogue',
+            'meta-description' => 'Browse the complete product catalogue by category, brand and specification.',
+            'showing' => 'Showing :count of :total products',
+            'subtitle' => 'Everything we stock, in one place. Browse by category, by brand, or by the specification you need.',
+            'title' => 'All Products',
+        ],
         'prices' => [
             'grouped' => [
                 'starting-at' => 'A partir de',
@@ -1311,6 +1323,7 @@ return [
         ],
 
         'index' => [
+            'brand-strip' => 'Franja de marques',
             'categories-carousel' => 'Carrusel de Categories',
             'image-carousel' => 'Carrusel d\'Imatges',
             'offer' => 'Obté FINS A un 40% de DESCOMPTE en la teva primera comanda COMPRA ARA',

@@ -800,6 +800,7 @@ return [
 
         'carousel' => [
             'explore-range' => 'रेंज देखें',
+            'go-to-slide' => 'स्लाइड :number पर जाएं',
             'image-slide' => 'चित्र स्लाइड',
             'next' => 'अगला',
             'previous' => 'पिछला',
@@ -813,6 +814,17 @@ return [
     ],
 
     'products' => [
+        'catalog' => [
+            'all-products' => 'All Products',
+            'browse-by-category' => 'Browse by Category',
+            'browse-by-spec' => 'Browse by Specification',
+            'empty' => 'No products match these filters.',
+            'heading' => 'The Complete Catalogue',
+            'meta-description' => 'Browse the complete product catalogue by category, brand and specification.',
+            'showing' => 'Showing :count of :total products',
+            'subtitle' => 'Everything we stock, in one place. Browse by category, by brand, or by the specification you need.',
+            'title' => 'All Products',
+        ],
         'prices' => [
             'grouped' => [
                 'starting-at' => 'शुरू होते हैं',
@@ -1311,6 +1323,7 @@ return [
         ],
 
         'index' => [
+            'brand-strip' => 'ब्रांड स्ट्रिप',
             'categories-carousel' => 'श्रेणियाँ कैरोसेल',
             'image-carousel' => 'चित्र कैरोसेल',
             'offer' => 'अपनी पहली ऑर्डर पर 40% तक छूट पाएं, अभी खरीदारी करें',

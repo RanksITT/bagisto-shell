@@ -563,6 +563,16 @@
                             icon: 'icon-store',
                             label: "@lang('admin::app.appearance.sections.create.type.services-content')",
                         },
+                        {
+                            key: 'brand_strip',
+                            icon: 'icon-promotion',
+                            label: "@lang('admin::app.appearance.sections.create.type.brand-strip')",
+                        },
+                        {
+                            key: 'story_chapter',
+                            icon: 'icon-magic',
+                            label: "@lang('admin::app.appearance.sections.create.type.story-chapter')",
+                        },
                     ],
                 };
             },

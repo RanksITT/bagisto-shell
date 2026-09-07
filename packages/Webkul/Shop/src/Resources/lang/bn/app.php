@@ -800,6 +800,7 @@ return [
 
         'carousel' => [
             'explore-range' => 'রেঞ্জ দেখুন',
+            'go-to-slide' => 'স্লাইড :number-এ যান',
             'image-slide' => 'চিত্র স্লাইড',
             'next' => 'পরবর্তী',
             'previous' => 'পূর্ববর্তী',
@@ -813,6 +814,17 @@ return [
     ],
 
     'products' => [
+        'catalog' => [
+            'all-products' => 'All Products',
+            'browse-by-category' => 'Browse by Category',
+            'browse-by-spec' => 'Browse by Specification',
+            'empty' => 'No products match these filters.',
+            'heading' => 'The Complete Catalogue',
+            'meta-description' => 'Browse the complete product catalogue by category, brand and specification.',
+            'showing' => 'Showing :count of :total products',
+            'subtitle' => 'Everything we stock, in one place. Browse by category, by brand, or by the specification you need.',
+            'title' => 'All Products',
+        ],
         'prices' => [
             'grouped' => [
                 'starting-at' => 'শুরু হচ্ছে',
@@ -1311,6 +1323,7 @@ return [
         ],
 
         'index' => [
+            'brand-strip' => 'ব্র্যান্ড স্ট্রিপ',
             'categories-carousel' => 'ক্যাটাগরি ক্যারোসেল',
             'image-carousel' => 'ইমেজ ক্যারোসেল',
             'offer' => 'আপনার প্রথম অর্ডারে ৪০% পর্যন্ত ছাড় পান, এখনই কেনাকাটা করুন',

@@ -800,6 +800,7 @@ return [
 
         'carousel' => [
             'explore-range' => 'Jelajahi Rangkaian',
+            'go-to-slide' => 'Ke slide :number',
             'image-slide' => 'Slide Gambar',
             'next' => 'Berikutnya',
             'previous' => 'Sebelumnya',
@@ -813,6 +814,17 @@ return [
     ],
 
     'products' => [
+        'catalog' => [
+            'all-products' => 'All Products',
+            'browse-by-category' => 'Browse by Category',
+            'browse-by-spec' => 'Browse by Specification',
+            'empty' => 'No products match these filters.',
+            'heading' => 'The Complete Catalogue',
+            'meta-description' => 'Browse the complete product catalogue by category, brand and specification.',
+            'showing' => 'Showing :count of :total products',
+            'subtitle' => 'Everything we stock, in one place. Browse by category, by brand, or by the specification you need.',
+            'title' => 'All Products',
+        ],
         'prices' => [
             'grouped' => [
                 'starting-at' => 'Mulai Dari',
@@ -1311,6 +1323,7 @@ return [
         ],
 
         'index' => [
+            'brand-strip' => 'Strip Merek',
             'categories-carousel' => 'Carousel Kategori',
             'image-carousel' => 'Carousel Gambar',
             'offer' => 'Dapatkan DISKON HINGGA 40% untuk pesanan pertama Anda BELI SEKARANG',

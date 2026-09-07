@@ -614,9 +614,17 @@ img.lazy {
      * overflow so the call to action is never cut off.
      */
     .hero-overlay {
-        @apply pointer-events-none absolute inset-x-0 bottom-0 pt-32 max-md:pt-20;
+        @apply pointer-events-none absolute inset-0 flex flex-col justify-end pt-32 max-md:pt-20;
         padding-bottom: calc(4rem + var(--header-h, 78px));
-        background: linear-gradient(to top, rgba(17, 17, 19, .96) 0%, rgba(17, 17, 19, .88) 30%, rgba(17, 17, 19, .55) 62%, transparent 100%);
+        background:
+            linear-gradient(to top, rgba(17, 17, 19, .96) 0%, rgba(17, 17, 19, .88) 30%, rgba(17, 17, 19, .55) 62%, transparent 100%),
+            linear-gradient(to right, rgba(17, 17, 19, .88) 0%, rgba(17, 17, 19, .5) 24%, rgba(17, 17, 19, .12) 42%, transparent 55%);
+    }
+
+    [dir="rtl"] .hero-overlay {
+        background:
+            linear-gradient(to top, rgba(17, 17, 19, .96) 0%, rgba(17, 17, 19, .88) 30%, rgba(17, 17, 19, .55) 62%, transparent 100%),
+            linear-gradient(to left, rgba(17, 17, 19, .88) 0%, rgba(17, 17, 19, .5) 24%, rgba(17, 17, 19, .12) 42%, transparent 55%);
     }
 
     .hero-overlay__title {
@@ -634,6 +642,141 @@ img.lazy {
 
     .hero-overlay__cta {
         @apply pointer-events-auto mt-7 max-md:mt-5 max-sm:px-6 max-sm:py-3 max-sm:text-sm;
+    }
+
+    /**
+     * The brands the store carries.
+     *
+     * Supplied brand marks rarely agree on a background: one arrives knocked out on
+     * white, the next locked to its own house colour. Each is therefore seated on the
+     * same light plate and left uncropped inside it, so a row of them reads as one set
+     * rather than as a row of mismatched cut-outs on the dark page.
+     */
+    /**
+     * The row grows to fill the width whatever it holds, so two brands read as a
+     * deliberate pair rather than as a four column grid left half empty.
+     */
+    .brand-strip {
+        @apply mt-10 flex flex-wrap gap-6 max-md:mt-6 max-md:gap-4;
+    }
+
+    .brand-strip__item {
+        @apply flex flex-grow basis-52 flex-col items-center gap-4 rounded-2xl border border-navyBorder p-6 text-center max-md:basis-40 max-md:gap-3 max-md:p-4;
+        transition: border-color .3s ease, transform .3s ease;
+    }
+
+    a.brand-strip__item:hover {
+        @apply border-darkBlue;
+        transform: translateY(-3px);
+    }
+
+    /**
+     * Pure white rather than the page's off white, because most supplied marks are
+     * knocked out on white and any warmer plate leaves their background showing as a
+     * paler rectangle behind the logo.
+     */
+    .brand-strip__plate {
+        @apply flex h-28 w-full items-center justify-center overflow-hidden rounded-xl px-6 max-md:h-20 max-md:px-4;
+        background: #FFFFFF;
+    }
+
+    .brand-strip__logo {
+        @apply max-h-20 w-auto max-w-full object-contain max-md:max-h-12;
+    }
+
+    .brand-strip__name {
+        @apply text-base font-semibold text-offWhite max-md:text-sm;
+    }
+
+    /**
+     * The treatment for a banner that carries its own headline and call to action.
+     *
+     * Nothing is laid over the artwork itself, so the design stays legible as drawn.
+     * The corners and the two long edges are only weighted enough to stop the image
+     * ending on a hard line against the page, and to hold the pagination that sits
+     * across its foot.
+     */
+    .hero-vignette {
+        @apply pointer-events-none absolute inset-0;
+        background:
+            linear-gradient(to top, rgba(17, 17, 19, .62) 0%, rgba(17, 17, 19, .12) 12%, transparent 26%),
+            linear-gradient(to bottom, rgba(17, 17, 19, .38) 0%, transparent 15%),
+            radial-gradient(125% 105% at 50% 50%, transparent 52%, rgba(17, 17, 19, .42) 100%);
+    }
+
+    /**
+     * Hero navigation, held just inside the frame rather than clamped to its edge,
+     * so the arrows read as part of the banner instead of furniture bolted to the
+     * viewport. Dimmed until pointed at, since the banner advances on its own.
+     */
+    .hero-nav {
+        @apply absolute top-1/2 z-10 grid h-12 w-12 -translate-y-1/2 place-items-center rounded-full border border-offWhite/25 text-xl text-offWhite max-md:hidden;
+        background: rgba(17, 17, 19, .35);
+        backdrop-filter: blur(6px);
+        opacity: .5;
+        transition: opacity .3s ease, background-color .3s ease, border-color .3s ease, color .3s ease;
+    }
+
+    .hero-nav:hover {
+        @apply border-darkBlue/70 text-darkBlue;
+        background: rgba(17, 17, 19, .72);
+        opacity: 1;
+    }
+
+    /**
+     * Hero pagination, drawn as a measured rail rather than a row of dots.
+     *
+     * The rail holds one segment per slide and the filled length travels to the
+     * active one, so the banner states how much of it there is and how far in the
+     * visitor has come. Dots only ever imply that, and stop being readable once a
+     * banner runs past four or five slides.
+     */
+    .hero-progress {
+        @apply pointer-events-none absolute inset-x-0 bottom-8 z-10 max-md:bottom-5;
+    }
+
+    .hero-progress__inner {
+        @apply flex items-center gap-6 max-sm:gap-4;
+    }
+
+    .hero-progress__count {
+        @apply flex shrink-0 items-baseline gap-1 font-dmserif text-lg leading-none text-offWhite max-sm:text-base;
+        font-variant-numeric: tabular-nums;
+    }
+
+    .hero-progress__count i {
+        @apply not-italic text-mutedBlue;
+    }
+
+    .hero-progress__total {
+        @apply text-mutedBlue;
+    }
+
+    .hero-progress__rail {
+        @apply pointer-events-auto relative h-0.5 flex-1 rounded-full bg-offWhite/20;
+    }
+
+    .hero-progress__bar {
+        @apply absolute inset-y-0 left-0 rounded-full bg-darkBlue;
+        transition: transform .6s cubic-bezier(.4, 0, .2, 1);
+    }
+
+    [dir="rtl"] .hero-progress__bar {
+        @apply left-auto right-0;
+    }
+
+    /**
+     * The hit targets stand clear of the two pixel rail they drive, so the rail can
+     * stay hairline thin without becoming impossible to click.
+     */
+    .hero-progress__segs {
+        @apply absolute inset-x-0 flex;
+        top: -0.75rem;
+        bottom: -0.75rem;
+    }
+
+    .hero-progress__seg {
+        @apply h-full flex-1 cursor-pointer;
     }
 
     @media (prefers-reduced-motion: no-preference) {
@@ -969,12 +1112,29 @@ img.lazy {
      * already writes. With motion unavailable the clip is never applied, which
      * leaves the engine drawn full of oil: the correct still image.
      */
+    /**
+     * The pin runs a little under two screens. Longer than that and the scene has
+     * finished drawing itself while the visitor is still scrolling through it, which
+     * reads as dead page rather than as a held moment.
+     */
     .engine-stage {
-        --pin-length: 2.6;
+        --pin-length: 1.8;
     }
 
+    /**
+     * Sized against the height of the stage rather than the width of its column, so
+     * the figure fills the pinned viewport instead of floating in the middle of it.
+     */
     .engine-svg {
-        @apply mx-auto w-full max-w-[420px];
+        @apply mx-auto w-auto max-w-full;
+        height: 64svh;
+    }
+
+    @media (max-width: 1023px) {
+        .engine-svg {
+            @apply w-full max-w-[380px];
+            height: auto;
+        }
     }
 
     .engine-lines {
