@@ -131,7 +131,7 @@ class PrestoneCatalogSeeder extends Seeder
     }
 
     /**
-     * The Radiator Cool line Rancon LubMart stocks. The brand has not supplied artwork
+     * The Radiator Cool line MotorMart stocks. The brand has not supplied artwork
      * for it yet, so each entry carries the nearest MAX jug as a stand-in.
      */
     protected function products(): array
@@ -298,7 +298,7 @@ class PrestoneCatalogSeeder extends Seeder
             'weight' => $product['weight'],
             'short_description' => $product['short_description'],
             'description' => $product['description'],
-            'meta_title' => $product['name'].' | Rancon LubMart',
+            'meta_title' => $product['name'].' | MotorMart',
             'meta_description' => $product['short_description'],
             'featured' => $product['featured'] ?? 0,
             'new' => $product['new'] ?? 0,
@@ -342,7 +342,7 @@ class PrestoneCatalogSeeder extends Seeder
                 'name' => $category['name'],
                 'slug' => $category['slug'],
                 'description' => $category['description'],
-                'meta_title' => $category['name'].' | Rancon LubMart',
+                'meta_title' => $category['name'].' | MotorMart',
                 'meta_description' => $category['description'],
             ];
         }

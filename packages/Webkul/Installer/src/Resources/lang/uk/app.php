@@ -31,7 +31,7 @@ return [
                 'manage-stock' => 'Управління запасами',
                 'meta-description' => 'Мета-опис',
                 'meta-keywords' => 'Мета-ключові слова',
-                'meta-title' => 'Rancon LubMart',
+                'meta-title' => 'MotorMart',
                 'name' => 'Назва',
                 'new' => 'Новинка',
                 'price' => 'Ціна',
@@ -137,8 +137,8 @@ return [
             'channels' => [
                 'meta-description' => 'Мета-опис демонстраційного магазину',
                 'meta-keywords' => 'Мета-ключові слова демонстраційного магазину',
-                'meta-title' => 'Rancon LubMart',
-                'name' => 'Rancon LubMart',
+                'meta-title' => 'MotorMart',
+                'name' => 'MotorMart',
             ],
 
             'currencies' => [
@@ -809,7 +809,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => 'Адміністратор',
-                'bagisto' => 'Rancon LubMart',
+                'bagisto' => 'MotorMart',
                 'confirm-password' => 'Підтвердити пароль',
                 'email' => 'Електронна пошта',
                 'email-address' => 'admin@example.com',
@@ -824,7 +824,7 @@ return [
                 'application-name' => 'Назва програми',
                 'argentine-peso' => 'Аргентинський песо (ARS)',
                 'australian-dollar' => 'Австралійський долар (AUD)',
-                'bagisto' => 'Rancon LubMart',
+                'bagisto' => 'MotorMart',
                 'bangladeshi-taka' => 'Бангладеська така (BDT)',
                 'bahraini-dinar' => 'бахрейнський динар (BHD)',
                 'brazilian-real' => 'Бразильський реал (BRL)',
@@ -977,7 +977,7 @@ return [
 
             'arabic' => 'Арабська',
             'back' => 'Назад',
-            'bagisto' => 'Rancon LubMart',
+            'bagisto' => 'MotorMart',
             'bagisto-info' => 'Спільний проект спільноти від Webkul',
             'bagisto-logo' => 'Логотип Bagisto',
             'bengali' => 'Бенгальська',

@@ -5,10 +5,10 @@ return [
         'forgot-password' => [
             'already-sent' => 'Już zresetuj hasło. Wiadomość została wysłana.',
             'back' => 'Powrót do logowania?',
-            'bagisto' => 'Rancon LubMart',
+            'bagisto' => 'MotorMart',
             'email' => 'Email',
             'email-not-exist' => 'Nie możemy znaleźć użytkownika z tym adresem e-mail.',
-            'footer' => '© Prawa autorskie 2010 - :current_year, Rancon LubMart. Wszelkie prawa zastrzeżone.',
+            'footer' => '© Prawa autorskie 2010 - :current_year, MotorMart. Wszelkie prawa zastrzeżone.',
             'forgot-password-text' => 'Jeśli zapomniałeś hasła, odzyskaj je, wpisując swój adres e-mail.',
             'page-title' => 'Zapomniałeś hasła?',
             'reset-link-sent' => 'Wysłaliśmy link resetowania hasła na Twój adres e-mail.',
@@ -19,21 +19,21 @@ return [
 
         'reset-password' => [
             'back-link-title' => 'Powrót do logowania',
-            'bagisto' => 'Rancon LubMart',
+            'bagisto' => 'MotorMart',
             'confirm-password' => 'Potwierdź hasło',
             'email' => 'Zarejestrowany adres e-mail',
-            'footer' => '© Prawa autorskie 2010 - :current_year, Rancon LubMart. Wszelkie prawa zastrzeżone.',
+            'footer' => '© Prawa autorskie 2010 - :current_year, MotorMart. Wszelkie prawa zastrzeżone.',
             'password' => 'Hasło',
             'submit-btn-title' => 'Zresetuj hasło',
             'title' => 'Zresetuj hasło',
         ],
 
         'login-form' => [
-            'bagisto' => 'Rancon LubMart',
+            'bagisto' => 'MotorMart',
             'button-title' => 'Zaloguj się',
             'create-your-account' => 'Stwórz swoje konto',
             'email' => 'Email',
-            'footer' => '© Prawa autorskie 2010 - :current_year, Rancon LubMart. Wszelkie prawa zastrzeżone.',
+            'footer' => '© Prawa autorskie 2010 - :current_year, MotorMart. Wszelkie prawa zastrzeżone.',
             'forgot-pass' => 'Zapomniałeś hasła?',
             'form-login-text' => 'Jeśli masz konto, zaloguj się za pomocą swojego adresu e-mail.',
             'invalid-credentials' => 'Sprawdź swoje dane logowania i spróbuj ponownie.',
@@ -49,13 +49,13 @@ return [
 
         'signup-form' => [
             'account-exists' => 'Masz już konto?',
-            'bagisto' => 'Rancon LubMart',
+            'bagisto' => 'MotorMart',
             'button-title' => 'Zarejestruj',
             'click-here' => 'Kliknij tutaj',
             'confirm-pass' => 'Potwierdź hasło',
             'email' => 'Email',
             'first-name' => 'Imię',
-            'footer' => '© Prawa autorskie 2010 - :current_year, Rancon LubMart. Wszelkie prawa zastrzeżone.',
+            'footer' => '© Prawa autorskie 2010 - :current_year, MotorMart. Wszelkie prawa zastrzeżone.',
             'form-signup-text' => 'Jeśli jesteś nowym klientem w naszym sklepie, cieszymy się, że jesteś naszym członkiem.',
             'last-name' => 'Nazwisko',
             'page-title' => 'Zostań użytkownikiem',
@@ -564,7 +564,7 @@ return [
                     'bottom' => [
                         'all' => 'Wszystko',
                         'back-button' => 'Powrót do menu głównego',
-                        'bagisto' => 'Rancon LubMart',
+                        'bagisto' => 'MotorMart',
                         'categories' => 'Kategorie',
                         'compare' => 'Porównaj',
                         'dropdown-text' => 'Zarządzaj koszykiem, zamówieniami i listą życzeń',
@@ -585,7 +585,7 @@ return [
                 'mobile' => [
                     'account' => 'Konto',
                     'back-button' => 'Powrót do menu głównego',
-                    'bagisto' => 'Rancon LubMart',
+                    'bagisto' => 'MotorMart',
                     'compare' => 'Porównaj',
                     'currencies' => 'Waluty',
                     'dropdown-text' => 'Zarządzaj koszykiem, zamówieniami i listą życzeń',
@@ -625,7 +625,7 @@ return [
                 'customer-service' => 'Obsługa klienta',
                 'email' => 'Email',
                 'footer-content' => 'Treść stopki',
-                'footer-text' => '© Prawa autorskie 2010 - :current_year, Rancon LubMart. Wszelkie prawa zastrzeżone.',
+                'footer-text' => '© Prawa autorskie 2010 - :current_year, MotorMart. Wszelkie prawa zastrzeżone.',
                 'locale' => 'Lokalizacja',
                 'newsletter-text' => 'Bądź gotów na nasz zabawny biuletyn!',
                 'order-return' => 'Zamówienia i zwroty',
@@ -1148,7 +1148,7 @@ return [
             'suspended-account-message' => 'Twoje konto zostało zawieszone',
 
             'index' => [
-                'bagisto' => 'Rancon LubMart',
+                'bagisto' => 'MotorMart',
                 'cart' => 'Koszyk',
                 'continue-shopping' => 'Kontynuuj zakupy',
                 'empty-product' => 'Nie masz produktu w koszyku',

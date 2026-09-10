@@ -135,10 +135,10 @@ return [
 
         'core' => [
             'channels' => [
-                'meta-description' => 'Rancon LubMart – genuine lubricants from Shell, Motul, Pristine and more',
-                'meta-keywords' => 'Rancon LubMart, lubricants, motor oil, Shell, Motul, Pristine',
-                'meta-title' => 'Rancon LubMart',
-                'name' => 'Rancon LubMart',
+                'meta-description' => 'MotorMart – genuine lubricants from Shell, Motul, Pristine and more',
+                'meta-keywords' => 'MotorMart, lubricants, motor oil, Shell, Motul, Pristine',
+                'meta-title' => 'MotorMart',
+                'name' => 'MotorMart',
             ],
 
             'currencies' => [
@@ -809,7 +809,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => 'Admin',
-                'bagisto' => 'Rancon LubMart',
+                'bagisto' => 'MotorMart',
                 'confirm-password' => 'Confirm Password',
                 'email' => 'Email',
                 'email-address' => 'admin@example.com',
@@ -824,7 +824,7 @@ return [
                 'application-name' => 'Application Name',
                 'argentine-peso' => 'Argentine Peso (ARS)',
                 'australian-dollar' => 'Australian Dollar (AUD)',
-                'bagisto' => 'Rancon LubMart',
+                'bagisto' => 'MotorMart',
                 'bangladeshi-taka' => 'Bangladeshi Taka (BDT)',
                 'bahraini-dinar' => 'Bahraini Dinar (BHD)',
                 'brazilian-real' => 'Brazilian Real (BRL)',
@@ -977,7 +977,7 @@ return [
 
             'arabic' => 'Arabic',
             'back' => 'Back',
-            'bagisto' => 'Rancon LubMart',
+            'bagisto' => 'MotorMart',
             'bagisto-info' => 'a Community Project by',
             'bagisto-logo' => 'Bagisto Logo',
             'bengali' => 'Bengali',

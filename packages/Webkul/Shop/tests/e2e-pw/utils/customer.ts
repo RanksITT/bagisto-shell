@@ -87,7 +87,6 @@ export async function addAddress(page) {
         .getByPlaceholder("Email", { exact: true })
         .fill("test@example.com");
     await page.getByPlaceholder("Email", { exact: true }).press("Tab");
-    await page.getByPlaceholder("Vat ID").press("Tab");
     await page.getByPlaceholder("Street Address").fill("Demo");
     await page.getByPlaceholder("Street Address").press("Tab");
     await page.getByLabel("Country").selectOption("DZ");
@@ -97,8 +96,8 @@ export async function addAddress(page) {
     await page.getByPlaceholder("City").fill("any");
     await page.getByPlaceholder("Post Code").click();
     await page.getByPlaceholder("Post Code").fill("123456");
-    await page.getByPlaceholder("Phone").click();
-    await page.getByPlaceholder("Phone").fill("9876543210");
+    await page.getByPlaceholder("Mobile Number").click();
+    await page.getByPlaceholder("Mobile Number").fill("9876543210");
     await page
         .locator("#main form div")
         .filter({ hasText: "Set as Default" })

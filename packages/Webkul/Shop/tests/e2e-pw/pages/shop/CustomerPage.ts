@@ -45,7 +45,7 @@ export class CustomerPage extends BasePage {
     }
 
     private get phoneInput() {
-        return this.page.getByPlaceholder("Phone");
+        return this.page.getByPlaceholder("Mobile Number");
     }
 
     private get genderSelect() {

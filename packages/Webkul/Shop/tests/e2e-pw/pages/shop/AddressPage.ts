@@ -27,10 +27,6 @@ export class AddressPage extends BasePage {
         return this.page.getByPlaceholder("Email", { exact: true });
     }
 
-    private get vatIdInput() {
-        return this.page.getByPlaceholder("Vat ID");
-    }
-
     private get streetAddressInput() {
         return this.page.getByPlaceholder("Street Address");
     }
@@ -52,7 +48,7 @@ export class AddressPage extends BasePage {
     }
 
     private get phoneInput() {
-        return this.page.getByPlaceholder("Phone");
+        return this.page.getByPlaceholder("Mobile Number");
     }
 
     private get saveButton() {
@@ -112,7 +108,6 @@ export class AddressPage extends BasePage {
         city: string;
         postCode: string;
         phone: string;
-        vatId?: string;
     }): Promise<void> {
         await this.addAddressButton.click();
         await this.page.waitForLoadState("networkidle");
@@ -130,11 +125,6 @@ export class AddressPage extends BasePage {
 
         await this.emailInput.click();
         await this.emailInput.fill(data.email);
-
-        if (data.vatId) {
-            await this.vatIdInput.click();
-            await this.vatIdInput.fill(data.vatId);
-        }
 
         await this.streetAddressInput.click();
         await this.streetAddressInput.fill(data.streetAddress);

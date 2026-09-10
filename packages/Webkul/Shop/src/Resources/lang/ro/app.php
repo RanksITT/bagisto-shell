@@ -5,10 +5,10 @@ return [
         'forgot-password' => [
             'already-sent' => 'E-mailul de resetare a parolei a fost deja trimis.',
             'back' => 'Înapoi la autentificare?',
-            'bagisto' => 'Rancon LubMart',
+            'bagisto' => 'MotorMart',
             'email' => 'E-mail',
             'email-not-exist' => 'Nu putem găsi un utilizator cu această adresă de e-mail.',
-            'footer' => '© Drepturi de autor 2010 - :current_year, Rancon LubMart. Toate drepturile rezervate.',
+            'footer' => '© Drepturi de autor 2010 - :current_year, MotorMart. Toate drepturile rezervate.',
             'forgot-password-text' => 'Dacă ați uitat parola, recuperați-o introducând adresa de e-mail.',
             'page-title' => 'Ați uitat parola?',
             'reset-link-sent' => 'Am trimis prin e-mail linkul de resetare a parolei.',
@@ -19,21 +19,21 @@ return [
 
         'reset-password' => [
             'back-link-title' => 'Înapoi la autentificare',
-            'bagisto' => 'Rancon LubMart',
+            'bagisto' => 'MotorMart',
             'confirm-password' => 'Confirmă parola',
             'email' => 'E-mail înregistrat',
-            'footer' => '© Drepturi de autor 2010 - :current_year, Rancon LubMart. Toate drepturile rezervate.',
+            'footer' => '© Drepturi de autor 2010 - :current_year, MotorMart. Toate drepturile rezervate.',
             'password' => 'Parolă',
             'submit-btn-title' => 'Resetare parolă',
             'title' => 'Resetare parolă',
         ],
 
         'login-form' => [
-            'bagisto' => 'Rancon LubMart',
+            'bagisto' => 'MotorMart',
             'button-title' => 'Autentificare',
             'create-your-account' => 'Creează-ți contul',
             'email' => 'E-mail',
-            'footer' => '© Drepturi de autor 2010 - :current_year, Rancon LubMart. Toate drepturile rezervate.',
+            'footer' => '© Drepturi de autor 2010 - :current_year, MotorMart. Toate drepturile rezervate.',
             'forgot-pass' => 'Ai uitat parola?',
             'form-login-text' => 'Dacă aveți un cont, autentificați-vă cu adresa de e-mail.',
             'invalid-credentials' => 'Vă rugăm să verificați datele de autentificare și să încercați din nou.',
@@ -49,13 +49,13 @@ return [
 
         'signup-form' => [
             'account-exists' => 'Aveți deja un cont?',
-            'bagisto' => 'Rancon LubMart',
+            'bagisto' => 'MotorMart',
             'button-title' => 'Înregistrare',
             'click-here' => 'Click aici',
             'confirm-pass' => 'Confirmă parola',
             'email' => 'E-mail',
             'first-name' => 'Prenume',
-            'footer' => '© Drepturi de autor 2010 - :current_year, Rancon LubMart. Toate drepturile rezervate.',
+            'footer' => '© Drepturi de autor 2010 - :current_year, MotorMart. Toate drepturile rezervate.',
             'form-signup-text' => 'Dacă sunteți nou în magazinul nostru, ne bucurăm să vă avem ca membru.',
             'last-name' => 'Nume',
             'page-title' => 'Deveniți utilizator',
@@ -564,7 +564,7 @@ return [
                     'bottom' => [
                         'all' => 'Toate',
                         'back-button' => 'Înapoi la meniul principal',
-                        'bagisto' => 'Rancon LubMart',
+                        'bagisto' => 'MotorMart',
                         'categories' => 'Categorii',
                         'compare' => 'Comparare',
                         'dropdown-text' => 'Gestionează coșul, comenzile și lista de dorințe',
@@ -585,7 +585,7 @@ return [
                 'mobile' => [
                     'account' => 'Cont',
                     'back-button' => 'Înapoi la meniul principal',
-                    'bagisto' => 'Rancon LubMart',
+                    'bagisto' => 'MotorMart',
                     'compare' => 'Comparare',
                     'currencies' => 'Monede',
                     'dropdown-text' => 'Gestionează coșul, comenzile și lista de dorințe',
@@ -625,7 +625,7 @@ return [
                 'customer-service' => 'Serviciu clienți',
                 'email' => 'E-mail',
                 'footer-content' => 'Conținut subsol',
-                'footer-text' => '© Drepturi de autor 2010 - :current_year, Rancon LubMart. Toate drepturile rezervate.',
+                'footer-text' => '© Drepturi de autor 2010 - :current_year, MotorMart. Toate drepturile rezervate.',
                 'locale' => 'Limbă',
                 'newsletter-text' => 'Pregătiți-vă pentru newsletter-ul nostru distractiv!',
                 'order-return' => 'Comenzi și retururi',
@@ -1148,7 +1148,7 @@ return [
             'suspended-account-message' => 'Contul dvs. a fost suspendat.',
 
             'index' => [
-                'bagisto' => 'Rancon LubMart',
+                'bagisto' => 'MotorMart',
                 'cart' => 'Coș de cumpărături',
                 'continue-shopping' => 'Continuă cumpărăturile',
                 'empty-product' => 'Nu aveți niciun produs în coș.',

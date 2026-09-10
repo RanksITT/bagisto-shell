@@ -31,7 +31,7 @@ return [
                 'manage-stock' => 'Gestion des stocks',
                 'meta-description' => 'Méta-description',
                 'meta-keywords' => 'Mots-clés méta',
-                'meta-title' => 'Rancon LubMart',
+                'meta-title' => 'MotorMart',
                 'name' => 'Nom',
                 'new' => 'Nouveau',
                 'price' => 'Prix',
@@ -137,8 +137,8 @@ return [
             'channels' => [
                 'meta-description' => 'Méta-description de la boutique de démonstration',
                 'meta-keywords' => 'Mots-clés méta de la boutique de démonstration',
-                'meta-title' => 'Rancon LubMart',
-                'name' => 'Rancon LubMart',
+                'meta-title' => 'MotorMart',
+                'name' => 'MotorMart',
             ],
 
             'currencies' => [
@@ -809,7 +809,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => 'Admin',
-                'bagisto' => 'Rancon LubMart',
+                'bagisto' => 'MotorMart',
                 'confirm-password' => 'Confirmer le mot de passe',
                 'email' => 'Email',
                 'email-address' => 'admin@example.com',
@@ -824,7 +824,7 @@ return [
                 'application-name' => 'Nom de l\'application',
                 'argentine-peso' => 'Peso argentin (ARS)',
                 'australian-dollar' => 'Dollar australien (AUD)',
-                'bagisto' => 'Rancon LubMart',
+                'bagisto' => 'MotorMart',
                 'bangladeshi-taka' => 'Taka bangladais (BDT)',
                 'bahraini-dinar' => 'Dinar bahreïni (BHD)',
                 'brazilian-real' => 'Réel brésilien (BRL)',
@@ -977,7 +977,7 @@ return [
 
             'arabic' => 'Arabe',
             'back' => 'Retour',
-            'bagisto' => 'Rancon LubMart',
+            'bagisto' => 'MotorMart',
             'bagisto-info' => 'Un projet communautaire par',
             'bagisto-logo' => 'Logo de Bagisto',
             'bengali' => 'Bengali',

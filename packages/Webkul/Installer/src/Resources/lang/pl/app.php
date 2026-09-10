@@ -31,7 +31,7 @@ return [
                 'manage-stock' => 'Zarządzaj zapasami',
                 'meta-description' => 'Opis meta',
                 'meta-keywords' => 'Słowa kluczowe meta',
-                'meta-title' => 'Rancon LubMart',
+                'meta-title' => 'MotorMart',
                 'name' => 'Nazwa',
                 'new' => 'Nowy',
                 'price' => 'Cena',
@@ -137,8 +137,8 @@ return [
             'channels' => [
                 'meta-description' => 'Opis meta sklepu demonstracyjnego',
                 'meta-keywords' => 'Słowa kluczowe sklepu demonstracyjnego',
-                'meta-title' => 'Rancon LubMart',
-                'name' => 'Rancon LubMart',
+                'meta-title' => 'MotorMart',
+                'name' => 'MotorMart',
             ],
 
             'currencies' => [
@@ -809,7 +809,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => 'Administrator',
-                'bagisto' => 'Rancon LubMart',
+                'bagisto' => 'MotorMart',
                 'confirm-password' => 'Potwierdź hasło',
                 'email' => 'Email',
                 'email-address' => 'admin@example.com',
@@ -824,7 +824,7 @@ return [
                 'application-name' => 'Nazwa Aplikacji',
                 'argentine-peso' => 'Peso Argentyńskie (ARS)',
                 'australian-dollar' => 'Dolar Australijski (AUD)',
-                'bagisto' => 'Rancon LubMart',
+                'bagisto' => 'MotorMart',
                 'bangladeshi-taka' => 'Taka Banglijska (BDT)',
                 'bahraini-dinar' => 'Dinar Bahrajnu (BHD)',
                 'brazilian-real' => 'Real Brazylijski (BRL)',
@@ -977,7 +977,7 @@ return [
 
             'arabic' => 'Arabski',
             'back' => 'Wstecz',
-            'bagisto' => 'Rancon LubMart',
+            'bagisto' => 'MotorMart',
             'bagisto-info' => 'Projekt społecznościowy',
             'bagisto-logo' => 'Logo Bagisto',
             'bengali' => 'Bengalski',

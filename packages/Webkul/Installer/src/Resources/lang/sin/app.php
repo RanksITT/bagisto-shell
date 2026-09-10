@@ -31,7 +31,7 @@ return [
                 'manage-stock' => 'වෘක්ත කළමනාක්ක',
                 'meta-description' => 'මැටා වෘක්ත',
                 'meta-keywords' => 'මැටා මාළු වල',
-                'meta-title' => 'Rancon LubMart',
+                'meta-title' => 'MotorMart',
                 'name' => 'නම',
                 'new' => 'නව',
                 'price' => 'මිල',
@@ -137,8 +137,8 @@ return [
             'channels' => [
                 'meta-description' => 'පෙරනිමවේ සෙදවොව මෙටා වෘක්ත',
                 'meta-keywords' => 'පෙරනිමවේ සෙදවොව මෙටා මාලු',
-                'meta-title' => 'Rancon LubMart',
-                'name' => 'Rancon LubMart',
+                'meta-title' => 'MotorMart',
+                'name' => 'MotorMart',
             ],
 
             'currencies' => [

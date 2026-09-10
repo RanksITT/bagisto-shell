@@ -2,6 +2,7 @@
 
 namespace Webkul\Theme\Repositories;
 
+use Exception;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
@@ -109,7 +110,7 @@ class SectionRepository extends Repository
 
                     $encoded = image_manager()->read($image['image'])->encodeByExtension('webp');
 
-                    Storage::put($path, (string) $encoded);
+                    $this->put($path, (string) $encoded);
                 } catch (\Exception $e) {
                     session()->flash('error', $e->getMessage());
 
@@ -480,6 +481,8 @@ class SectionRepository extends Repository
      * storefront records it.
      *
      * @param  int  $id
+     *
+     * @throws Exception
      */
     public function storeImage($id, UploadedFile $file): string
     {
@@ -487,9 +490,25 @@ class SectionRepository extends Repository
 
         $path = $this->mediaDirectory($section).'/'.Str::random(40).'.webp';
 
-        Storage::put($path, (string) image_manager()->read($file)->encodeByExtension('webp'));
+        return 'storage/'.$this->put($path, (string) image_manager()->read($file)->encodeByExtension('webp'));
+    }
 
-        return 'storage/'.$path;
+    /**
+     * Write the given contents to the given path and return that path.
+     *
+     * The configured disk swallows its write failures, so the return value is checked
+     * here instead: without this a failed write leaves the section pointing at a file
+     * that was never created, which surfaces as a silently broken image.
+     *
+     * @throws Exception
+     */
+    protected function put(string $path, string $contents): string
+    {
+        if (! Storage::put($path, $contents)) {
+            throw new Exception('Unable to write the section media file "'.$path.'".');
+        }
+
+        return $path;
     }
 
     /**
@@ -497,6 +516,8 @@ class SectionRepository extends Repository
      * streaming a video to disk as uploaded.
      *
      * @return array{path: string, type: string}
+     *
+     * @throws Exception
      */
     public function storeMedia($id, UploadedFile $file): array
     {
@@ -514,6 +535,10 @@ class SectionRepository extends Repository
             $file,
             Str::random(40).'.'.$file->extension()
         );
+
+        if (! $path) {
+            throw new Exception('Unable to write the section video file in "'.$this->mediaDirectory($section).'".');
+        }
 
         return [
             'path' => 'storage/'.$path,

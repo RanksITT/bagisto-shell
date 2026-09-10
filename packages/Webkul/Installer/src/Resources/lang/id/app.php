@@ -31,7 +31,7 @@ return [
                 'manage-stock' => 'Kelola Stok',
                 'meta-description' => 'Meta Deskripsi',
                 'meta-keywords' => 'Meta Kata Kunci',
-                'meta-title' => 'Rancon LubMart',
+                'meta-title' => 'MotorMart',
                 'name' => 'Nama',
                 'new' => 'Baru',
                 'price' => 'Harga',
@@ -137,8 +137,8 @@ return [
             'channels' => [
                 'meta-description' => 'Deskripsi meta toko demo',
                 'meta-keywords' => 'Kata kunci meta toko demo',
-                'meta-title' => 'Rancon LubMart',
-                'name' => 'Rancon LubMart',
+                'meta-title' => 'MotorMart',
+                'name' => 'MotorMart',
             ],
 
             'currencies' => [
@@ -809,7 +809,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => 'Admin',
-                'bagisto' => 'Rancon LubMart',
+                'bagisto' => 'MotorMart',
                 'confirm-password' => 'Konfirmasi Kata Sandi',
                 'email' => 'Email',
                 'email-address' => 'admin@example.com',
@@ -824,7 +824,7 @@ return [
                 'application-name' => 'Nama Aplikasi',
                 'argentine-peso' => 'Peso Argentina (ARS)',
                 'australian-dollar' => 'Dolar Australia (AUD)',
-                'bagisto' => 'Rancon LubMart',
+                'bagisto' => 'MotorMart',
                 'bangladeshi-taka' => 'Taka Bangladesh (BDT)',
                 'bahraini-dinar' => 'Dinar Bahrain (BHD)',
                 'brazilian-real' => 'Real Brasil (BRL)',
@@ -977,7 +977,7 @@ return [
 
             'arabic' => 'Arab',
             'back' => 'Kembali',
-            'bagisto' => 'Rancon LubMart',
+            'bagisto' => 'MotorMart',
             'bagisto-info' => 'Proyek Komunitas oleh',
             'bagisto-logo' => 'Logo Bagisto',
             'bengali' => 'Bengali',

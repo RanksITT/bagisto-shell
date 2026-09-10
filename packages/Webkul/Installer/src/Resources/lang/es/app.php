@@ -31,7 +31,7 @@ return [
                 'manage-stock' => 'Gestionar Stock',
                 'meta-description' => 'Meta Descripción',
                 'meta-keywords' => 'Meta Palabras Clave',
-                'meta-title' => 'Rancon LubMart',
+                'meta-title' => 'MotorMart',
                 'name' => 'Nombre',
                 'new' => 'Nuevo',
                 'price' => 'Precio',
@@ -137,8 +137,8 @@ return [
             'channels' => [
                 'meta-description' => 'Descripción de Meta de la Tienda de Demostración',
                 'meta-keywords' => 'Palabras Clave de Meta de la Tienda de Demostración',
-                'meta-title' => 'Rancon LubMart',
-                'name' => 'Rancon LubMart',
+                'meta-title' => 'MotorMart',
+                'name' => 'MotorMart',
             ],
 
             'currencies' => [
@@ -809,7 +809,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => 'Administrador',
-                'bagisto' => 'Rancon LubMart',
+                'bagisto' => 'MotorMart',
                 'confirm-password' => 'Confirmar Contraseña',
                 'email' => 'Correo Electrónico',
                 'email-address' => 'admin@example.com',
@@ -824,7 +824,7 @@ return [
                 'application-name' => 'Nombre de la Aplicación',
                 'argentine-peso' => 'Peso Argentino (ARS)',
                 'australian-dollar' => 'Dólar Australiano (AUD)',
-                'bagisto' => 'Rancon LubMart',
+                'bagisto' => 'MotorMart',
                 'bangladeshi-taka' => 'Taka de Bangladesh (BDT)',
                 'bahraini-dinar' => 'Dinar de Bahreiní (BHD)',
                 'brazilian-real' => 'Real Brasileño (BRL)',
@@ -977,7 +977,7 @@ return [
 
             'arabic' => 'Árabe',
             'back' => 'Atrás',
-            'bagisto' => 'Rancon LubMart',
+            'bagisto' => 'MotorMart',
             'bagisto-info' => 'Un proyecto comunitario por',
             'bagisto-logo' => 'Logo de Bagisto',
             'bengali' => 'Bengalí',

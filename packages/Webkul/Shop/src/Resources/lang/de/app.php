@@ -5,10 +5,10 @@ return [
         'forgot-password' => [
             'already-sent' => 'E-Mail zum Zurücksetzen des Passworts wurde bereits gesendet.',
             'back' => 'Zurück zur Anmeldung?',
-            'bagisto' => 'Rancon LubMart',
+            'bagisto' => 'MotorMart',
             'email' => 'E-Mail',
             'email-not-exist' => 'Wir konnten keinen Benutzer mit dieser E-Mail-Adresse finden.',
-            'footer' => '© Copyright 2010 - :current_year, Rancon LubMart. Alle Rechte vorbehalten.',
+            'footer' => '© Copyright 2010 - :current_year, MotorMart. Alle Rechte vorbehalten.',
             'forgot-password-text' => 'Wenn Sie Ihr Passwort vergessen haben, stellen Sie es wieder her, indem Sie Ihre E-Mail-Adresse eingeben.',
             'page-title' => 'Passwort vergessen?',
             'reset-link-sent' => 'Wir haben Ihnen den Link zum Zurücksetzen Ihres Passworts per E-Mail gesendet.',
@@ -19,21 +19,21 @@ return [
 
         'reset-password' => [
             'back-link-title' => 'Zurück zur Anmeldung',
-            'bagisto' => 'Rancon LubMart',
+            'bagisto' => 'MotorMart',
             'confirm-password' => 'Passwort bestätigen',
             'email' => 'Registrierte E-Mail',
-            'footer' => '© Copyright 2010 - :current_year, Rancon LubMart. Alle Rechte vorbehalten.',
+            'footer' => '© Copyright 2010 - :current_year, MotorMart. Alle Rechte vorbehalten.',
             'password' => 'Passwort',
             'submit-btn-title' => 'Passwort zurücksetzen',
             'title' => 'Passwort zurücksetzen',
         ],
 
         'login-form' => [
-            'bagisto' => 'Rancon LubMart',
+            'bagisto' => 'MotorMart',
             'button-title' => 'Anmelden',
             'create-your-account' => 'Erstellen Sie Ihr Konto',
             'email' => 'E-Mail',
-            'footer' => '© Copyright 2010 - :current_year, Rancon LubMart. Alle Rechte vorbehalten.',
+            'footer' => '© Copyright 2010 - :current_year, MotorMart. Alle Rechte vorbehalten.',
             'forgot-pass' => 'Passwort vergessen?',
             'form-login-text' => 'Wenn Sie bereits ein Konto haben, melden Sie sich mit Ihrer E-Mail-Adresse an.',
             'invalid-credentials' => 'Bitte überprüfen Sie Ihre Anmeldedaten und versuchen Sie es erneut.',
@@ -49,13 +49,13 @@ return [
 
         'signup-form' => [
             'account-exists' => 'Bereits ein Konto?',
-            'bagisto' => 'Rancon LubMart',
+            'bagisto' => 'MotorMart',
             'button-title' => 'Registrieren',
             'click-here' => 'Hier klicken',
             'confirm-pass' => 'Passwort bestätigen',
             'email' => 'E-Mail',
             'first-name' => 'Vorname',
-            'footer' => '© Copyright 2010 - :current_year, Rancon LubMart. Alle Rechte vorbehalten.',
+            'footer' => '© Copyright 2010 - :current_year, MotorMart. Alle Rechte vorbehalten.',
             'form-signup-text' => 'Wenn Sie neu in unserem Geschäft sind, freuen wir uns, Sie als Mitglied begrüßen zu dürfen.',
             'last-name' => 'Nachname',
             'page-title' => 'Benutzer werden',
@@ -564,7 +564,7 @@ return [
                     'bottom' => [
                         'all' => 'Alle',
                         'back-button' => 'Zurück zum Hauptmenü',
-                        'bagisto' => 'Rancon LubMart',
+                        'bagisto' => 'MotorMart',
                         'categories' => 'Kategorien',
                         'compare' => 'Vergleichen',
                         'dropdown-text' => 'Warenkorb, Bestellungen & Wunschliste verwalten',
@@ -585,7 +585,7 @@ return [
                 'mobile' => [
                     'account' => 'Konto',
                     'back-button' => 'Zurück zum Hauptmenü',
-                    'bagisto' => 'Rancon LubMart',
+                    'bagisto' => 'MotorMart',
                     'compare' => 'Vergleichen',
                     'currencies' => 'Währungen',
                     'dropdown-text' => 'Warenkorb, Bestellungen & Wunschliste verwalten',
@@ -625,7 +625,7 @@ return [
                 'customer-service' => 'Kundenservice',
                 'email' => 'E-Mail',
                 'footer-content' => 'Fußzeileninhalt',
-                'footer-text' => '© Copyright 2010 - :current_year, Rancon LubMart. Alle Rechte vorbehalten.',
+                'footer-text' => '© Copyright 2010 - :current_year, MotorMart. Alle Rechte vorbehalten.',
                 'locale' => 'Sprache',
                 'newsletter-text' => 'Bereiten Sie sich auf unseren unterhaltsamen Newsletter vor!',
                 'order-return' => 'Bestellung und Rückgabe',
@@ -1148,7 +1148,7 @@ return [
             'suspended-account-message' => 'Ihr Konto wurde gesperrt.',
 
             'index' => [
-                'bagisto' => 'Rancon LubMart',
+                'bagisto' => 'MotorMart',
                 'cart' => 'Warenkorb',
                 'continue-shopping' => 'Einkauf fortsetzen',
                 'empty-product' => 'Sie haben kein Produkt in Ihrem Warenkorb.',

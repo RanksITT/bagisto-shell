@@ -31,7 +31,7 @@ return [
                 'manage-stock' => 'Gestionare stoc',
                 'meta-description' => 'Meta descriere',
                 'meta-keywords' => 'Cuvinte cheie meta',
-                'meta-title' => 'Rancon LubMart',
+                'meta-title' => 'MotorMart',
                 'name' => 'Nume',
                 'new' => 'Nou',
                 'price' => 'Preț',
@@ -137,8 +137,8 @@ return [
             'channels' => [
                 'meta-description' => 'Meta descriere magazin demonstrativ',
                 'meta-keywords' => 'Cuvinte cheie meta magazin demonstrativ',
-                'meta-title' => 'Rancon LubMart',
-                'name' => 'Rancon LubMart',
+                'meta-title' => 'MotorMart',
+                'name' => 'MotorMart',
             ],
 
             'currencies' => [
@@ -809,7 +809,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => 'Administrator',
-                'bagisto' => 'Rancon LubMart',
+                'bagisto' => 'MotorMart',
                 'confirm-password' => 'Confirmați parola',
                 'email' => 'E-mail',
                 'email-address' => 'admin@example.com',
@@ -824,7 +824,7 @@ return [
                 'application-name' => 'Numele aplicației',
                 'argentine-peso' => 'Peso argentinian (ARS)',
                 'australian-dollar' => 'Dolar australian (AUD)',
-                'bagisto' => 'Rancon LubMart',
+                'bagisto' => 'MotorMart',
                 'bangladeshi-taka' => 'Taka din Bangladesh (BDT)',
                 'bahraini-dinar' => 'Dinar din Bahrain (BHD)',
                 'brazilian-real' => 'Real brazilian (BRL)',
@@ -977,7 +977,7 @@ return [
 
             'arabic' => 'Arabă',
             'back' => 'Înapoi',
-            'bagisto' => 'Rancon LubMart',
+            'bagisto' => 'MotorMart',
             'bagisto-info' => 'un proiect comunitar realizat de',
             'bagisto-logo' => 'Logo Bagisto',
             'bengali' => 'Bengali',

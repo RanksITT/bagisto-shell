@@ -31,7 +31,7 @@ return [
                 'manage-stock' => 'ניהול מלאי',
                 'meta-description' => 'תיאור מטא',
                 'meta-keywords' => 'מילות מפתח מטא',
-                'meta-title' => 'Rancon LubMart',
+                'meta-title' => 'MotorMart',
                 'name' => 'שם',
                 'new' => 'חדש',
                 'price' => 'מחיר',
@@ -137,8 +137,8 @@ return [
             'channels' => [
                 'meta-description' => 'תיאור מטא לחנות הדגמה',
                 'meta-keywords' => 'מילות מפתח לחנות הדגמה',
-                'meta-title' => 'Rancon LubMart',
-                'name' => 'Rancon LubMart',
+                'meta-title' => 'MotorMart',
+                'name' => 'MotorMart',
             ],
 
             'currencies' => [
@@ -809,7 +809,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => 'מנהל',
-                'bagisto' => 'Rancon LubMart',
+                'bagisto' => 'MotorMart',
                 'confirm-password' => 'אשר סיסמה',
                 'email' => 'אימייל',
                 'email-address' => 'admin@example.com',
@@ -824,7 +824,7 @@ return [
                 'application-name' => 'שם היישום',
                 'argentine-peso' => 'פסו ארגנטינאי (ARS)',
                 'australian-dollar' => 'דולר אוסטרלי (AUD)',
-                'bagisto' => 'Rancon LubMart',
+                'bagisto' => 'MotorMart',
                 'bangladeshi-taka' => 'טאקה בנגלדשי (BDT)',
                 'bahraini-dinar' => 'דינר בחרייני (BHD)',
                 'brazilian-real' => 'ריאל ברזילאי (BRL)',
@@ -977,7 +977,7 @@ return [
 
             'arabic' => 'ערבית',
             'back' => 'חזרה',
-            'bagisto' => 'Rancon LubMart',
+            'bagisto' => 'MotorMart',
             'bagisto-info' => 'פרויקט קהילתי על ידי',
             'bagisto-logo' => 'לוגו Bagisto',
             'bengali' => 'בנגלי',

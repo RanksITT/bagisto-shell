@@ -31,7 +31,7 @@ return [
                 'manage-stock' => 'Bestand verwalten',
                 'meta-description' => 'Meta-Beschreibung',
                 'meta-keywords' => 'Meta-Schlüsselwörter',
-                'meta-title' => 'Rancon LubMart',
+                'meta-title' => 'MotorMart',
                 'name' => 'Name',
                 'new' => 'Neu',
                 'price' => 'Preis',
@@ -137,8 +137,8 @@ return [
             'channels' => [
                 'meta-description' => 'Demo-Shop Meta-Beschreibung',
                 'meta-keywords' => 'Demo-Shop Meta-Stichwörter',
-                'meta-title' => 'Rancon LubMart',
-                'name' => 'Rancon LubMart',
+                'meta-title' => 'MotorMart',
+                'name' => 'MotorMart',
             ],
 
             'currencies' => [
@@ -809,7 +809,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => 'Administrator',
-                'bagisto' => 'Rancon LubMart',
+                'bagisto' => 'MotorMart',
                 'confirm-password' => 'Passwort bestätigen',
                 'email' => 'E-Mail',
                 'email-address' => 'admin@example.com',
@@ -824,7 +824,7 @@ return [
                 'application-name' => 'Anwendungsname',
                 'argentine-peso' => 'Argentinischer Peso (ARS)',
                 'australian-dollar' => 'Australischer Dollar (AUD)',
-                'bagisto' => 'Rancon LubMart',
+                'bagisto' => 'MotorMart',
                 'bangladeshi-taka' => 'Bangladeschischer Taka (BDT)',
                 'bahraini-dinar' => 'Bahreinse Dinar (BHD)',
                 'brazilian-real' => 'Brasilianischer Real (BRL)',
@@ -977,7 +977,7 @@ return [
 
             'arabic' => 'Arabisch',
             'back' => 'Zurück',
-            'bagisto' => 'Rancon LubMart',
+            'bagisto' => 'MotorMart',
             'bagisto-info' => 'Ein Gemeinschaftsprojekt von',
             'bagisto-logo' => 'Bagisto Logo',
             'bengali' => 'Bengalisch',

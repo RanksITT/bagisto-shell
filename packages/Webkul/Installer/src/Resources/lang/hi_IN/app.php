@@ -31,7 +31,7 @@ return [
                 'manage-stock' => 'स्टॉक प्रबंधन',
                 'meta-description' => 'मेटा विवरण',
                 'meta-keywords' => 'मेटा कीवर्ड्स',
-                'meta-title' => 'Rancon LubMart',
+                'meta-title' => 'MotorMart',
                 'name' => 'नाम',
                 'new' => 'नया',
                 'price' => 'मूल्य',
@@ -137,8 +137,8 @@ return [
             'channels' => [
                 'meta-description' => 'डेमो स्टोर मेटा विवरण',
                 'meta-keywords' => 'डेमो स्टोर मेटा कीवर्ड',
-                'meta-title' => 'Rancon LubMart',
-                'name' => 'Rancon LubMart',
+                'meta-title' => 'MotorMart',
+                'name' => 'MotorMart',
             ],
 
             'currencies' => [

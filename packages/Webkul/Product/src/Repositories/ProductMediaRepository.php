@@ -135,6 +135,8 @@ class ProductMediaRepository extends Repository
      * base name and never the resulting file type.
      *
      * @param  Product  $product
+     *
+     * @throws Exception
      */
     protected function storeUploadedFile(UploadedFile $file, $product, array $meta): string
     {
@@ -147,20 +149,38 @@ class ProductMediaRepository extends Repository
 
             $path = $this->mediaFileName->resolve($directory, $requestedName, 'webp');
 
-            Storage::put($path, (string) $encoded);
-
-            return $path;
+            return $this->put($path, (string) $encoded);
         }
 
         if (filled($requestedName)) {
             $path = $this->mediaFileName->resolve($directory, $requestedName, $file->getClientOriginalExtension());
 
-            Storage::put($path, $file->get());
-
-            return $path;
+            return $this->put($path, $file->get());
         }
 
-        return $file->store($directory);
+        if (! $path = $file->store($directory)) {
+            throw new Exception('Unable to store the uploaded media file in "'.$directory.'".');
+        }
+
+        return $path;
+    }
+
+    /**
+     * Write the given contents to the given path and return that path.
+     *
+     * The configured disk swallows its write failures, so the return value is checked
+     * here instead: without this a failed write leaves the database pointing at a file
+     * that was never created, which surfaces as a silently broken image.
+     *
+     * @throws Exception
+     */
+    protected function put(string $path, string $contents): string
+    {
+        if (! Storage::put($path, $contents)) {
+            throw new Exception('Unable to write the media file "'.$path.'".');
+        }
+
+        return $path;
     }
 
     /**

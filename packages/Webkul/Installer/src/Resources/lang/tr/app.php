@@ -31,7 +31,7 @@ return [
                 'manage-stock' => 'Stoğu Yönet',
                 'meta-description' => 'Meta Açıklama',
                 'meta-keywords' => 'Meta Anahtar Kelimeler',
-                'meta-title' => 'Rancon LubMart',
+                'meta-title' => 'MotorMart',
                 'name' => 'Ad',
                 'new' => 'Yeni',
                 'price' => 'Fiyat',
@@ -137,8 +137,8 @@ return [
             'channels' => [
                 'meta-description' => 'Demo Mağaza Meta Açıklama',
                 'meta-keywords' => 'Demo Mağaza Meta Anahtar Kelimeler',
-                'meta-title' => 'Rancon LubMart',
-                'name' => 'Rancon LubMart',
+                'meta-title' => 'MotorMart',
+                'name' => 'MotorMart',
             ],
 
             'currencies' => [
@@ -809,7 +809,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => 'Yönetici',
-                'bagisto' => 'Rancon LubMart',
+                'bagisto' => 'MotorMart',
                 'confirm-password' => 'Şifreyi Onayla',
                 'email' => 'E-posta',
                 'email-address' => 'admin@ornek.com',
@@ -824,7 +824,7 @@ return [
                 'application-name' => 'Uygulama Adı',
                 'argentine-peso' => 'Arjantin Pezosu (ARS)',
                 'australian-dollar' => 'Avustralya Doları (AUD)',
-                'bagisto' => 'Rancon LubMart',
+                'bagisto' => 'MotorMart',
                 'bangladeshi-taka' => 'Bangladeş Takası (BDT)',
                 'bahraini-dinar' => 'Bahreyn Dinarı (BHD)',
                 'brazilian-real' => 'Brezilya Reali (BRL)',
@@ -977,7 +977,7 @@ return [
 
             'arabic' => 'Arapça',
             'back' => 'Geri',
-            'bagisto' => 'Rancon LubMart',
+            'bagisto' => 'MotorMart',
             'bagisto-info' => 'Webkul tarafından geliştirilen bir Topluluk Projesi',
             'bagisto-logo' => 'Bagisto Logosu',
             'bengali' => 'Bengalce',

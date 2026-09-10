@@ -76,8 +76,8 @@ export class CheckoutHelper extends BasePage {
         return this.page.getByRole("textbox", { name: "Zip/Postcode" });
     }
 
-    get billingTelephone() {
-        return this.page.getByRole("textbox", { name: "Telephone" });
+    get billingMobileNumber() {
+        return this.page.getByRole("textbox", { name: "Mobile Number" });
     }
 
     get clickSaveAddressButton() {
@@ -349,7 +349,7 @@ export class CheckoutHelper extends BasePage {
         await this.billingState.selectOption({ value: "UP" });
         await this.billingCity.fill("test city");
         await this.billingZip.fill("123456");
-        await this.billingTelephone.fill("2365432789");
+        await this.billingMobileNumber.fill("2365432789");
     }
 
     /**

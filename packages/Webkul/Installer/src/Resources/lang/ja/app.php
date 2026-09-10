@@ -31,7 +31,7 @@ return [
                 'manage-stock' => '在庫管理',
                 'meta-description' => 'メタ説明',
                 'meta-keywords' => 'メタキーワード',
-                'meta-title' => 'Rancon LubMart',
+                'meta-title' => 'MotorMart',
                 'name' => '名前',
                 'new' => '新規',
                 'price' => '価格',
@@ -137,8 +137,8 @@ return [
             'channels' => [
                 'meta-description' => 'デモストアのメタ説明',
                 'meta-keywords' => 'デモストアのメタキーワード',
-                'meta-title' => 'Rancon LubMart',
-                'name' => 'Rancon LubMart',
+                'meta-title' => 'MotorMart',
+                'name' => 'MotorMart',
             ],
 
             'currencies' => [
@@ -809,7 +809,7 @@ return [
         'index' => [
             'create-administrator' => [
                 'admin' => '管理者',
-                'bagisto' => 'Rancon LubMart',
+                'bagisto' => 'MotorMart',
                 'confirm-password' => 'パスワードの確認',
                 'email' => 'メール',
                 'email-address' => 'admin@example.com',
@@ -824,7 +824,7 @@ return [
                 'application-name' => 'アプリケーション名',
                 'argentine-peso' => 'アルゼンチンペソ（ARS）',
                 'australian-dollar' => 'オーストラリアドル（AUD）',
-                'bagisto' => 'Rancon LubMart',
+                'bagisto' => 'MotorMart',
                 'bangladeshi-taka' => 'バングラデシュタカ（BDT）',
                 'bahraini-dinar' => 'バーレーンディナール（BHD）',
                 'brazilian-real' => 'ブラジルレアル（BRL）',
@@ -977,7 +977,7 @@ return [
 
             'arabic' => 'アラビア語',
             'back' => '戻る',
-            'bagisto' => 'Rancon LubMart',
+            'bagisto' => 'MotorMart',
             'bagisto-info' => 'コミュニティプロジェクト by',
             'bagisto-logo' => 'Bagistoロゴ',
             'bengali' => 'ベンガル語',
