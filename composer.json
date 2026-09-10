@@ -110,7 +110,8 @@
             "Webkul\\Stripe\\": "packages/Webkul/Stripe/src",
             "Webkul\\Tax\\": "packages/Webkul/Tax/src",
             "Webkul\\Theme\\": "packages/Webkul/Theme/src",
-            "Webkul\\User\\": "packages/Webkul/User/src"
+            "Webkul\\User\\": "packages/Webkul/User/src",
+            "Local\\BangladeshGeo\\": "packages/Local/BangladeshGeo/src"
         }
     },
     "autoload-dev": {
@@ -149,13 +150,15 @@
             ]
         }
     },
-    "repositories": [{
-        "type": "path",
-        "url": "packages/*/*",
-        "options": {
-            "symlink": true
+    "repositories": [
+        {
+            "type": "path",
+            "url": "packages/*/*",
+            "options": {
+                "symlink": true
+            }
         }
-    }],
+    ],
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",

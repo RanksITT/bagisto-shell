@@ -36,7 +36,11 @@ package-lock.json
 /public/vendor
 /lang/vendor
 skills-lock.json
-/packages
+# Bagisto ships /packages ignored, yet its Webkul tree is tracked (tracked files
+# override ignore rules). Git cannot re-include inside an excluded directory, so
+# exclude the CONTENTS and re-include our own vendor dir.
+/packages/*
+!/packages/Local
 /storage/*.key
 /storage/dcc-data/
 /test-results

@@ -1,5 +1,7 @@
 <?php
 
+use Local\BangladeshGeo\Providers\BangladeshGeoServiceProvider;
+
 use App\Providers\AppServiceProvider;
 use Webkul\Admin\Providers\AdminServiceProvider;
 use Webkul\Attribute\Providers\AttributeServiceProvider;
@@ -95,4 +97,5 @@ return [
     TaxServiceProvider::class,
     ThemeServiceProvider::class,
     UserServiceProvider::class,
+    BangladeshGeoServiceProvider::class,
 ];
