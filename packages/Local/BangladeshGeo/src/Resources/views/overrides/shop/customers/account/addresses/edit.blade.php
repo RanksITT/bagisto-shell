@@ -137,6 +137,25 @@
 
                 {!! view_render_event('bagisto.shop.customers.account.addresses.edit_form_controls.email.after', ['address' => $address]) !!}
 
+                    <!-- Mobile Number: the delivery contact, kept next to email -->
+                    <x-shop::form.control-group>
+                        <x-shop::form.control-group.label class="required">
+                            @lang('shop::app.customers.account.addresses.edit.phone')
+                        </x-shop::form.control-group.label>
+
+                        <x-shop::form.control-group.control
+                            type="text"
+                            name="phone"
+                            rules="required|phone"
+                            :value="old('phone') ?? $address->phone"
+                            :label="trans('shop::app.customers.account.addresses.edit.phone')"
+                            :placeholder="trans('shop::app.customers.account.addresses.edit.phone')"
+                        />
+
+                        <x-shop::form.control-group.error control-name="phone" />
+                    </x-shop::form.control-group>
+
+
                 @php
                     $addresses = explode(PHP_EOL, $address->address);
                 @endphp
@@ -202,6 +221,11 @@
 
             </x-shop::form>
         </script>
+
+    {{-- Sibling of the template above, never inside it: a nested </script>
+         would terminate that template and blank the page. --}}
+    <x-bdgeo::address-fields-scripts />
+
 
         <script type="module">
             app.component('v-edit-customer-address', {

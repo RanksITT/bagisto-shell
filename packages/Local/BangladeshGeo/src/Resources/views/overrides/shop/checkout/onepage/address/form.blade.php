@@ -90,6 +90,25 @@
 
             {!! view_render_event('bagisto.shop.checkout.onepage.address.form.email.after') !!}
 
+                <!-- Mobile Number: the delivery contact, kept next to email -->
+                <x-shop::form.control-group>
+                    <x-shop::form.control-group.label class="required">
+                        @lang('shop::app.checkout.onepage.address.telephone')
+                    </x-shop::form.control-group.label>
+
+                    <x-shop::form.control-group.control
+                        type="text"
+                        ::name="controlName + '.phone'"
+                        ::value="address.phone"
+                        rules="required|phone"
+                        :label="trans('shop::app.checkout.onepage.address.telephone')"
+                        :placeholder="trans('shop::app.checkout.onepage.address.telephone')"
+                    />
+
+                    <x-shop::form.control-group.error ::name="controlName + '.phone'" />
+                </x-shop::form.control-group>
+
+
             <!-- Street Address -->
             <x-shop::form.control-group>
                 <x-shop::form.control-group.label class="required !mt-0">
@@ -143,6 +162,11 @@
 
         </div>
     </script>
+
+    {{-- Sibling of the template above, never inside it: a nested </script>
+         would terminate that template and blank the page. --}}
+    <x-bdgeo::address-fields-scripts />
+
 
     <script type="module">
         app.component('v-checkout-address-form', {

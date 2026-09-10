@@ -125,6 +125,25 @@
 
                     {!! view_render_event('bagisto.shop.customers.account.addresses.create_form_controls.email.after') !!}
 
+                    <!-- Mobile Number: the delivery contact, kept next to email -->
+                    <x-shop::form.control-group>
+                        <x-shop::form.control-group.label class="required">
+                            @lang('shop::app.customers.account.addresses.create.phone')
+                        </x-shop::form.control-group.label>
+
+                        <x-shop::form.control-group.control
+                            type="text"
+                            name="phone"
+                            rules="required|phone"
+                            :value="old('phone')"
+                            :label="trans('shop::app.customers.account.addresses.create.phone')"
+                            :placeholder="trans('shop::app.customers.account.addresses.create.phone')"
+                        />
+
+                        <x-shop::form.control-group.error control-name="phone" />
+                    </x-shop::form.control-group>
+
+
                     <!-- Street Address -->
                     <x-shop::form.control-group>
                         <x-shop::form.control-group.label class="required">
@@ -211,6 +230,11 @@
                 {!! view_render_event('bagisto.shop.customers.account.address.create.after') !!}
             </div>
         </script>
+
+    {{-- Sibling of the template above, never inside it: a nested </script>
+         would terminate that template and blank the page. --}}
+    <x-bdgeo::address-fields-scripts />
+
     
         <script type="module">
             app.component('v-create-customer-address', {
