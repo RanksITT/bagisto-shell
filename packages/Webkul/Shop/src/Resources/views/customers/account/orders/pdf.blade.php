@@ -64,10 +64,10 @@
                     'regular' => 'Hind',
                     'bold'    => 'Hind Bold',
                 ];
-            } elseif (app()->getLocale() == 'bn') {
+            } elseif (app()->getLocale() == 'bn' || $orderCurrencyCode == 'BDT') {
                 $fontPath = [
-                    'regular' => asset('fonts/NotoSansBengali-Regular.ttf'),
-                    'bold'    => asset('fonts/NotoSansBengali-Bold.ttf'),
+                    'regular' => public_path('fonts/NotoSansBengali-Regular.ttf'),
+                    'bold'    => public_path('fonts/NotoSansBengali-Bold.ttf'),
                 ];
 
                 $fontFamily = [
@@ -100,7 +100,7 @@
                 @font-face {
                     src: url({{ $fontPath['bold'] }}) format('truetype');
                     font-family: {{ $fontFamily['bold'] }};
-                    font-style: bold;
+                    font-weight: bold;
                 }
             @endif
 
