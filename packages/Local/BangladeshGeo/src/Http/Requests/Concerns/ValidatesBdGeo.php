@@ -44,8 +44,6 @@ trait ValidatesBdGeo
                     ->where('status', 1),
             ],
 
-            // Unions are not collected; level 4 is always the free-text area.
-            $prefix.'bd_area_name' => ['required', 'string', 'max:128'],
 
             // Optional: in Bangladesh the mobile number is the contact that matters, and
             // plenty of buyers have no email they actually read. Requiring one just invites
@@ -72,7 +70,6 @@ trait ValidatesBdGeo
             $prefix.'bd_district_id.exists'   => trans('bdgeo::app.validation.district-invalid'),
             $prefix.'bd_upazila_id.required'  => trans('bdgeo::app.validation.upazila-required'),
             $prefix.'bd_upazila_id.exists'    => trans('bdgeo::app.validation.upazila-invalid'),
-            $prefix.'bd_area_name.required'   => trans('bdgeo::app.validation.area-required'),
         ];
     }
 }

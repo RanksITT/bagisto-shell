@@ -116,7 +116,6 @@
                         :label="trans('bdgeo::app.address.upazila')"
                         :placeholder="trans('bdgeo::app.address.upazila')"
                         ::disabled="! districtId || loadingUpazilas"
-                        @change="onUpazilaChange"
                     >
                         <option value="">@{{ upazilaPlaceholder }}</option>
 
@@ -128,26 +127,6 @@
                     </x-shop::form.control-group.control>
 
                     <x-shop::form.control-group.error ::name="bdField('bd_upazila_id')" />
-                </x-shop::form.control-group>
-
-                {{-- Level 4 is one free-text area for every address. Unions are not collected:
-                     rural-only, absent for metro thanas, and buyers describe where they live
-                     by area and road. --}}
-                <x-shop::form.control-group v-if="upazilaId">
-                    <x-shop::form.control-group.label class="required">
-                        @lang('bdgeo::app.address.area')
-                    </x-shop::form.control-group.label>
-
-                    <x-shop::form.control-group.control
-                        type="text"
-                        ::name="bdField('bd_area_name')"
-                        v-model="areaName"
-                        rules="required"
-                        :label="trans('bdgeo::app.address.area')"
-                        :placeholder="trans('bdgeo::app.address.area-placeholder')"
-                    />
-
-                    <x-shop::form.control-group.error ::name="bdField('bd_area_name')" />
                 </x-shop::form.control-group>
 
                 {{-- Postcode stays optional: the geo dataset carries no post codes. --}}
@@ -188,7 +167,6 @@
                     divisionId: this.initial.bd_division_id ?? '',
                     districtId: this.initial.bd_district_id ?? '',
                     upazilaId: this.initial.bd_upazila_id ?? '',
-                    areaName: this.initial.bd_area_name ?? '',
                     postcode: this.initial.postcode ?? '',
                     upazilas: [],
                     loadingUpazilas: false,
@@ -248,18 +226,12 @@
                 onDivisionChange() {
                     this.districtId = '';
                     this.upazilaId = '';
-                    this.areaName = '';
                     this.upazilas = [];
                 },
 
                 onDistrictChange() {
                     this.upazilaId = '';
-                    this.areaName = '';
                     this.fetchUpazilas();
-                },
-
-                onUpazilaChange() {
-                    this.areaName = '';
                 },
 
                 fetchUpazilas() {
