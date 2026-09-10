@@ -25,8 +25,8 @@ jobs:
       - name: Composer install
         run: composer install --no-interaction --prefer-dist --no-progress
 
-      # - name: Run testsff
-      ###   env:
+      # - name: Run tests
+      #   env:
       #     APP_ENV: testing
       #     DB_CONNECTION: sqlite
       #     DB_DATABASE: ":memory:"
@@ -45,12 +45,21 @@ jobs:
           host: ${{ secrets.DEV_HOST }}
           username: ${{ secrets.DEV_USER }}
           key: ${{ secrets.DEV_SSH_KEY }}
+          port: ${{ secrets.DEV_PORT || 22 }}
           command_timeout: 20m
           script: |
             set -euo pipefail
-            git config --global --add safe.directory "/var/www/development/bagisto-shell"
-            cd "/var/www/development/bagisto-shell"
+            DEPLOY_PATH="${{ secrets.DEV_DEPLOY_PATH || '/var/www/motormart' }}"
+
+            if [ ! -d "$DEPLOY_PATH/.git" ]; then
+              echo "error: $DEPLOY_PATH is not a git checkout" >&2
+              exit 1
+            fi
+
+            git config --global --add safe.directory "$DEPLOY_PATH"
+            cd "$DEPLOY_PATH"
+
+            git fetch origin development
             git reset --hard origin/development
             git clean -fd
-            git pull origin development
             bash .scripts/laravel.sh

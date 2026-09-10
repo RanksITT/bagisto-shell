@@ -45,9 +45,18 @@ php artisan config:cache
 php artisan route:cache
 php artisan view:cache
 
+# Bagisto's response cache uses its own store (RESPONSE_CACHE_DRIVER) and is NOT
+# cleared by optimize:clear - without this a deploy serves stale HTML.
+php artisan responsecache:clear 2>/dev/null || true
+
 composer dump-autoload --optimize --no-dev
 
 php artisan queue:restart 2>/dev/null || true
+
+# Deploy runs as the repo owner; php-fpm runs as www-data. Keep runtime dirs
+# group-writable so the web user can still write cache, sessions and logs.
+chgrp -R www-data storage bootstrap/cache 2>/dev/null || true
+chmod -R g+w storage bootstrap/cache 2>/dev/null || true
 
 echo "Bringing application back up..."
 php artisan up
