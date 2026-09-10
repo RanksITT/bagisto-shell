@@ -34,8 +34,6 @@ class AddressResource extends JsonResource
             'bd_division_id' => $this->bd_division_id,
             'bd_district_id' => $this->bd_district_id,
             'bd_upazila_id' => $this->bd_upazila_id,
-            'bd_union_id' => $this->bd_union_id,
-            'bd_area_name' => $this->bd_area_name,
             'email' => $this->email,
             'phone' => $this->phone,
             'vat_id' => $this->vat_id,

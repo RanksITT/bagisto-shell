@@ -461,6 +461,9 @@ class Cart
                 'city',
                 'postcode',
                 'phone',
+                'bd_division_id',
+                'bd_district_id',
+                'bd_upazila_id',
             ])
             ->merge([
                 'address_type' => CartAddress::ADDRESS_TYPE_BILLING,
@@ -514,8 +517,6 @@ class Cart
             'bd_division_id',
             'bd_district_id',
             'bd_upazila_id',
-            'bd_union_id',
-            'bd_area_name',
         ];
 
         if ($this->cart->billing_address->use_for_shipping) {
