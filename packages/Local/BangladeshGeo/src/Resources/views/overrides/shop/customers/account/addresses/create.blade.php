@@ -125,7 +125,7 @@
 
                     {!! view_render_event('bagisto.shop.customers.account.addresses.create_form_controls.email.after') !!}
 
-                    <!-- Mobile Number: the delivery contact, kept next to email -->
+                    <!-- Mobile Number -->
                     <x-shop::form.control-group>
                         <x-shop::form.control-group.label class="required">
                             @lang('shop::app.customers.account.addresses.create.phone')
@@ -143,7 +143,6 @@
                         <x-shop::form.control-group.error control-name="phone" />
                     </x-shop::form.control-group>
 
-
                     <!-- Street Address -->
                     <x-shop::form.control-group>
                         <x-shop::form.control-group.label class="required">
@@ -156,7 +155,7 @@
                             rules="required|address"
                             :value="collect(old('address'))->first()"
                             :label="trans('shop::app.customers.account.addresses.create.street-address')"
-                            :placeholder="trans('shop::app.customers.account.addresses.create.street-address')"
+                            :placeholder="trans('bdgeo::app.address.street-placeholder')"
                         />
 
                         <x-shop::form.control-group.error control-name="address[]" />
@@ -187,12 +186,8 @@
 
                     {!! view_render_event('bagisto.shop.customers.account.addresses.create_form_controls.street_address.after') !!}
 
-                    {{-- Country, division, district, upazila/thana, area and postcode.
-                         Country is fixed: this shop ships within Bangladesh only. --}}
+                    <!-- Country, Division, District, Upazila / Thana and Postcode -->
                     <x-bdgeo::address-fields />
-
-
-
 
                     <!-- Set As Default -->
                     <div class="text-md mb-4 flex select-none items-center gap-x-1.5 text-mutedBlue">
@@ -231,11 +226,8 @@
             </div>
         </script>
 
-    {{-- Sibling of the template above, never inside it: a nested </script>
-         would terminate that template and blank the page. --}}
-    <x-bdgeo::address-fields-scripts />
+        <x-bdgeo::address-fields-scripts />
 
-    
         <script type="module">
             app.component('v-create-customer-address', {
                 template: '#v-create-customer-address-template',

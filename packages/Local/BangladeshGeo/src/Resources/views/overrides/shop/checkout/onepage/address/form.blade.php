@@ -90,24 +90,23 @@
 
             {!! view_render_event('bagisto.shop.checkout.onepage.address.form.email.after') !!}
 
-                <!-- Mobile Number: the delivery contact, kept next to email -->
-                <x-shop::form.control-group>
-                    <x-shop::form.control-group.label class="required">
-                        @lang('shop::app.checkout.onepage.address.telephone')
-                    </x-shop::form.control-group.label>
+            <!-- Mobile Number -->
+            <x-shop::form.control-group>
+                <x-shop::form.control-group.label class="required">
+                    @lang('shop::app.checkout.onepage.address.telephone')
+                </x-shop::form.control-group.label>
 
-                    <x-shop::form.control-group.control
-                        type="text"
-                        ::name="controlName + '.phone'"
-                        ::value="address.phone"
-                        rules="required|phone"
-                        :label="trans('shop::app.checkout.onepage.address.telephone')"
-                        :placeholder="trans('shop::app.checkout.onepage.address.telephone')"
-                    />
+                <x-shop::form.control-group.control
+                    type="text"
+                    ::name="controlName + '.phone'"
+                    ::value="address.phone"
+                    rules="required|phone"
+                    :label="trans('shop::app.checkout.onepage.address.telephone')"
+                    :placeholder="trans('shop::app.checkout.onepage.address.telephone')"
+                />
 
-                    <x-shop::form.control-group.error ::name="controlName + '.phone'" />
-                </x-shop::form.control-group>
-
+                <x-shop::form.control-group.error ::name="controlName + '.phone'" />
+            </x-shop::form.control-group>
 
             <!-- Street Address -->
             <x-shop::form.control-group>
@@ -121,7 +120,7 @@
                     ::value="address.address[0]"
                     rules="required|address"
                     :label="trans('shop::app.checkout.onepage.address.street-address')"
-                    :placeholder="trans('shop::app.checkout.onepage.address.street-address')"
+                    :placeholder="trans('bdgeo::app.address.street-placeholder')"
                 />
 
                 <x-shop::form.control-group.error
@@ -149,24 +148,15 @@
 
             {!! view_render_event('bagisto.shop.checkout.onepage.address.form.address.after') !!}
 
-            {{-- Country, division, district, upazila/thana, union or area, and postcode.
-                 Replaces Bagisto's country select and free-text state/city inputs: this shop
-                 ships within Bangladesh only, so country is fixed and the rest is a
-                 validated four-level cascade. --}}
+            <!-- Country, Division, District, Upazila / Thana and Postcode -->
             <x-bdgeo::address-fields
                 prefix-expr="controlName + '.'"
                 initial-expr="address"
             />
-
-
-
         </div>
     </script>
 
-    {{-- Sibling of the template above, never inside it: a nested </script>
-         would terminate that template and blank the page. --}}
     <x-bdgeo::address-fields-scripts />
-
 
     <script type="module">
         app.component('v-checkout-address-form', {

@@ -5,7 +5,14 @@
      </script> terminates the outer template and the page renders blank.
 
      The guard is request-scoped, not view-scoped: Blade component scopes are isolated and
-     checkout renders the address form twice, for billing and shipping. --}}
+     checkout renders the address form twice, for billing and shipping.
+
+     Every control uses Bagisto's own control-group components, so the block inherits the
+     form's borders, spacing, focus states and error styling. Postcode is optional because
+     the geo dataset carries no post codes. `state` and `city` are submitted from the
+     selection and re-derived by AddressObserver on save. A newer upazila request aborts the
+     older one, so a slow response for a district the customer has left never overwrites
+     the list on screen. --}}
 @php
     $bdGeoEmit = ! app()->bound('bdgeo.scripts.emitted');
     if ($bdGeoEmit) {
@@ -19,11 +26,7 @@
         id="v-bd-address-fields-template"
     >
         <div>
-            {{-- Every control below uses Bagisto's own control-group components rather than
-                 bare inputs, so the address block inherits the same borders, spacing, focus
-                 states and error styling as the rest of the form. --}}
-
-            <!-- Country: fixed, the shop ships within Bangladesh only -->
+            <!-- Country -->
             <x-shop::form.control-group>
                 <x-shop::form.control-group.label>
                     @lang('shop::app.checkout.onepage.address.country')
@@ -72,7 +75,7 @@
                     <x-shop::form.control-group.error ::name="bdField('bd_division_id')" />
                 </x-shop::form.control-group>
 
-                <!-- District -> saved as the native `state` -->
+                <!-- District -->
                 <x-shop::form.control-group>
                     <x-shop::form.control-group.label class="required">
                         @lang('bdgeo::app.address.district')
@@ -102,7 +105,7 @@
                     <x-shop::form.control-group.error ::name="bdField('bd_district_id')" />
                 </x-shop::form.control-group>
 
-                <!-- Upazila / Thana -> saved as the native `city` -->
+                <!-- Upazila / Thana -->
                 <x-shop::form.control-group>
                     <x-shop::form.control-group.label class="required">
                         @lang('bdgeo::app.address.upazila')
@@ -129,7 +132,7 @@
                     <x-shop::form.control-group.error ::name="bdField('bd_upazila_id')" />
                 </x-shop::form.control-group>
 
-                {{-- Postcode stays optional: the geo dataset carries no post codes. --}}
+                <!-- Postcode -->
                 <x-shop::form.control-group>
                     <x-shop::form.control-group.label>
                         @lang('shop::app.checkout.onepage.address.postcode')
@@ -145,8 +148,7 @@
                 </x-shop::form.control-group>
             </div>
 
-            {{-- Derived server-side by AddressObserver, but submitted so the request carries a
-                 coherent address even before the observer runs. --}}
+            <!-- State and City -->
             <input type="hidden" :name="bdField('state')" :value="stateCode" />
             <input type="hidden" :name="bdField('city')" :value="cityName" />
         </div>
@@ -170,8 +172,6 @@
                     postcode: this.initial.postcode ?? '',
                     upazilas: [],
                     loadingUpazilas: false,
-                    // A slow response for a district the user has already moved on from must
-                    // never overwrite the list they are looking at now.
                     upazilaRequest: null,
                     districtPlaceholder: @json(trans('bdgeo::app.address.select-district')),
                     divisionFirstText: @json(trans('bdgeo::app.address.select-division-first')),
@@ -212,7 +212,6 @@
             },
 
             mounted() {
-                // Edit mode: repopulate level 3 so the saved value shows its label.
                 if (this.districtId) {
                     this.fetchUpazilas();
                 }

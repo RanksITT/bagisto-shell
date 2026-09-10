@@ -7,11 +7,18 @@ use Illuminate\Validation\Rule;
 trait ValidatesBdGeo
 {
     /**
-     * Validation for the Bangladesh address cascade.
+     * Validation for the Bangladesh address cascade: division, district and upazila or thana.
      *
      * The scoped Rule::exists IS the parent-child check: an upazila that does not belong to
      * the submitted district simply fails to exist for that query, so no custom rule object
      * is needed. This is what stops a tampered or stale form saving an incoherent address.
+     *
+     * The house, road and area detail is the native street address, so nothing here asks for
+     * it a second time.
+     *
+     * Email is optional: in Bangladesh the mobile number is the contact that matters, and
+     * plenty of buyers have no email they actually read. Requiring one invites invented
+     * addresses and lost orders, so it is only validated when given.
      *
      * `state` and `city` are relaxed because AddressObserver derives them from the ids on
      * save - validating what the client sent would be validating a value we overwrite.
@@ -44,20 +51,16 @@ trait ValidatesBdGeo
                     ->where('status', 1),
             ],
 
-
-            // Optional: in Bangladesh the mobile number is the contact that matters, and
-            // plenty of buyers have no email they actually read. Requiring one just invites
-            // invented addresses and lost orders. Still validated when given.
             $prefix.'email' => ['nullable', 'email'],
 
-            // Derived server-side by AddressObserver.
             $prefix.'state' => ['nullable'],
             $prefix.'city'  => ['nullable'],
         ];
     }
 
     /**
-     * A generic "the bd area name field is required" is a checkout-abandonment bug.
+     * Plain-language messages: a generic "the bd upazila id field is required" is a
+     * checkout-abandonment bug.
      *
      * @return array<string, string>
      */
