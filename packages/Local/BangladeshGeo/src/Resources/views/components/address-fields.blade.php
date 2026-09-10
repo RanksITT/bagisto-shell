@@ -168,6 +168,26 @@
                     <v-error-message :name="field('bd_area_name')" class="mt-1 text-xs text-red-600" />
                 </x-shop::form.control-group>
 
+                <!-- Mobile number: the delivery contact, so it belongs with the address
+                     rather than stranded in its own row underneath. -->
+                <x-shop::form.control-group class="!mb-4">
+                    <x-shop::form.control-group.label class="required !mt-0">
+                        @lang('bdgeo::app.address.mobile')
+                    </x-shop::form.control-group.label>
+
+                    <v-field
+                        type="text"
+                        :name="field('phone')"
+                        v-model="phone"
+                        rules="required|phone"
+                        :label="'@lang('bdgeo::app.address.mobile')'"
+                        class="w-full rounded border px-4 py-2.5 text-sm"
+                        placeholder="@lang('bdgeo::app.address.mobile-placeholder')"
+                    />
+
+                    <v-error-message :name="field('phone')" class="mt-1 text-xs text-red-600" />
+                </x-shop::form.control-group>
+
                 <!-- Postcode stays optional: the geo dataset carries no post codes. -->
                 <x-shop::form.control-group class="!mb-4">
                     <x-shop::form.control-group.label class="!mt-0">
@@ -209,6 +229,7 @@
                     upazilaId: this.initial.bd_upazila_id ?? '',
                     areaName: this.initial.bd_area_name ?? '',
                     postcode: this.initial.postcode ?? '',
+                    phone: this.initial.phone ?? '',
                     upazilas: [],
                     loadingUpazilas: false,
                     // A slow response for a district the user has already moved on from must

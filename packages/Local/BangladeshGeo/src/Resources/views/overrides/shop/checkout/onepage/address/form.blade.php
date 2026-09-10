@@ -140,25 +140,7 @@
             />
 
 
-            <!-- Phone Number -->
-            <x-shop::form.control-group>
-                <x-shop::form.control-group.label class="required !mt-0">
-                    @lang('shop::app.checkout.onepage.address.telephone')
-                </x-shop::form.control-group.label>
 
-                <x-shop::form.control-group.control
-                    type="text"
-                    ::name="controlName + '.phone'"
-                    ::value="address.phone"
-                    rules="required|phone"
-                    :label="trans('shop::app.checkout.onepage.address.telephone')"
-                    :placeholder="trans('shop::app.checkout.onepage.address.telephone')"
-                />
-
-                <x-shop::form.control-group.error ::name="controlName + '.phone'" />
-            </x-shop::form.control-group>
-
-            {!! view_render_event('bagisto.shop.checkout.onepage.address.form.phone.after') !!}
         </div>
     </script>
 

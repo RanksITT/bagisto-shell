@@ -189,24 +189,7 @@
                     />
 
 
-                <x-shop::form.control-group>
-                    <x-shop::form.control-group.label class="required">
-                        @lang('shop::app.customers.account.addresses.edit.phone')
-                    </x-shop::form.control-group.label>
 
-                    <x-shop::form.control-group.control
-                        type="text"
-                        name="phone"
-                        rules="required|phone"
-                        :value="old('phone') ?? $address->phone"
-                        :label="trans('shop::app.customers.account.addresses.edit.phone')"
-                        :placeholder="trans('shop::app.customers.account.addresses.edit.phone')"
-                    />
-
-                    <x-shop::form.control-group.error control-name="phone" />
-                </x-shop::form.control-group>
-
-                {!! view_render_event('bagisto.shop.customers.account.addresses.edit_form_controls.phone.after', ['address' => $address]) !!}
 
                 <button
                     type="submit"

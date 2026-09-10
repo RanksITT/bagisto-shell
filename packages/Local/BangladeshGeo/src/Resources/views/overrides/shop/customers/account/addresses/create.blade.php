@@ -173,25 +173,7 @@
                     <x-bdgeo::address-fields />
 
 
-                    <!-- Contact -->
-                    <x-shop::form.control-group>
-                        <x-shop::form.control-group.label class="required">
-                            @lang('shop::app.customers.account.addresses.create.phone')
-                        </x-shop::form.control-group.label>
 
-                        <x-shop::form.control-group.control
-                            type="text"
-                            name="phone"
-                            rules="required|phone"
-                            :value="old('phone')"
-                            :label="trans('shop::app.customers.account.addresses.create.phone')"
-                            :placeholder="trans('shop::app.customers.account.addresses.create.phone')"
-                        />
-
-                        <x-shop::form.control-group.error control-name="phone" />
-                    </x-shop::form.control-group>
-
-                    {!! view_render_event('bagisto.shop.customers.account.addresses.create_form_controls.phone.after') !!}
 
                     <!-- Set As Default -->
                     <div class="text-md mb-4 flex select-none items-center gap-x-1.5 text-mutedBlue">

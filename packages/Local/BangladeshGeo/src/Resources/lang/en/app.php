@@ -16,6 +16,8 @@ return [
         'area-placeholder'      => 'e.g. Gulshan 2, Road 11',
         'postcode-placeholder'  => 'Optional, e.g. 1212',
         'loading'               => 'Loading...',
+        'mobile'                => 'Mobile Number',
+        'mobile-placeholder'    => 'e.g. 01712 345678',
     ],
     'validation' => [
         'division-required' => 'Please select your division.',
