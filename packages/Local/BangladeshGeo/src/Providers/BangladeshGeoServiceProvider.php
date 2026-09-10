@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use Local\BangladeshGeo\Console\Commands\SyncBdGeoCommand;
 use Local\BangladeshGeo\Console\Commands\VerifyBdGeoCommand;
+use Local\BangladeshGeo\Http\Requests\ShopCartAddressRequest;
+use Local\BangladeshGeo\Http\Requests\ShopCustomerAddressRequest;
 use Local\BangladeshGeo\Observers\AddressObserver;
 use Webkul\Checkout\Models\CartAddress;
 use Webkul\Customer\Models\CustomerAddress;
@@ -52,6 +54,16 @@ class BangladeshGeoServiceProvider extends ServiceProvider
 
     public function register(): void
     {
-        //
+        // Laravel resolves FormRequests through the container by the controller's type-hint,
+        // so binding our subclasses substitutes the extra rules without editing a Webkul file.
+        $this->app->bind(
+            \Webkul\Shop\Http\Requests\Customer\AddressRequest::class,
+            ShopCustomerAddressRequest::class
+        );
+
+        $this->app->bind(
+            \Webkul\Shop\Http\Requests\CartAddressRequest::class,
+            ShopCartAddressRequest::class
+        );
     }
 }
