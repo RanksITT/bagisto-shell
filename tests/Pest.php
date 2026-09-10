@@ -1,5 +1,6 @@
 <?php
 
+use Local\SSLCommerz\Tests\SSLCommerzTestCase;
 use Webkul\Admin\Tests\AdminTestCase;
 use Webkul\Core\Tests\CoreTestCase;
 use Webkul\Customer\Tests\CustomerTestCase;
@@ -34,6 +35,7 @@ uses(DataGridTestCase::class)->in('../packages/Webkul/DataGrid/tests');
 uses(EUWithdrawalTestCase::class)->in('../packages/Webkul/EUWithdrawal/tests');
 uses(FPCTestCase::class)->in('../packages/Webkul/FPC/tests');
 uses(InstallerTestCase::class)->in('../packages/Webkul/Installer/tests');
+uses(SSLCommerzTestCase::class)->in('../packages/Local/SSLCommerz/tests');
 uses(PayGlocalTestCase::class)->in('../packages/Webkul/PayGlocal/tests');
 uses(PaymentTestCase::class)->in('../packages/Webkul/Payment/tests');
 uses(PayUTestCase::class)->in('../packages/Webkul/PayU/tests');

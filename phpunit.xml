@@ -45,6 +45,15 @@
             <directory suffix="Test.php">packages/Webkul/Installer/tests/Feature</directory>
         </testsuite>
 
+        <!-- SSLCommerz package testsuites. -->
+        <testsuite name="SSLCommerz Unit Test">
+            <directory suffix="Test.php">packages/Local/SSLCommerz/tests/Unit</directory>
+        </testsuite>
+
+        <testsuite name="SSLCommerz Feature Test">
+            <directory suffix="Test.php">packages/Local/SSLCommerz/tests/Feature</directory>
+        </testsuite>
+
         <!-- PayGlocal package testsuites. -->
         <testsuite name="PayGlocal Unit Test">
             <directory suffix="Test.php">packages/Webkul/PayGlocal/tests/Unit</directory>

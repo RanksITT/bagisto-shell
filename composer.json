@@ -111,12 +111,14 @@
             "Webkul\\Tax\\": "packages/Webkul/Tax/src",
             "Webkul\\Theme\\": "packages/Webkul/Theme/src",
             "Webkul\\User\\": "packages/Webkul/User/src",
-            "Local\\BangladeshGeo\\": "packages/Local/BangladeshGeo/src"
+            "Local\\BangladeshGeo\\": "packages/Local/BangladeshGeo/src",
+            "Local\\SSLCommerz\\": "packages/Local/SSLCommerz/src"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/",
+            "Local\\SSLCommerz\\Tests\\": "packages/Local/SSLCommerz/tests",
             "Webkul\\Admin\\Tests\\": "packages/Webkul/Admin/tests",
             "Webkul\\Core\\Tests\\": "packages/Webkul/Core/tests",
             "Webkul\\Customer\\Tests\\": "packages/Webkul/Customer/tests",

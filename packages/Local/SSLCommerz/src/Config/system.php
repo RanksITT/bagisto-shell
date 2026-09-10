@@ -1,0 +1,77 @@
+<?php
+
+return [
+    [
+        'key' => 'sales.payment_methods.sslcommerz',
+        'name' => 'sslcommerz::app.admin.system.title',
+        'info' => 'sslcommerz::app.admin.system.info',
+        'sort' => 10,
+        'fields' => [
+            [
+                'name' => 'active',
+                'title' => 'admin::app.configuration.index.sales.payment-methods.status',
+                'type' => 'boolean',
+                'channel_based' => true,
+                'locale_based' => false,
+            ], [
+                'name' => 'title',
+                'title' => 'admin::app.configuration.index.sales.payment-methods.title',
+                'type' => 'text',
+                'depends' => 'active:1',
+                'validation' => 'required_if:active,1',
+                'channel_based' => true,
+                'locale_based' => true,
+            ], [
+                'name' => 'description',
+                'title' => 'admin::app.configuration.index.sales.payment-methods.description',
+                'type' => 'textarea',
+                'depends' => 'active:1',
+                'channel_based' => true,
+                'locale_based' => true,
+            ], [
+                'name' => 'image',
+                'title' => 'admin::app.configuration.index.sales.payment-methods.logo',
+                'info' => 'admin::app.configuration.index.sales.payment-methods.logo-information',
+                'type' => 'image',
+                'depends' => 'active:1',
+                'channel_based' => true,
+                'locale_based' => false,
+                'validation' => 'mimes:bmp,jpeg,jpg,png,webp',
+            ], [
+                'name' => 'store_id',
+                'title' => 'sslcommerz::app.admin.system.store-id',
+                'info' => 'sslcommerz::app.admin.system.store-id-info',
+                'type' => 'text',
+                'depends' => 'active:1',
+                'validation' => 'max:30',
+                'channel_based' => true,
+                'locale_based' => false,
+            ], [
+                'name' => 'store_password',
+                'title' => 'sslcommerz::app.admin.system.store-password',
+                'info' => 'sslcommerz::app.admin.system.store-password-info',
+                'type' => 'password',
+                'depends' => 'active:1',
+                'validation' => 'max:30',
+                'channel_based' => true,
+                'locale_based' => false,
+            ], [
+                'name' => 'sandbox',
+                'title' => 'admin::app.configuration.index.sales.payment-methods.sandbox',
+                'info' => 'sslcommerz::app.admin.system.sandbox-info',
+                'type' => 'boolean',
+                'depends' => 'active:1',
+                'channel_based' => true,
+                'locale_based' => false,
+            ], [
+                'name' => 'sort',
+                'title' => 'admin::app.configuration.index.sales.payment-methods.sort-order',
+                'type' => 'number',
+                'depends' => 'active:1',
+                'validation' => 'required_if:active,1|integer|min:1',
+                'channel_based' => true,
+                'locale_based' => false,
+            ],
+        ],
+    ],
+];

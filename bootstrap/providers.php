@@ -1,6 +1,7 @@
 <?php
 
 use Local\BangladeshGeo\Providers\BangladeshGeoServiceProvider;
+use Local\SSLCommerz\Providers\SSLCommerzServiceProvider;
 
 use App\Providers\AppServiceProvider;
 use Webkul\Admin\Providers\AdminServiceProvider;
@@ -98,4 +99,5 @@ return [
     ThemeServiceProvider::class,
     UserServiceProvider::class,
     BangladeshGeoServiceProvider::class,
+    SSLCommerzServiceProvider::class,
 ];
