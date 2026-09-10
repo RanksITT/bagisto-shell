@@ -143,6 +143,9 @@
                         <x-shop::form.control-group.error control-name="phone" />
                     </x-shop::form.control-group>
 
+                    <!-- Country, Division, District, Upazila / Thana and Postcode -->
+                    <x-bdgeo::address-fields />
+
                     <!-- Street Address -->
                     <x-shop::form.control-group>
                         <x-shop::form.control-group.label class="required">
@@ -185,9 +188,6 @@
                     @endif
 
                     {!! view_render_event('bagisto.shop.customers.account.addresses.create_form_controls.street_address.after') !!}
-
-                    <!-- Country, Division, District, Upazila / Thana and Postcode -->
-                    <x-bdgeo::address-fields />
 
                     <!-- Set As Default -->
                     <div class="text-md mb-4 flex select-none items-center gap-x-1.5 text-mutedBlue">

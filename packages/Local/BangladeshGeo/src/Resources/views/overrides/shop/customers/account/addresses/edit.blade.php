@@ -155,6 +155,11 @@
                     <x-shop::form.control-group.error control-name="phone" />
                 </x-shop::form.control-group>
 
+                <!-- Country, Division, District, Upazila / Thana and Postcode -->
+                <x-bdgeo::address-fields
+                    :initial="$address->only(['bd_division_id', 'bd_district_id', 'bd_upazila_id', 'postcode'])"
+                />
+
                 @php
                     $addresses = explode(PHP_EOL, $address->address);
                 @endphp
@@ -199,11 +204,6 @@
                 @endif
 
                 {!! view_render_event('bagisto.shop.customers.account.addresses.edit_form_controls.street-addres.after', ['address' => $address]) !!}
-
-                <!-- Country, Division, District, Upazila / Thana and Postcode -->
-                <x-bdgeo::address-fields
-                    :initial="$address->only(['bd_division_id', 'bd_district_id', 'bd_upazila_id', 'postcode'])"
-                />
 
                 <button
                     type="submit"

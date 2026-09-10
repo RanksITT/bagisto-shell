@@ -108,6 +108,12 @@
                 <x-shop::form.control-group.error ::name="controlName + '.phone'" />
             </x-shop::form.control-group>
 
+            <!-- Country, Division, District, Upazila / Thana and Postcode -->
+            <x-bdgeo::address-fields
+                prefix-expr="controlName + '.'"
+                initial-expr="address"
+            />
+
             <!-- Street Address -->
             <x-shop::form.control-group>
                 <x-shop::form.control-group.label class="required !mt-0">
@@ -147,12 +153,6 @@
             </x-shop::form.control-group>
 
             {!! view_render_event('bagisto.shop.checkout.onepage.address.form.address.after') !!}
-
-            <!-- Country, Division, District, Upazila / Thana and Postcode -->
-            <x-bdgeo::address-fields
-                prefix-expr="controlName + '.'"
-                initial-expr="address"
-            />
         </div>
     </script>
 
