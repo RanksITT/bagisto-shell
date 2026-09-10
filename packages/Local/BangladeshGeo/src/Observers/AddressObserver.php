@@ -3,7 +3,6 @@
 namespace Local\BangladeshGeo\Observers;
 
 use Local\BangladeshGeo\Models\BdDistrict;
-use Local\BangladeshGeo\Models\BdUnion;
 use Local\BangladeshGeo\Models\BdUpazila;
 
 /**
@@ -56,26 +55,9 @@ class AddressObserver
 
         $address->city = $upazila->name;
 
-        if ($upazila->hasUnions()) {
-            $union = $address->bd_union_id
-                ? BdUnion::find((int) $address->bd_union_id)
-                : null;
-
-            if ($union && $union->upazila_id === $upazila->id) {
-                // Snapshot the name: a later rename or merger must not silently rewrite
-                // what was printed on an existing order.
-                $address->bd_area_name = $union->name;
-
-                return;
-            }
-
-            $address->bd_union_id = null;
-            $address->bd_area_name = $this->normalise($address->bd_area_name);
-
-            return;
-        }
-
-        // Metro thana, or one of the five rural upazilas with no unions: level 4 is free text.
+        // Unions are not collected: they are rural-only, absent for every metro thana, and
+        // buyers describe where they live by area and road. Level 4 is always free text, and
+        // any union id arriving from a stale form is discarded rather than persisted.
         $address->bd_union_id = null;
         $address->bd_area_name = $this->normalise($address->bd_area_name);
     }

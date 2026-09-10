@@ -13,6 +13,4 @@ Route::middleware(['throttle:120,1'])
     ->group(function () {
         Route::get('bootstrap', [GeoController::class, 'bootstrap'])->name('bootstrap');
         Route::get('upazilas', [GeoController::class, 'upazilas'])->name('upazilas');
-        Route::get('unions', [GeoController::class, 'unions'])->name('unions');
-        Route::get('hydrate', [GeoController::class, 'hydrate'])->name('hydrate');
     });
