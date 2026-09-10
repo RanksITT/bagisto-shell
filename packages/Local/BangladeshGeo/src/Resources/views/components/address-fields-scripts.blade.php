@@ -31,7 +31,7 @@
 
                 <x-shop::form.control-group.control
                     type="text"
-                    ::name="field('country_display')"
+                    ::name="bdField('country_display')"
                     value="Bangladesh"
                     readonly
                     :label="trans('shop::app.checkout.onepage.address.country')"
@@ -39,7 +39,7 @@
 
                 <input
                     type="hidden"
-                    :name="field('country')"
+                    :name="bdField('country')"
                     value="BD"
                 />
             </x-shop::form.control-group>
@@ -53,7 +53,7 @@
 
                     <x-shop::form.control-group.control
                         type="select"
-                        ::name="field('bd_division_id')"
+                        ::name="bdField('bd_division_id')"
                         v-model="divisionId"
                         rules="required"
                         :label="trans('bdgeo::app.address.division')"
@@ -69,7 +69,7 @@
                         >@{{ d.name }}</option>
                     </x-shop::form.control-group.control>
 
-                    <x-shop::form.control-group.error ::name="field('bd_division_id')" />
+                    <x-shop::form.control-group.error ::name="bdField('bd_division_id')" />
                 </x-shop::form.control-group>
 
                 <!-- District -> saved as the native `state` -->
@@ -80,7 +80,7 @@
 
                     <x-shop::form.control-group.control
                         type="select"
-                        ::name="field('bd_district_id')"
+                        ::name="bdField('bd_district_id')"
                         v-model="districtId"
                         rules="required"
                         :label="trans('bdgeo::app.address.district')"
@@ -99,7 +99,7 @@
                         >@{{ d.name }}</option>
                     </x-shop::form.control-group.control>
 
-                    <x-shop::form.control-group.error ::name="field('bd_district_id')" />
+                    <x-shop::form.control-group.error ::name="bdField('bd_district_id')" />
                 </x-shop::form.control-group>
 
                 <!-- Upazila / Thana -> saved as the native `city` -->
@@ -110,7 +110,7 @@
 
                     <x-shop::form.control-group.control
                         type="select"
-                        ::name="field('bd_upazila_id')"
+                        ::name="bdField('bd_upazila_id')"
                         v-model="upazilaId"
                         rules="required"
                         :label="trans('bdgeo::app.address.upazila')"
@@ -127,7 +127,7 @@
                         >@{{ u.name }}</option>
                     </x-shop::form.control-group.control>
 
-                    <x-shop::form.control-group.error ::name="field('bd_upazila_id')" />
+                    <x-shop::form.control-group.error ::name="bdField('bd_upazila_id')" />
                 </x-shop::form.control-group>
 
                 {{-- Level 4 is one free-text area for every address. Unions are not collected:
@@ -140,14 +140,14 @@
 
                     <x-shop::form.control-group.control
                         type="text"
-                        ::name="field('bd_area_name')"
+                        ::name="bdField('bd_area_name')"
                         v-model="areaName"
                         rules="required"
                         :label="trans('bdgeo::app.address.area')"
                         :placeholder="trans('bdgeo::app.address.area-placeholder')"
                     />
 
-                    <x-shop::form.control-group.error ::name="field('bd_area_name')" />
+                    <x-shop::form.control-group.error ::name="bdField('bd_area_name')" />
                 </x-shop::form.control-group>
 
                 {{-- Postcode stays optional: the geo dataset carries no post codes. --}}
@@ -158,7 +158,7 @@
 
                     <x-shop::form.control-group.control
                         type="text"
-                        ::name="field('postcode')"
+                        ::name="bdField('postcode')"
                         v-model="postcode"
                         :label="trans('shop::app.checkout.onepage.address.postcode')"
                         :placeholder="trans('bdgeo::app.address.postcode-placeholder')"
@@ -168,8 +168,8 @@
 
             {{-- Derived server-side by AddressObserver, but submitted so the request carries a
                  coherent address even before the observer runs. --}}
-            <input type="hidden" :name="field('state')" :value="stateCode" />
-            <input type="hidden" :name="field('city')" :value="cityName" />
+            <input type="hidden" :name="bdField('state')" :value="stateCode" />
+            <input type="hidden" :name="bdField('city')" :value="cityName" />
         </div>
     </script>
 
@@ -241,7 +241,7 @@
             },
 
             methods: {
-                field(name) {
+                bdField(name) {
                     return this.namePrefix ? `${this.namePrefix}${name}` : name;
                 },
 

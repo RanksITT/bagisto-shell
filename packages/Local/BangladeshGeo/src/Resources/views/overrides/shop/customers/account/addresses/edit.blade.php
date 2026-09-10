@@ -119,14 +119,14 @@
 
                 <!-- E-mail -->
                 <x-shop::form.control-group>
-                    <x-shop::form.control-group.label class="required">
+                    <x-shop::form.control-group.label>
                         @lang('Email')
                     </x-shop::form.control-group.label>
 
                     <x-shop::form.control-group.control
                         type="email"
                         name="email"
-                        rules="required|email"
+                        rules="email"
                         :value="old('email') ?? $address->email"
                         :label="trans('Email')"
                         :placeholder="trans('Email')"

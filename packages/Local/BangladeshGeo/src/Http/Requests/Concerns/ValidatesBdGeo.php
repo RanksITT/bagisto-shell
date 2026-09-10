@@ -47,6 +47,11 @@ trait ValidatesBdGeo
             // Unions are not collected; level 4 is always the free-text area.
             $prefix.'bd_area_name' => ['required', 'string', 'max:128'],
 
+            // Optional: in Bangladesh the mobile number is the contact that matters, and
+            // plenty of buyers have no email they actually read. Requiring one just invites
+            // invented addresses and lost orders. Still validated when given.
+            $prefix.'email' => ['nullable', 'email'],
+
             // Derived server-side by AddressObserver.
             $prefix.'state' => ['nullable'],
             $prefix.'city'  => ['nullable'],
