@@ -23,6 +23,7 @@ return [
         'payment-failed' => 'भुगतान विफल रहा। कृपया पुनः प्रयास करें।',
         'payment-success' => 'भुगतान सफलतापूर्वक पूरा हुआ।',
         'provide-credentials' => 'कृपया मान्य SSLCommerz क्रेडेंशियल प्रदान करें।',
+        'session-refused' => 'SSLCommerz भुगतान शुरू नहीं कर सका: :reason',
         'supported-currency-error' => 'मुद्रा :currency समर्थित नहीं है। समर्थित मुद्राएँ: :supportedCurrencies.',
         'verification-failed' => 'आपके भुगतान की पुष्टि नहीं हो सकी। यदि आपसे राशि ली गई है, तो कृपया लेनदेन :tranId का उल्लेख करते हुए हमसे संपर्क करें।',
     ],

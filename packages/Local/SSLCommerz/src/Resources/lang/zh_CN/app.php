@@ -23,6 +23,7 @@ return [
         'payment-failed' => '付款失败，请重试。',
         'payment-success' => '付款已成功完成。',
         'provide-credentials' => '请提供有效的 SSLCommerz 凭据。',
+        'session-refused' => 'SSLCommerz 无法发起付款：:reason',
         'supported-currency-error' => '不支持货币 :currency。支持的货币：:supportedCurrencies。',
         'verification-failed' => '无法确认您的付款。如果已被扣款，请联系我们并提供交易号 :tranId。',
     ],

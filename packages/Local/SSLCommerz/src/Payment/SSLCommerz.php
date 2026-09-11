@@ -218,7 +218,11 @@ class SSLCommerz extends Payment
     }
 
     /**
-     * Open a hosted checkout session and get back somewhere to send the customer.
+     * Open a hosted checkout session.
+     *
+     * SSLCommerz's answer is handed back whether it opened the session or refused it, so that the
+     * reason for a refusal can be shown to the customer. Nothing comes back only when SSLCommerz
+     * could not be reached or did not answer in JSON.
      */
     public function initiatePayment($cart, string $tranId): ?array
     {
@@ -232,18 +236,17 @@ class SSLCommerz extends Payment
                 return null;
             }
 
-            $session = $response->json() ?? [];
+            $session = $response->json();
 
-            if (
-                strtoupper($session['status'] ?? '') !== 'SUCCESS'
-                || empty($session['GatewayPageURL'])
-            ) {
+            if (! is_array($session)) {
+                return null;
+            }
+
+            if (! $this->getGatewayPageUrl($session)) {
                 logger()->error('SSLCommerz refused to open a payment session.', [
                     'tran_id' => $tranId,
-                    'reason' => $session['failedreason'] ?? null,
+                    'reason' => $this->getFailureReason($session),
                 ]);
-
-                return null;
             }
 
             return $session;
@@ -252,6 +255,35 @@ class SSLCommerz extends Payment
 
             return null;
         }
+    }
+
+    /**
+     * Get the hosted checkout page an opened session sends the customer to.
+     */
+    public function getGatewayPageUrl(?array $session): ?string
+    {
+        if (
+            strtoupper((string) ($session['status'] ?? '')) !== 'SUCCESS'
+            || empty($session['GatewayPageURL'])
+        ) {
+            return null;
+        }
+
+        return (string) $session['GatewayPageURL'];
+    }
+
+    /**
+     * Get the reason SSLCommerz gave for refusing to open a session.
+     */
+    public function getFailureReason(?array $session): ?string
+    {
+        $reason = trim((string) ($session['failedreason'] ?? ''));
+
+        if ($reason === '') {
+            return null;
+        }
+
+        return Str::limit($reason, 200);
     }
 
     /**

@@ -23,6 +23,7 @@ return [
         'payment-failed' => 'Ödeme başarısız oldu. Lütfen tekrar deneyin.',
         'payment-success' => 'Ödeme başarıyla tamamlandı.',
         'provide-credentials' => 'Lütfen geçerli SSLCommerz kimlik bilgilerini girin.',
+        'session-refused' => 'SSLCommerz ödemeyi başlatamadı: :reason',
         'supported-currency-error' => ':currency para birimi desteklenmiyor. Desteklenen para birimleri: :supportedCurrencies.',
         'verification-failed' => 'Ödemeniz doğrulanamadı. Ücret alındıysa lütfen :tranId işlem numarasını belirterek bizimle iletişime geçin.',
     ],

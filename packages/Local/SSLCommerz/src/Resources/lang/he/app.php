@@ -23,6 +23,7 @@ return [
         'payment-failed' => 'התשלום נכשל. אנא נסו שוב.',
         'payment-success' => 'התשלום הושלם בהצלחה.',
         'provide-credentials' => 'אנא ספקו פרטי גישה תקינים ל-SSLCommerz.',
+        'session-refused' => 'SSLCommerz לא הצליח להתחיל את התשלום: :reason',
         'supported-currency-error' => 'המטבע :currency אינו נתמך. מטבעות נתמכים: :supportedCurrencies.',
         'verification-failed' => 'לא ניתן היה לאשר את התשלום. אם חויבתם, אנא צרו איתנו קשר וציינו את מספר העסקה :tranId.',
     ],

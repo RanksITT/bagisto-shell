@@ -23,6 +23,7 @@ return [
         'payment-failed' => 'ගෙවීම අසාර්ථක විය. කරුණාකර නැවත උත්සාහ කරන්න.',
         'payment-success' => 'ගෙවීම සාර්ථකව අවසන් විය.',
         'provide-credentials' => 'කරුණාකර වලංගු SSLCommerz අක්තපත්‍ර ලබා දෙන්න.',
+        'session-refused' => 'SSLCommerz හට ගෙවීම ආරම්භ කළ නොහැකි විය: :reason',
         'supported-currency-error' => ':currency මුදල් වර්ගය සහාය නොදක්වයි. සහාය දක්වන මුදල් වර්ග: :supportedCurrencies.',
         'verification-failed' => 'ඔබගේ ගෙවීම තහවුරු කළ නොහැකි විය. ඔබෙන් මුදල් අය කර ඇත්නම්, ගනුදෙනු අංකය :tranId සඳහන් කර අප හා සම්බන්ධ වන්න.',
     ],

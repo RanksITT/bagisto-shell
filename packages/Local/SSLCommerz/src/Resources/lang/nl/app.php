@@ -23,6 +23,7 @@ return [
         'payment-failed' => 'De betaling is mislukt. Probeer het opnieuw.',
         'payment-success' => 'De betaling is succesvol voltooid.',
         'provide-credentials' => 'Geef geldige SSLCommerz-inloggegevens op.',
+        'session-refused' => 'SSLCommerz kon de betaling niet starten: :reason',
         'supported-currency-error' => 'De valuta :currency wordt niet ondersteund. Ondersteunde valuta: :supportedCurrencies.',
         'verification-failed' => 'Je betaling kon niet worden bevestigd. Als er een bedrag is afgeschreven, neem dan contact met ons op en vermeld transactie :tranId.',
     ],

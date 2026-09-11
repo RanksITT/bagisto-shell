@@ -23,6 +23,7 @@ return [
         'payment-failed' => 'Платёж не прошёл. Пожалуйста, попробуйте ещё раз.',
         'payment-success' => 'Платёж успешно завершён.',
         'provide-credentials' => 'Укажите действительные учётные данные SSLCommerz.',
+        'session-refused' => 'SSLCommerz не смог начать оплату: :reason',
         'supported-currency-error' => 'Валюта :currency не поддерживается. Поддерживаемые валюты: :supportedCurrencies.',
         'verification-failed' => 'Не удалось подтвердить ваш платёж. Если деньги были списаны, свяжитесь с нами и укажите номер транзакции :tranId.',
     ],

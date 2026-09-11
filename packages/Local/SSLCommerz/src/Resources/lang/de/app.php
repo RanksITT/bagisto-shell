@@ -23,6 +23,7 @@ return [
         'payment-failed' => 'Die Zahlung ist fehlgeschlagen. Bitte versuchen Sie es erneut.',
         'payment-success' => 'Die Zahlung wurde erfolgreich abgeschlossen.',
         'provide-credentials' => 'Bitte geben Sie gültige SSLCommerz-Zugangsdaten an.',
+        'session-refused' => 'SSLCommerz konnte die Zahlung nicht starten: :reason',
         'supported-currency-error' => 'Die Währung :currency wird nicht unterstützt. Unterstützte Währungen: :supportedCurrencies.',
         'verification-failed' => 'Ihre Zahlung konnte nicht bestätigt werden. Falls Ihnen ein Betrag belastet wurde, kontaktieren Sie uns bitte unter Angabe der Transaktion :tranId.',
     ],

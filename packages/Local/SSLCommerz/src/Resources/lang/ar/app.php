@@ -23,6 +23,7 @@ return [
         'payment-failed' => 'فشل الدفع. يرجى المحاولة مرة أخرى.',
         'payment-success' => 'تم الدفع بنجاح.',
         'provide-credentials' => 'يرجى تقديم بيانات اعتماد SSLCommerz صالحة.',
+        'session-refused' => 'تعذّر على SSLCommerz بدء عملية الدفع: :reason',
         'supported-currency-error' => 'العملة :currency غير مدعومة. العملات المدعومة: :supportedCurrencies.',
         'verification-failed' => 'تعذّر تأكيد دفعتك. إذا تم خصم المبلغ منك، يرجى التواصل معنا وذكر رقم المعاملة :tranId.',
     ],

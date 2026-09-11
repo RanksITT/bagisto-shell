@@ -23,6 +23,7 @@ return [
         'payment-failed' => 'The payment failed. Please try again.',
         'payment-success' => 'The payment completed successfully.',
         'provide-credentials' => 'Please provide valid SSLCommerz credentials.',
+        'session-refused' => 'SSLCommerz could not start the payment: :reason',
         'supported-currency-error' => 'The currency :currency is not supported. Supported Currencies: :supportedCurrencies.',
         'verification-failed' => 'Your payment could not be confirmed. If you were charged, please contact us and quote transaction :tranId.',
     ],

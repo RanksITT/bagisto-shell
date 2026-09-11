@@ -35,6 +35,9 @@ class SSLCommerzController extends Controller
 
     /**
      * Open a payment session for the cart and send the customer to SSLCommerz's hosted checkout.
+     *
+     * When SSLCommerz refuses the session, the customer is shown the reason it gave, because what it
+     * objects to, such as the amount, is not something trying again would fix.
      */
     public function redirect(): RedirectResponse
     {
@@ -78,13 +81,19 @@ class SSLCommerzController extends Controller
             $this->sslCommerz->generateTransactionId($cart->id)
         );
 
-        if (! $session) {
-            session()->flash('error', trans('sslcommerz::app.response.payment-failed'));
+        $gatewayPageUrl = $this->sslCommerz->getGatewayPageUrl($session);
+
+        if (! $gatewayPageUrl) {
+            $reason = $this->sslCommerz->getFailureReason($session);
+
+            session()->flash('error', $reason
+                ? trans('sslcommerz::app.response.session-refused', ['reason' => $reason])
+                : trans('sslcommerz::app.response.payment-failed'));
 
             return redirect()->route('shop.checkout.cart.index');
         }
 
-        return redirect()->away($session['GatewayPageURL']);
+        return redirect()->away($gatewayPageUrl);
     }
 
     /**

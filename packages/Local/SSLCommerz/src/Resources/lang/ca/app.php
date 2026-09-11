@@ -23,6 +23,7 @@ return [
         'payment-failed' => 'El pagament ha fallat. Torneu-ho a provar.',
         'payment-success' => 'El pagament s\'ha completat correctament.',
         'provide-credentials' => 'Proporcioneu credencials de SSLCommerz vàlides.',
+        'session-refused' => 'SSLCommerz no ha pogut iniciar el pagament: :reason',
         'supported-currency-error' => 'La moneda :currency no és compatible. Monedes compatibles: :supportedCurrencies.',
         'verification-failed' => 'No s\'ha pogut confirmar el pagament. Si se us ha cobrat, contacteu amb nosaltres indicant la transacció :tranId.',
     ],

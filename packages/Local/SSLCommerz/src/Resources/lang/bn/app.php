@@ -23,6 +23,7 @@ return [
         'payment-failed' => 'পেমেন্ট ব্যর্থ হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন।',
         'payment-success' => 'পেমেন্ট সফলভাবে সম্পন্ন হয়েছে।',
         'provide-credentials' => 'অনুগ্রহ করে সঠিক SSLCommerz ক্রেডেনশিয়াল দিন।',
+        'session-refused' => 'SSLCommerz পেমেন্ট শুরু করতে পারেনি: :reason',
         'supported-currency-error' => 'মুদ্রা :currency সমর্থিত নয়। সমর্থিত মুদ্রাসমূহ: :supportedCurrencies।',
         'verification-failed' => 'আপনার পেমেন্ট নিশ্চিত করা যায়নি। টাকা কেটে থাকলে লেনদেন নম্বর :tranId উল্লেখ করে আমাদের সাথে যোগাযোগ করুন।',
     ],

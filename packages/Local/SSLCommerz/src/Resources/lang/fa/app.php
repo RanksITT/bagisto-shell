@@ -23,6 +23,7 @@ return [
         'payment-failed' => 'پرداخت ناموفق بود. لطفاً دوباره تلاش کنید.',
         'payment-success' => 'پرداخت با موفقیت انجام شد.',
         'provide-credentials' => 'لطفاً اطلاعات احراز هویت معتبر SSLCommerz را وارد کنید.',
+        'session-refused' => 'SSLCommerz نتوانست پرداخت را آغاز کند: :reason',
         'supported-currency-error' => 'ارز :currency پشتیبانی نمی‌شود. ارزهای پشتیبانی‌شده: :supportedCurrencies.',
         'verification-failed' => 'پرداخت شما تأیید نشد. اگر مبلغی از حساب شما کسر شده است، لطفاً با ذکر شماره تراکنش :tranId با ما تماس بگیرید.',
     ],

@@ -23,6 +23,7 @@ return [
         'payment-failed' => 'Plata a eșuat. Te rugăm să încerci din nou.',
         'payment-success' => 'Plata a fost finalizată cu succes.',
         'provide-credentials' => 'Te rugăm să furnizezi date de autentificare SSLCommerz valide.',
+        'session-refused' => 'SSLCommerz nu a putut iniția plata: :reason',
         'supported-currency-error' => 'Moneda :currency nu este acceptată. Monede acceptate: :supportedCurrencies.',
         'verification-failed' => 'Plata ta nu a putut fi confirmată. Dacă ai fost taxat, contactează-ne menționând tranzacția :tranId.',
     ],

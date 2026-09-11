@@ -176,7 +176,8 @@ it('reads the gateway page url out of an opened session', function () {
     $session = $this->sslCommerz->initiatePayment(cartStub(), 'SSL1TTEST');
 
     // Assert
-    expect($session['GatewayPageURL'])->toBe('https://sandbox.sslcommerz.com/EasyCheckOut/testcdea15f1')
+    expect($this->sslCommerz->getGatewayPageUrl($session))->toBe('https://sandbox.sslcommerz.com/EasyCheckOut/testcdea15f1')
+        ->and($this->sslCommerz->getFailureReason($session))->toBeNull()
         ->and($session['sessionkey'])->toBe('A15F1AA5CBF1F0F7969043779A4C8247');
 });
 
@@ -211,27 +212,47 @@ it('sends the payment sslcommerz needs to open a session', function () {
     });
 });
 
-it('returns nothing when sslcommerz refuses to open a session', function () {
+it('hands back the reason sslcommerz gives for refusing to open a session', function () {
     // Arrange
     configureCredentials();
 
     Http::fake([
         '*/gwprocess/v4/api.php' => Http::response([
             'status' => 'FAILED',
-            'failedreason' => 'Store Credential Error Or Store is De-active',
+            'failedreason' => 'Transaction amount is not allowed as per admin configuration!',
         ], 200),
     ]);
 
-    // Act & Assert
-    expect($this->sslCommerz->initiatePayment(cartStub(), 'SSL1TTEST'))->toBeNull();
+    // Act
+    $session = $this->sslCommerz->initiatePayment(cartStub(), 'SSL1TTEST');
+
+    // Assert
+    expect($this->sslCommerz->getGatewayPageUrl($session))->toBeNull()
+        ->and($this->sslCommerz->getFailureReason($session))->toBe('Transaction amount is not allowed as per admin configuration!');
 });
 
-it('returns nothing when the session response carries nowhere to send the customer', function () {
+it('finds nowhere to send the customer when the session response carries no gateway page', function () {
     // Arrange
     configureCredentials();
 
     Http::fake([
         '*/gwprocess/v4/api.php' => Http::response(['status' => 'SUCCESS'], 200),
+    ]);
+
+    // Act
+    $session = $this->sslCommerz->initiatePayment(cartStub(), 'SSL1TTEST');
+
+    // Assert
+    expect($this->sslCommerz->getGatewayPageUrl($session))->toBeNull()
+        ->and($this->sslCommerz->getFailureReason($session))->toBeNull();
+});
+
+it('returns nothing when sslcommerz cannot be reached', function () {
+    // Arrange
+    configureCredentials();
+
+    Http::fake([
+        '*/gwprocess/v4/api.php' => Http::response('Service Unavailable', 503),
     ]);
 
     // Act & Assert

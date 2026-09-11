@@ -23,6 +23,7 @@ return [
         'payment-failed' => 'Le paiement a échoué. Veuillez réessayer.',
         'payment-success' => 'Le paiement a été effectué avec succès.',
         'provide-credentials' => 'Veuillez fournir des identifiants SSLCommerz valides.',
+        'session-refused' => 'SSLCommerz n\'a pas pu lancer le paiement : :reason',
         'supported-currency-error' => 'La devise :currency n\'est pas prise en charge. Devises prises en charge : :supportedCurrencies.',
         'verification-failed' => 'Votre paiement n\'a pas pu être confirmé. Si vous avez été débité, contactez-nous en indiquant la transaction :tranId.',
     ],

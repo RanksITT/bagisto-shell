@@ -23,6 +23,7 @@ return [
         'payment-failed' => 'Pembayaran gagal. Silakan coba lagi.',
         'payment-success' => 'Pembayaran berhasil diselesaikan.',
         'provide-credentials' => 'Harap berikan kredensial SSLCommerz yang valid.',
+        'session-refused' => 'SSLCommerz tidak dapat memulai pembayaran: :reason',
         'supported-currency-error' => 'Mata uang :currency tidak didukung. Mata uang yang didukung: :supportedCurrencies.',
         'verification-failed' => 'Pembayaran Anda tidak dapat dikonfirmasi. Jika Anda telah ditagih, silakan hubungi kami dengan menyebutkan transaksi :tranId.',
     ],

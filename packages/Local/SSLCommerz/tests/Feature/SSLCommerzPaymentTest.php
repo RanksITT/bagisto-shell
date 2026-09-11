@@ -95,7 +95,10 @@ it('sends the customer to the hosted checkout without recording anything of its 
     Cart::shouldReceive('getCart')->andReturn($cart);
 
     $this->sslCommerzMock->shouldReceive('initiatePayment')
-        ->andReturn(['GatewayPageURL' => 'https://sandbox.sslcommerz.com/EasyCheckOut/testcdea15f1']);
+        ->andReturn([
+            'status' => 'SUCCESS',
+            'GatewayPageURL' => 'https://sandbox.sslcommerz.com/EasyCheckOut/testcdea15f1',
+        ]);
 
     // Act
     $response = $this->get(route('sslcommerz.redirect'));
@@ -120,7 +123,29 @@ it('reports a failure when sslcommerz will not open a session', function () {
     // Assert
     $response->assertRedirect(route('shop.checkout.cart.index'));
 
-    $response->assertSessionHas('error');
+    $response->assertSessionHas('error', trans('sslcommerz::app.response.payment-failed'));
+});
+
+it('shows the customer the reason sslcommerz gave for refusing the session', function () {
+    // Arrange
+    $cart = $this->createCartWithItems('sslcommerz', ['base_currency_code' => 'BDT']);
+
+    Cart::shouldReceive('getCart')->andReturn($cart);
+
+    $this->sslCommerzMock->shouldReceive('initiatePayment')->andReturn([
+        'status' => 'FAILED',
+        'failedreason' => 'Transaction amount is not allowed as per admin configuration!',
+    ]);
+
+    // Act
+    $response = $this->get(route('sslcommerz.redirect'));
+
+    // Assert
+    $response->assertRedirect(route('shop.checkout.cart.index'));
+
+    $response->assertSessionHas('error', trans('sslcommerz::app.response.session-refused', [
+        'reason' => 'Transaction amount is not allowed as per admin configuration!',
+    ]));
 });
 
 it('settles the payment and creates the order with an invoice from the callback', function () {
